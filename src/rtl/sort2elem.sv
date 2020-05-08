@@ -70,6 +70,7 @@ module sort2elem(
             IDLE: begin
                 rd_fifo_nxt = {1'b1, 1'b1};
                 wr_fifo_nxt = 1'b0;
+                sorted_array_nxt = 0;
             end
             COPY_VAL_1: begin
                 sorted_array_nxt = byte_elem1;
@@ -84,6 +85,7 @@ module sort2elem(
             default: begin
                 rd_fifo_nxt = {1'b0, 1'b0};
                 wr_fifo_nxt = 1'b0;
+                sorted_array_nxt = 0;
             end
         endcase
     end
