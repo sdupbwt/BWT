@@ -59,13 +59,15 @@ module merge_sort_top(
                                 .empty(emp_fifo4_1), .full(), .r_data(fifo_arr4_1));
                                 
     always @(posedge clk) begin
-        if(!emp_fifo4_1) begin
-            data_out[i] <= fifo_arr4_1;
+        if(!emp_fifo4_1) 
             rd_fifo4_1 <= 1;
-            i++;
-        end 
-        else begin
+        else 
             rd_fifo4_1 <= 0;
+        if(rd_fifo4_1) begin
+            data_out[i] <= fifo_arr4_1;
+            i++;
+        end
+        else begin
             i <= 0;
         end
     end

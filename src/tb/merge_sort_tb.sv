@@ -35,17 +35,65 @@ module merge_sort_tb(
     merge_sort_top ms_test(.clk(clk),.rst(rst),.start(start),.data_in(data_in),.data_out(data_out));
     
     initial begin
-        data_in = "badc";
+        $display("***** START TEST *****\n");
+        data_in = "cadb";
         rst = 1;
         start = 0;
+        $write("input string:");
+        foreach(data_in[i])
+            $write("%s", data_in[i]);
+        $write("\n");
         #10;
         rst = 0;
         #10;
         start = 1;
         #10;
         start = 0;
-        #1000;
-        $display("merged_array: %p", data_out);
+        #200;
+        $write("output string:");
+        foreach(data_out[i])
+            $write("%s", data_out[i]);
+        $write("\n\n");
+        
+//        data_in = "cadb";
+//        rst = 1;
+//        start = 0;
+//        $write("input string:");
+//        foreach(data_in[i])
+//            $write("%s", data_in[i]);
+//        $write("\n");
+//        #10;
+//        rst = 0;
+//        #10;
+//        start = 1;
+//        #10;
+//        start = 0;
+//        #200;
+//        $write("output string:");
+//        foreach(data_out[i])
+//            $write("%s", data_out[i]);
+//        $write("\n\n");
+        
+//        data_in = "baca";
+//        rst = 1;
+//        start = 0;
+//        $write("input string:");
+//        foreach(data_in[i])
+//            $write("%s", data_in[i]);
+//        $write("\n");
+//        #10;
+//        rst = 0;
+//        #10;
+//        start = 1;
+//        #10;
+//        start = 0;
+//        #200;
+//        $write("output string:");
+//        foreach(data_out[i])
+//            $write("%s", data_out[i]);
+//        $write("\n\n");
+        
+        $display("***** FINISH TEST *****\n");
         $finish;
     end 
     
