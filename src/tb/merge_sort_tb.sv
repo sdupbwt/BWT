@@ -49,7 +49,7 @@ module merge_sort_tb(
         start = 1;
         #10;
         start = 0;
-        #1000;
+        #200;
         $write("output string:");
         foreach(data_out[i])
             $write("%s", data_out[i]);
@@ -74,7 +74,7 @@ module merge_sort_tb(
             $write("%s", data_out[i]);
         $write("\n\n");
         
-        data_in = "twoabbtt";
+        data_in = "twoab";
         rst = 1;
         start = 0;
         $write("input string:");
@@ -93,7 +93,7 @@ module merge_sort_tb(
             $write("%s", data_out[i]);
         $write("\n\n");
         
-        data_in = "abcdefgh";
+        data_in = "abcdef";
         rst = 1;
         start = 0;
         $write("input string:");
@@ -112,7 +112,7 @@ module merge_sort_tb(
             $write("%s", data_out[i]);
         $write("\n\n");
         
-        data_in = "hgfedcba";
+        data_in = "hgfedcb";
         rst = 1;
         start = 0;
         $write("input string:");

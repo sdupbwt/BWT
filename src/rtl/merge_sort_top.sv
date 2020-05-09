@@ -66,7 +66,7 @@ module merge_sort_top(
     
     //STAGE 4-element array
     for(m_num=0; m_num<(ELEMENT_NUM>>2); m_num++) begin: stage4
-    sort_arrays #(2,2) stage4 (.clk(clk), .rst(rst), .start(!empt_fifo2[m_num<<1] && !empt_fifo2[(m_num<<1)+1]),
+    sort_arrays #(2,2) stage4 (.clk(clk), .rst(rst), .empty_FIFO_L(empt_fifo2[m_num<<1]), .empty_FIFO_R(empt_fifo2[(m_num<<1)+1]),
                                 .array_L(fifo_arr2[m_num<<1]), .array_R(fifo_arr2[(m_num<<1)+1]), 
                                 .merged_array(arr4[m_num]), .rd_fifo(rd_fifo2[(m_num<<1)+:2]),.wr_fifo(wr_fifo4[m_num]));
     
@@ -76,7 +76,7 @@ module merge_sort_top(
     
     //STAGE 8-element array
     for(m_num=0; m_num<(ELEMENT_NUM>>3); m_num++) begin: stage8
-        sort_arrays #(4,3) stage8 (.clk(clk), .rst(rst), .start(!empt_fifo4[m_num<<1] && !empt_fifo4[(m_num<<1)+1]),
+        sort_arrays #(4,3) stage8 (.clk(clk), .rst(rst), .empty_FIFO_L(empt_fifo4[m_num<<1]), .empty_FIFO_R(empt_fifo4[(m_num<<1)+1]),
                                     .array_L(fifo_arr4[m_num<<1]), .array_R(fifo_arr4[(m_num<<1)+1]), 
                                     .merged_array(arr8[m_num]), .rd_fifo(rd_fifo4[(m_num<<1)+:2]),.wr_fifo(wr_fifo8[m_num]));
         
