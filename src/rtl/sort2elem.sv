@@ -20,13 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module sort2elem(
+module sort2elem
+    #(parameter COLUMN = 3)
+    (
     input wire clk,
     input wire rst,
     input wire en,
-    input wire [7:0] byte_elem1,
-    input wire [7:0] byte_elem2,
-    output reg [7:0] sorted_array,
+    input wire [COLUMN-1:0][7:0] byte_elem1,
+    input wire [COLUMN-1:0][7:0] byte_elem2,
+    input wire [1:0] sort_num,
+    output reg [COLUMN-1:0][7:0] sorted_array,
     output reg rd_fifo [1:0],
     output reg wr_fifo
     );
@@ -35,14 +38,14 @@ module sort2elem(
                 COPY_VAL_1 = 2'h1,
                 COPY_VAL_2 = 2'h2;
     
-    reg [7:0] sorted_array_nxt;
+    reg [COLUMN-1:0][7:0] sorted_array_nxt;
     reg rd_fifo_nxt [1:0];
     reg wr_fifo_nxt;
-    reg [1:0] state, state_nxt;
+    reg [1:0][1:0] state, state_nxt;
    
     always @(posedge clk) begin
     if(rst) begin
-        sorted_array <= '{8'h0};
+        sorted_array <= {2{8'h0}};
         wr_fifo <= 0;
         rd_fifo <= {1'b0, 1'b0};
         state <= IDLE;
@@ -57,7 +60,7 @@ module sort2elem(
         
     always @* begin
         case(state)
-            IDLE: state_nxt = en ? ((byte_elem1 <= byte_elem2) ? COPY_VAL_1 : COPY_VAL_2) : IDLE;
+            IDLE: state_nxt = en ? ((byte_elem1[sort_num] <= byte_elem2[sort_num]) ? COPY_VAL_1 : COPY_VAL_2) : IDLE;
             COPY_VAL_1: state_nxt = wr_fifo ? IDLE : COPY_VAL_2;
             COPY_VAL_2: state_nxt = wr_fifo ? IDLE : COPY_VAL_1;
             default: state_nxt = IDLE;

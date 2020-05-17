@@ -93,43 +93,43 @@ module merge_sort_tb(
             $write("%s", data_out[i]);
         $write("\n\n");
         
-        data_in = "abcdef";
-        rst = 1;
-        start = 0;
-        $write("input string:");
-        foreach(data_in[i])
-            $write("%s", data_in[i]);
-        $write("\n");
-        #10;
-        rst = 0;
-        #10;
-        start = 1;
-        #10;
-        start = 0;
-        #200;
-        $write("output string:");
-        foreach(data_out[i])
-            $write("%s", data_out[i]);
-        $write("\n\n");
+//        data_in = "abcdef";
+//        rst = 1;
+//        start = 0;
+//        $write("input string:");
+//        foreach(data_in[i])
+//            $write("%s", data_in[i]);
+//        $write("\n");
+//        #10;
+//        rst = 0;
+//        #10;
+//        start = 1;
+//        #10;
+//        start = 0;
+//        #200;
+//        $write("output string:");
+//        foreach(data_out[i])
+//            $write("%s", data_out[i]);
+//        $write("\n\n");
         
-        data_in = "hgfedcb";
-        rst = 1;
-        start = 0;
-        $write("input string:");
-        foreach(data_in[i])
-            $write("%s", data_in[i]);
-        $write("\n");
-        #10;
-        rst = 0;
-        #10;
-        start = 1;
-        #10;
-        start = 0;
-        #200;
-        $write("output string:");
-        foreach(data_out[i])
-            $write("%s", data_out[i]);
-        $write("\n\n");
+//        data_in = "hgfedcb";
+//        rst = 1;
+//        start = 0;
+//        $write("input string:");
+//        foreach(data_in[i])
+//            $write("%s", data_in[i]);
+//        $write("\n");
+//        #10;
+//        rst = 0;
+//        #10;
+//        start = 1;
+//        #10;
+//        start = 0;
+//        #200;
+//        $write("output string:");
+//        foreach(data_out[i])
+//            $write("%s", data_out[i]);
+//        $write("\n\n");
         
         $display("***** FINISH TEST *****\n");
         $finish;

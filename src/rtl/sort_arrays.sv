@@ -21,17 +21,20 @@
 
 
 module sort_arrays
-    #(parameter INPUT_ARR_LEN=2,
-      parameter VAR_LEN=2)
+    #(parameter INPUT_ARR_LEN = 2,
+      VAR_LEN = 2,
+      COLUMN = 3)
     (
     input wire clk,
     input wire rst,
     input wire empty_FIFO_L,
     input wire empty_FIFO_R,
-    input wire [7:0] array_L,
-    input wire [7:0] array_R,
-    output reg [7:0] merged_array,
-    output reg [1:0] rd_fifo ,
+    input wire [COLUMN-1:0][7:0] array_L,
+    input wire [COLUMN-1:0][7:0] array_R,
+    input wire [1:0] sort_num,
+    output reg [COLUMN-1:0][7:0] merged_array,
+    output reg rd_fifo_L,
+    output reg rd_fifo_R,
     output reg wr_fifo
     );
     
@@ -57,36 +60,42 @@ module sort_arrays
         i_nxt = i;
         j_nxt = j;
         if(!empty_FIFO_L && !empty_FIFO_R) begin
-            if (array_L <= array_R) begin
-                rd_fifo = {1'b0, 1'b1};
+            if (array_L[sort_num] <= array_R[sort_num]) begin
+                rd_fifo_L = 1'b1;
+                rd_fifo_R = 1'b0;
                 merged_array = array_L;
                 wr_fifo = 1'b1;
                 i_nxt = i + 1;
                 end
             else begin
-                rd_fifo = {1'b1, 1'b0};
+                rd_fifo_L = 1'b0;
+                rd_fifo_R = 1'b1;
                 merged_array = array_R;
                 wr_fifo = 1'b1;
                 j_nxt = j + 1;
                 end
             end
             else if(!empty_FIFO_L) begin
-                rd_fifo = {1'b0, 1'b1};
+                rd_fifo_L = 1'b1;
+                rd_fifo_R = 1'b0;
                 merged_array = array_L;
                 wr_fifo = 1'b1;
                 i_nxt = i + 1;
             end
             else if(!empty_FIFO_R) begin
-                rd_fifo = {1'b1, 1'b0};
+                rd_fifo_L = 1'b0;
+                rd_fifo_R = 1'b1;
                 merged_array = array_R;
                 wr_fifo = 1'b1;
                 j_nxt = j + 1;
             end
             else begin
-                rd_fifo = {1'b0, 1'b0};
+                rd_fifo_L = 1'b0;
+                rd_fifo_R = 1'b0;
                 i_nxt = 0;
                 j_nxt = 0;
                 wr_fifo = 1'b0;
+                merged_array = 8'h0;
             end                 
     end 
 endmodule

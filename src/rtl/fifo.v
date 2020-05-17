@@ -22,18 +22,19 @@
 module fifo
 	#(
 		parameter B=8, // number of bits in a word
-		W=2  // number of address bits
+		W=2,  // number of address bits
+		COLUMN = 3
 	)
 	(
 		input wire clk, reset,
 		input wire rd, wr,
-		input wire [B-1:0] w_data,
+		input wire [2:0][B-1:0] w_data,
 		output wire empty, full,
-		output wire [B-1:0] r_data
+		output wire [2:0][B-1:0] r_data
 	);
 
 	//signal declaration
-	reg [B-1:0] array_reg [2**W-1:0];  // register array
+	reg [COLUMN-1:0][B-1:0] array_reg [2**W-1:0];  // register array
 	reg [W-1:0] w_ptr_reg, w_ptr_next, w_ptr_succ;
 	reg [W-1:0] r_ptr_reg, r_ptr_next, r_ptr_succ;
 	reg full_reg, empty_reg, full_next, empty_next;
