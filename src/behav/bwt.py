@@ -32,6 +32,7 @@ def build_keys(buckets, offset):
     return keys
 
 # Merge Sort algorithm
+
 def mergeSort(array, column): 
     if len(array[:,column]) >1: 
         mid = len(array)//2         # Find the mid of the array 
@@ -64,7 +65,8 @@ def mergeSort(array, column):
             k+=1
             
 # Manber-Myers algorithm 
-# Creates the suffix array from the string
+# Creates the suffix array for the string
+
 def build_sa(string):
     phase = 0   #Phase of sorting
     k = 1       #Suffixes are sorted by k first characters, k = 2**phase
@@ -93,10 +95,9 @@ def build_sa(string):
         #print('Keys: ', keys)
         phase += 1
         k = 2**phase
-        
     return suffixes
 
-#compute the BWT of the string
+# Compute the BWT of the string
 
 def bwt(string):
     string = string + '$'
@@ -105,7 +106,7 @@ def bwt(string):
     
     for i in range(len(string)):            #Build an encoded integers string
         Encoded_string[i] = ord(string[i])  #ASCII number
-    print('Encoded string: ',Encoded_string)
+    print('Encoded string: ', Encoded_string)
     
     suffix_array = build_sa(Encoded_string) #Build suffix array
     print('\nFinal SA: ', suffix_array)
@@ -120,13 +121,14 @@ def bwt(string):
 
 ##########################################################
 
-#Take input string for the BWT
+# Take input string for the BWT
 Input = input('Enter string for the BWT: ')
 assert "$" not in Input     #string terminator
 
 print('\n\n___________Start of the BWT____________\n')
 bwt = bwt(Input)
-#Print the result of the BWT as string 
-print('\n\n______________BWT result_______________')
-print('\nBWT:',bwt)
+
+# Print the result of the BWT
+print('\n\n______________BWT result_______________\n')
+print('BWT:',bwt)
 print('end')
