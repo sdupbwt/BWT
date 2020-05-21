@@ -28,8 +28,8 @@ module merge_sort_top
     input wire rst,
     input wire start,
     input wire [1:0] sort_num,
-    input wire [COLUMN-1:0][7:0] data_in [0:STRING_LEN-1],
-    output reg [COLUMN-1:0][7:0] data_out [0:STRING_LEN-1],
+    input wire [7:0] data_in [0:STRING_LEN-1][COLUMN-1:0],
+    output reg [7:0] data_out[0:STRING_LEN-1][COLUMN-1:0],
     output wire sorted
     );
     
@@ -38,21 +38,21 @@ module merge_sort_top
 
     // Variables for STAGE 2-element array
     wire rd_fifo2 [STRING_LEN>>1];
-    wire [COLUMN-1:0][ELEMENT_LEN-1:0] arr2 [STRING_LEN>>1];
-    wire [COLUMN-1:0][7:0] fifo_arr2 [STRING_LEN>>1];
+    wire [ELEMENT_LEN-1:0] arr2 [STRING_LEN>>1][COLUMN-1:0];
+    wire [7:0] fifo_arr2        [STRING_LEN>>1][COLUMN-1:0];
     wire wr_fifo2 [STRING_LEN>>1];
     wire empt_fifo2 [STRING_LEN>>1];
     
     // Variables for STAGE 4-element array 
-    wire [COLUMN-1:0][ELEMENT_LEN-1:0] arr4 [STRING_LEN>>2];
-    wire [COLUMN-1:0][7:0] fifo_arr4 [STRING_LEN>>2];
+    wire [ELEMENT_LEN-1:0] arr4 [STRING_LEN>>2][COLUMN-1:0];
+    wire [7:0] fifo_arr4        [STRING_LEN>>2][COLUMN-1:0];
     wire rd_fifo4 [STRING_LEN>>2];
     wire empt_fifo4 [STRING_LEN>>2];
     wire wr_fifo4 [STRING_LEN>>2];
     
     // Variables for STAGE 8-element array 
-    wire [COLUMN-1:0][ELEMENT_LEN-1:0] arr8 [STRING_LEN>>3];
-    wire [COLUMN-1:0][7:0] fifo_arr8 [STRING_LEN>>3];
+    wire [ELEMENT_LEN-1:0] arr8 [STRING_LEN>>3][COLUMN-1:0];
+    wire [7:0] fifo_arr8        [STRING_LEN>>3][COLUMN-1:0];
     wire empt_fifo8 [STRING_LEN>>3];
     wire wr_fifo8 [STRING_LEN>>3];
     reg rd_fifo8 [STRING_LEN>>3];
@@ -65,8 +65,8 @@ module merge_sort_top
         stage2 [0:(STRING_LEN>>1)-1](.clk(clk), 
                                      .rst(rst), 
                                      .en(start), 
-                                     .byte_elem1(data_in[0:(STRING_LEN>>1)-1]), 
-                                     .byte_elem2(data_in[(STRING_LEN>>1)+:(STRING_LEN>>1)]), 
+                                     .byte_elem1({data_in[8'h0],data_in[8'h2],data_in[8'h4],data_in[8'h6]}), 
+                                     .byte_elem2({data_in[8'h1],data_in[8'h3],data_in[8'h5],data_in[8'h7]}), 
                                      .sorted_array(arr2[0:(STRING_LEN>>1)-1]), 
                                      .rd_fifo(), 
                                      .wr_fifo(wr_fifo2[0:(STRING_LEN>>1)-1]), 
@@ -87,13 +87,13 @@ module merge_sort_top
     sort_arrays #(2,2,COLUMN) 
         stage4 [0:(STRING_LEN>>2)-1](.clk(clk), 
                                      .rst(rst), 
-                                     .empty_FIFO_L(empt_fifo2[0:(STRING_LEN>>2)-1]), 
-                                     .empty_FIFO_R(empt_fifo2[(STRING_LEN>>2)+:(STRING_LEN>>2)]),
-                                     .array_L(fifo_arr2[0:(STRING_LEN>>2)-1]), 
-                                     .array_R(fifo_arr2[(STRING_LEN>>2)+:(STRING_LEN>>2)]), 
+                                     .empty_FIFO_L({empt_fifo2[0],empt_fifo2[2]}), 
+                                     .empty_FIFO_R({empt_fifo2[1],empt_fifo2[3]}),
+                                     .array_L({fifo_arr2[0],fifo_arr2[2]}), 
+                                     .array_R({fifo_arr2[1],fifo_arr2[3]}), 
                                      .merged_array(arr4[0:(STRING_LEN>>2)-1]), 
-                                     .rd_fifo_L(rd_fifo2[0:1]), 
-                                     .rd_fifo_R(rd_fifo2[2:3]), 
+                                     .rd_fifo_L({rd_fifo2[0],rd_fifo2[2]}), 
+                                     .rd_fifo_R({rd_fifo2[1],rd_fifo2[3]}), 
                                      .wr_fifo(wr_fifo4[0:(STRING_LEN>>2)-1]), 
                                      .sort_num(sort_num));
     

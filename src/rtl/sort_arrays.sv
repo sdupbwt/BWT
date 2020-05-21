@@ -29,10 +29,10 @@ module sort_arrays
     input wire rst,
     input wire empty_FIFO_L,
     input wire empty_FIFO_R,
-    input wire [COLUMN-1:0][7:0] array_L,
-    input wire [COLUMN-1:0][7:0] array_R,
+    input wire [7:0] array_L[COLUMN-1:0],
+    input wire [7:0] array_R[COLUMN-1:0],
     input wire [1:0] sort_num,
-    output reg [COLUMN-1:0][7:0] merged_array,
+    output reg [7:0] merged_array[COLUMN-1:0],
     output reg rd_fifo_L,
     output reg rd_fifo_R,
     output reg wr_fifo
@@ -95,7 +95,7 @@ module sort_arrays
                 i_nxt = 0;
                 j_nxt = 0;
                 wr_fifo = 1'b0;
-                merged_array = 8'h0;
+                merged_array = '{3{8'h0}};
             end                 
     end 
 endmodule

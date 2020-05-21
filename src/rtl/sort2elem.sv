@@ -26,10 +26,10 @@ module sort2elem
     input wire clk,
     input wire rst,
     input wire en,
-    input wire [COLUMN-1:0][7:0] byte_elem1,
-    input wire [COLUMN-1:0][7:0] byte_elem2,
+    input wire [7:0] byte_elem1[COLUMN-1:0],
+    input wire [7:0] byte_elem2[COLUMN-1:0],
     input wire [1:0] sort_num,
-    output reg [COLUMN-1:0][7:0] sorted_array,
+    output reg [7:0] sorted_array[COLUMN-1:0],
     output reg rd_fifo [1:0],
     output reg wr_fifo
     );
@@ -38,14 +38,14 @@ module sort2elem
                 COPY_VAL_1 = 2'h1,
                 COPY_VAL_2 = 2'h2;
     
-    reg [COLUMN-1:0][7:0] sorted_array_nxt;
+    reg [7:0] sorted_array_nxt[COLUMN-1:0];
     reg rd_fifo_nxt [1:0];
     reg wr_fifo_nxt;
-    reg [1:0][1:0] state, state_nxt;
+    reg [1:0] state, state_nxt;
    
     always @(posedge clk) begin
     if(rst) begin
-        sorted_array <= {2{8'h0}};
+        sorted_array <= '{COLUMN{8'h0}};
         wr_fifo <= 0;
         rd_fifo <= {1'b0, 1'b0};
         state <= IDLE;
@@ -73,7 +73,7 @@ module sort2elem
             IDLE: begin
                 rd_fifo_nxt = {1'b1, 1'b1};
                 wr_fifo_nxt = 1'b0;
-                sorted_array_nxt = 0;
+                sorted_array_nxt = '{COLUMN{8'h0}};
             end
             COPY_VAL_1: begin
                 sorted_array_nxt = byte_elem1;
@@ -88,7 +88,7 @@ module sort2elem
             default: begin
                 rd_fifo_nxt = {1'b0, 1'b0};
                 wr_fifo_nxt = 1'b0;
-                sorted_array_nxt = 0;
+                sorted_array_nxt = '{COLUMN{8'h0}};
             end
         endcase
     end

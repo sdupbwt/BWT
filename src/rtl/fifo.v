@@ -28,13 +28,13 @@ module fifo
 	(
 		input wire clk, reset,
 		input wire rd, wr,
-		input wire [2:0][B-1:0] w_data,
+		input wire [B-1:0] w_data[COLUMN-1:0],
 		output wire empty, full,
-		output wire [2:0][B-1:0] r_data
+		output wire [B-1:0] r_data[COLUMN-1:0]
 	);
 
 	//signal declaration
-	reg [COLUMN-1:0][B-1:0] array_reg [2**W-1:0];  // register array
+	reg [B-1:0] array_reg [2**W-1:0][COLUMN-1:0];  // register array
 	reg [W-1:0] w_ptr_reg, w_ptr_next, w_ptr_succ;
 	reg [W-1:0] r_ptr_reg, r_ptr_next, r_ptr_succ;
 	reg full_reg, empty_reg, full_next, empty_next;
