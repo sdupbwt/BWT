@@ -110,7 +110,7 @@ module MM_top
         case(state)
             IDLE: state_nxt             = start_sort ? SORT_2_ST : IDLE;
             SORT_1_ST: state_nxt        = SORT_1;
-            SORT_1: state_nxt           = sort_done_1 ? ((phase != 5'h0) ? SORT_2_ST : BUILD_BUCKETS) : SORT_1;
+            SORT_1: state_nxt           = sort_done_1 ? SORT_2_ST : SORT_1;
             SORT_2_ST: state_nxt        = SORT_2;
             SORT_2: state_nxt           = sort_done_2 ? BUILD_BUCKETS : SORT_2; //BUILD_BUCKETS : SORT_2
             BUILD_BUCKETS: state_nxt    = buckets_done ? (max_bucket == STRING_LEN ? DONE : BUILD_KEYS) : BUILD_BUCKETS;

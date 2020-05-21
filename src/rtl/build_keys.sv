@@ -74,7 +74,7 @@ module build_keys
                 if(counter+offset < STRING_LEN)
                     data_out_nxt[counter] = {counter,buckets[counter],buckets[counter+offset]};
                 else
-                    data_out_nxt[counter] = {counter,buckets[counter],{8{8'h0}}};
+                    data_out_nxt[counter] = '{counter,buckets[counter],{8{8'h0}}};
                 counter_nxt = counter + 1;
             end
         endcase

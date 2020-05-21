@@ -66,6 +66,7 @@ module build_buckets
             IDLE: state_nxt = start ? BUILD_BUCKETS : IDLE;
             BUILD_BUCKETS: state_nxt = (counter < STRING_LEN) ? BUILD_BUCKETS : SEND_OUTPUTS;
             SEND_OUTPUTS: state_nxt = IDLE;
+            default: state_nxt = IDLE;
         endcase
     end           
     
