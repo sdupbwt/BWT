@@ -52,7 +52,6 @@ module MM_top
 //    reg [7:0] keys_nxt  [STRING_LEN-1:0][1:0];
     
     reg sort_done_1, sort_done_1_nxt, sort_done_2, sort_done_2_nxt, buckets_done, keys_done;
-    wire [7:0] max_bucket_out;
     reg [7:0] max_bucket;
     reg sort_start_1, sort_start_1_nxt, sort_start_2, sort_start_2_nxt;
     reg [7:0] sort_data_in_1[0:STRING_LEN-1] [3-1:0], sort_data_in_1_nxt[0:STRING_LEN-1] [3-1:0];
@@ -60,16 +59,16 @@ module MM_top
     reg [7:0] sort_data_in_2[0:STRING_LEN-1] [3-1:0], sort_data_in_2_nxt[0:STRING_LEN-1] [3-1:0];
     wire [7:0] sort_data_out_2[0:STRING_LEN-1][3-1:0];
     
-    reg [7:0] buckets_data_in[0:STRING_LEN-1] [3-1:0], buckets_data_in_nxt[0:STRING_LEN-1] [3-1:0];
-    reg  buckets_start, buckets_start_nxt;
     reg [7:0] buckets [0:STRING_LEN-1];
-    reg [7:0] buckets_out [0:STRING_LEN-1];
-    
-    reg keys_start, keys_start_nxt;
-    reg [7:0] keys_data_out[0:STRING_LEN-1] [3-1:0];
+    reg [7:0] buckets_nxt [0:STRING_LEN-1];
+
+    reg [7:0] keys_data_nxt[0:STRING_LEN-1] [3-1:0];
     reg [7:0] keys_data[0:STRING_LEN-1] [3-1:0];
     reg [7:0] suffixes_out_nxt[0:STRING_LEN-1];
     reg buckets_done_nxt, keys_done_nxt;
+    reg [7:0] counter, counter_nxt;
+    reg [7:0] counter_k, counter_k_nxt;
+    reg [7:0] current_bucket, current_bucket_nxt;
 
     
     always@(posedge clk) begin
@@ -80,14 +79,17 @@ module MM_top
             sort_done_1 <= 0;
             sort_data_in_2 <= '{8{'{3{8'h0}}}};
             sort_done_2 <= 0;
-            buckets_start <= 0;
             suffixes_out <= '{8{8'h0}};
             sort_start_1 <= 0;
             sort_start_2 <= 0;
             
-            keys_start <= 0;
             buckets_done <= 0;
             keys_done <= 0;
+            keys_data <= '{8{'{3{8'h0}}}};
+            counter_k <= 0;
+            counter <= 0;
+            current_bucket <= 0;
+            buckets <= '{8{8'h0}};
         end
         else begin
             state <= state_nxt;
@@ -96,13 +98,16 @@ module MM_top
             sort_done_1 <= sort_done_1_nxt;
             sort_data_in_2 <= sort_data_in_2_nxt;
             sort_done_2 <= sort_done_2_nxt;
-            buckets_start <= buckets_start_nxt;
             suffixes_out <= suffixes_out_nxt;
             sort_start_1 <= sort_start_1_nxt;
             sort_start_2 <= sort_start_2_nxt;
-            keys_start <= keys_start_nxt;
             buckets_done <= buckets_done_nxt;
             keys_done <= keys_done_nxt;
+            keys_data <= keys_data_nxt;
+            counter <= counter_nxt;
+            counter_k <= counter_k_nxt;
+            current_bucket <= current_bucket_nxt;
+            buckets <= buckets_nxt;
         end
     end
     
@@ -112,9 +117,9 @@ module MM_top
             SORT_1_ST: state_nxt        = SORT_1;
             SORT_1: state_nxt           = sort_done_1 ? SORT_2_ST : SORT_1;
             SORT_2_ST: state_nxt        = SORT_2;
-            SORT_2: state_nxt           = sort_done_2 ? BUILD_BUCKETS : SORT_2; //BUILD_BUCKETS : SORT_2
-            BUILD_BUCKETS: state_nxt    = buckets_done ? (max_bucket == STRING_LEN ? DONE : BUILD_KEYS) : BUILD_BUCKETS;
-            BUILD_KEYS: state_nxt       = keys_done ? INC_PHASE : BUILD_KEYS;
+            SORT_2: state_nxt           = sort_done_2 ? BUILD_BUCKETS : SORT_2;
+            BUILD_BUCKETS: state_nxt    = (counter >= STRING_LEN) ? (max_bucket == STRING_LEN ? DONE : BUILD_KEYS) : BUILD_BUCKETS;
+            BUILD_KEYS: state_nxt       = (counter_k >= STRING_LEN) ? INC_PHASE : BUILD_KEYS;
             INC_PHASE: state_nxt        = SORT_1_ST;
             DONE:state_nxt              = IDLE;
             default: state_nxt          = IDLE;
@@ -124,13 +129,11 @@ module MM_top
     always@(posedge clk) begin
         sort_start_1_nxt = 1'b0;
         sort_start_2_nxt = 1'b0;
-        buckets_start_nxt = 1'b0;
-        keys_start_nxt = 1'b0;
 //        phase_nxt = phase;
         case(state)
             IDLE: begin
 //                suffixes_nxt = input_suffixes;
-                sort_data_in_2_nxt[0] = {suffixes[0],input_string[0],8'h0};
+                sort_data_in_2_nxt[0] = {suffixes[0],input_string[0],8'h0}; //suffixes moze nie byc
                 sort_data_in_2_nxt[1] = {suffixes[1],input_string[1],8'h0};
                 sort_data_in_2_nxt[2] = {suffixes[2],input_string[2],8'h0};
                 sort_data_in_2_nxt[3] = {suffixes[3],input_string[3],8'h0};
@@ -140,10 +143,16 @@ module MM_top
                 sort_data_in_2_nxt[7] = {suffixes[7],input_string[7],8'h0};
                 phase_nxt = 0;
                 max_bucket = 0;
+                counter_nxt = 8'h0;
+                counter_k_nxt = 8'h0;
+                current_bucket_nxt = 8'h1;
+                buckets_nxt = '{8{8'h0}};
+                keys_data_nxt = '{8{'{3{8'h0}}}};
+//                suffixes_out_nxt = '{8{8'h0}};
             end
             SORT_1_ST: begin
                 sort_start_1_nxt = 1;
-                sort_data_in_1_nxt = keys_data_out;
+                sort_data_in_1_nxt = keys_data;
             end
             SORT_1: begin
                 sort_start_1_nxt = 0;
@@ -158,17 +167,29 @@ module MM_top
                 sort_start_2_nxt = 0;
             end
             BUILD_BUCKETS: begin
-                buckets_data_in_nxt = sort_data_out_2;
-                buckets_start_nxt = 1'b1;
-                buckets_out = buckets;
-                max_bucket = max_bucket_out;
+                if(sort_data_out_2[counter][0] != sort_data_out_2[counter+1][0] ||
+                    sort_data_out_2[counter][1] != sort_data_out_2[counter+1][1]) 
+                    current_bucket_nxt = current_bucket + 8'h1;
+                    
+                buckets_nxt[sort_data_out_2[counter][2]] = current_bucket;
+                counter_nxt = counter + 1;
+                max_bucket = current_bucket_nxt;
+                keys_data_nxt = '{8{'{3{8'h0}}}}; 
             end 
             BUILD_KEYS: begin
-                keys_start_nxt = 1'b1;  
-                keys_data_out = keys_data;
+                if(counter_k+k < STRING_LEN)
+                    keys_data_nxt[counter_k] = {counter_k,buckets[counter_k],buckets[counter_k+k]};
+                else
+                    keys_data_nxt[counter_k] = '{counter_k,buckets[counter_k],{8{8'h0}}};
+                counter_k_nxt = counter_k + 1;                
             end
             INC_PHASE: begin
                 phase_nxt = phase + 1;
+                counter_k_nxt = 8'h0;     
+                buckets_nxt = '{8{8'h0}}; 
+                current_bucket_nxt = 8'h1;  
+                max_bucket = 0;                  
+                counter_nxt = 8'h0;   
             end
             DONE: begin
                 suffixes_out_nxt[0] = sort_data_out_2[0][2];
@@ -202,24 +223,4 @@ module MM_top
     .data_out(sort_data_out_2), 
     .sort_num(2'h1), 
     .sorted(sort_done_2_nxt));
-    
-    build_buckets #(STRING_LEN) build_buckets_mm(
-    .clk(clk),
-    .rst(rst),
-    .start(buckets_start),
-    .data_in(buckets_data_in_nxt),
-    .buckets(buckets),
-    .max_bucket(max_bucket_out),
-    .done(buckets_done_nxt)
-    );
-
-    build_keys #(STRING_LEN) build_keys_mm(
-    .clk(clk),
-    .rst(rst),
-    .start(keys_start),
-    .buckets(buckets_out),
-    .offset(k),
-    .data_out(keys_data),
-    .done(keys_done_nxt)
-    );
 endmodule
