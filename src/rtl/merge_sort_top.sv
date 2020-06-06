@@ -27,7 +27,7 @@ module merge_sort_top
     input wire clk,
     input wire rst,
     input wire start,
-    input wire [1:0] sort_num,
+    input wire sort_num,
     input wire [7:0] data_in [0:STRING_LEN-1][COLUMN-1:0],
     output reg [7:0] data_out[0:STRING_LEN-1][COLUMN-1:0],
     output wire sorted

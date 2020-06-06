@@ -28,7 +28,7 @@ module sort2elem
     input wire en,
     input wire [7:0] byte_elem1[COLUMN-1:0],
     input wire [7:0] byte_elem2[COLUMN-1:0],
-    input wire [1:0] sort_num,
+    input wire sort_num,
     output reg [7:0] sorted_array[COLUMN-1:0],
     output reg rd_fifo [1:0],
     output reg wr_fifo

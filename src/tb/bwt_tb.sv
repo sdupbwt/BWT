@@ -33,16 +33,16 @@ module bwt_tb();
     reg [2:0] sort_num;
     reg [3:0] iter;
     reg [7:0] suffixes_out [7:0];
-    
+    reg [7:0] output_string [7:0];
     
     MM_top #(8,4) build_sa
     (
     .clk(clk),
     .rst(rst),
     .input_string(input_string),
-    .suffixes(input_suffixes),
     .start_sort(start),
-    .suffixes_out(suffixes_out)
+    .suffixes_out(suffixes_out),
+    .output_string(output_string)
     );
 
     always begin
@@ -72,6 +72,8 @@ module bwt_tb();
         #3500;
         
         $display(suffixes_out);
+        foreach(output_string[i])
+            $write("%s",output_string[i]);
         $finish;
     end 
     

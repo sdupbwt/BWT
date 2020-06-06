@@ -31,7 +31,7 @@ module sort_arrays
     input wire empty_FIFO_R,
     input wire [7:0] array_L[COLUMN-1:0],
     input wire [7:0] array_R[COLUMN-1:0],
-    input wire [1:0] sort_num,
+    input wire sort_num,
     output reg [7:0] merged_array[COLUMN-1:0],
     output reg rd_fifo_L,
     output reg rd_fifo_R,
