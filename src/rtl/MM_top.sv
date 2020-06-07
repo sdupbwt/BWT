@@ -21,7 +21,7 @@
 
 
 module MM_top
-    #(parameter STRING_LEN=8,
+    #(parameter STRING_LEN=32,
       parameter VAR_LEN=4)
     (
     input wire clk,
@@ -71,17 +71,17 @@ module MM_top
         if(rst) begin
             state <= IDLE;
             phase <= 0; 
-            sort_data_in <= '{8{'{3{8'h0}}}};
+            sort_data_in <= '{STRING_LEN{'{3{8'h0}}}};
             sort_done <= 0;
-            suffixes_out <= '{8{8'h0}};
+            suffixes_out <= '{STRING_LEN{8'h0}};
             sort_start <= 0;
-            keys_data <= '{8{'{3{8'h0}}}};
+            keys_data <= '{STRING_LEN{'{3{8'h0}}}};
             counter_k <= 0;
             counter_b <= 0;
             current_bucket <= 0;
-            buckets <= '{8{8'h0}};
+            buckets <= '{STRING_LEN{8'h0}};
             sort_num <= 0;
-            output_string <= '{8{8'h0}};
+            output_string <= '{STRING_LEN{8'h0}};
             done <= 0;
         end
         else begin
@@ -130,8 +130,8 @@ module MM_top
                 counter_b_nxt = 8'h0;
                 counter_k_nxt = 8'h0;
                 current_bucket_nxt = 8'h1;
-                buckets_nxt = '{8{8'h0}};
-                keys_data_nxt = '{8{'{3{8'h0}}}};
+                buckets_nxt = '{STRING_LEN{8'h0}};
+                keys_data_nxt = '{STRING_LEN{'{3{8'h0}}}};
                 sort_num_nxt = 0;
                 done_nxt = 0;
             end
@@ -160,7 +160,7 @@ module MM_top
                 buckets_nxt[sort_data_out[counter_b][2]] = current_bucket;
                 counter_b_nxt = counter_b + 1;
                 max_bucket = current_bucket_nxt;
-                keys_data_nxt = '{8{'{3{8'h0}}}}; 
+                keys_data_nxt = '{STRING_LEN{'{3{8'h0}}}}; 
             end 
             BUILD_KEYS: begin
                 if(counter_k+k < STRING_LEN)
@@ -172,7 +172,7 @@ module MM_top
             INC_PHASE: begin
                 phase_nxt = phase + 1;
                 counter_k_nxt = 8'h0;     
-                buckets_nxt = '{8{8'h0}}; 
+                buckets_nxt = '{STRING_LEN{8'h0}}; 
                 current_bucket_nxt = 8'h1;  
                 max_bucket = 0;                  
                 counter_b_nxt = 8'h0;   

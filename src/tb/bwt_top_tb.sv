@@ -22,20 +22,20 @@
 
 module bwt_top_tb();
 
-    localparam STRING_LEN = 8;
+    localparam STRING_LEN = 32;
     reg clk, rst, start, start_test, start_nxt;
     
-    reg [7:0] input_string [7:0];
-    reg [7:0] input_string_nxt [7:0];
-    reg [3:0] iter, iter_nxt, iter_d, iter_d_nxt;
+    reg [7:0] input_string [STRING_LEN-1:0];
+    reg [7:0] input_string_nxt [STRING_LEN-1:0];
+    reg [7:0] iter, iter_nxt, iter_d, iter_d_nxt;
 //    reg [7:0] suffixes_out [7:0];
-    reg [7:0] output_string [7:0], output_string_nxt [7:0];
+    reg [7:0] output_string [STRING_LEN-1:0], output_string_nxt [STRING_LEN-1:0];
     
     reg [7:0] input_string_char, input_string_char_nxt;
     reg [7:0] output_string_char;
     reg done;
     
-    bwt_top#(8) bwt_test
+    bwt_top#(32) bwt_test
     (
     .clk(clk),
     .rst(rst),
@@ -54,7 +54,7 @@ module bwt_top_tb();
     if(rst) begin
         iter <= 0;
         input_string_char <= 0;
-        output_string <= '{8{7'h0}};
+        output_string <= '{STRING_LEN{7'h0}};
         start <= 0;
         iter_d <= 0;
     end
@@ -91,9 +91,9 @@ module bwt_top_tb();
     initial begin
         $display("***** START TEST *****\n");
 //        data_in = {{8'h0,8'h1,8'h2},{8'h1,8'h1,8'h3},{8'h2,8'h1,8'h2},{8'h3,8'ha,8'h3},{8'h4,8'h1,8'h2},{8'h5,8'h7,8'h2},{8'h6,8'h1,8'h7},{8'h7,8'h1,8'h2}};
-        input_string_nxt = "mississ$";
+        input_string_nxt = "mississipimississipimississipiq$";
         foreach(input_string_nxt[i]) begin
-            input_string[7-i]=input_string_nxt[i];
+            input_string[STRING_LEN-1-i]=input_string_nxt[i];
         end
         #50;
         rst = 1;
@@ -104,10 +104,10 @@ module bwt_top_tb();
         start_test = 1;
         #20;
         start_test = 0;
-        #5000;
+        #50000;
         
         foreach(output_string[i])
-            $write("%s",output_string[7-i]);
+            $write("%s",output_string[STRING_LEN-1-i]);
             
         $display();
         $finish;
