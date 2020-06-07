@@ -29,7 +29,8 @@ module MM_top
     input wire [7:0] input_string [STRING_LEN-1:0],
     input wire start_sort,
     output reg [7:0] suffixes_out [STRING_LEN-1:0],
-    output reg [7:0] output_string [STRING_LEN-1:0]
+    output reg [7:0] output_string [STRING_LEN-1:0],
+    output reg done
     );
     
     localparam  IDLE = 4'h0,
@@ -64,6 +65,7 @@ module MM_top
     reg [7:0] char_ctr;
     reg sort_num, sort_num_nxt;
     reg [7:0] output_string_nxt [STRING_LEN-1:0];
+    reg done_nxt;
     
     always@(posedge clk) begin
         if(rst) begin
@@ -80,6 +82,7 @@ module MM_top
             buckets <= '{8{8'h0}};
             sort_num <= 0;
             output_string <= '{8{8'h0}};
+            done <= 0;
         end
         else begin
             state <= state_nxt;
@@ -95,6 +98,7 @@ module MM_top
             buckets <= buckets_nxt;
             sort_num <= sort_num_nxt;
             output_string <= output_string_nxt;
+            done <= done_nxt;
         end
     end
     
@@ -129,6 +133,7 @@ module MM_top
                 buckets_nxt = '{8{8'h0}};
                 keys_data_nxt = '{8{'{3{8'h0}}}};
                 sort_num_nxt = 0;
+                done_nxt = 0;
             end
             SORT_1_ST: begin
                 sort_start_nxt = 1;
@@ -180,6 +185,7 @@ module MM_top
                     else
                         output_string_nxt[char_ctr] = input_string[sort_data_out[char_ctr][2]-1];
                 end
+                done_nxt = 1;
             end
         endcase
     end
