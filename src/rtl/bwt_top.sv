@@ -21,7 +21,7 @@
 
 
 module bwt_top
-    #(parameter STRING_LEN=128)
+    #(parameter STRING_LEN=64)
     (
     input wire clk,
     input wire rst,
@@ -88,7 +88,7 @@ module bwt_top
     
     end
    
-    fifo #(8,7,1) fifo_input
+    fifo #(8,6,1) fifo_input
       (
       .clk(clk),                               
       .reset(rst),

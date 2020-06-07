@@ -22,18 +22,19 @@
 
 module bwt_top_tb();
 
-    localparam STRING_LEN = 128;
+    localparam STRING_LEN = 64;
     reg clk, rst, start, start_test, start_nxt;
     
     reg [7:0] input_string [STRING_LEN-1:0];
-    reg [7:0] input_string_nxt [STRING_LEN-1:0];
+    reg [7:0] input_string_b [STRING_LEN-1:0];
     reg [7:0] iter, iter_nxt, iter_d, iter_d_nxt;
 //    reg [7:0] suffixes_out [7:0];
     reg [7:0] output_string [STRING_LEN-1:0], output_string_nxt [STRING_LEN-1:0];
-    
+    reg [7:0] output_bwt [STRING_LEN-1:0], test_bwt [STRING_LEN-1:0];
     reg [7:0] input_string_char, input_string_char_nxt;
     reg [7:0] output_string_char;
     reg done;
+    reg [3:0] test_num;
     
     bwt_top#(STRING_LEN) bwt_test
     (
@@ -88,12 +89,14 @@ module bwt_top_tb();
         end
     end
     
-    initial begin
-        $display("***** START TEST *****\n");
-        input_string_nxt = "mississippiamississippiamississippiamississippiamississippiamississippiamississippiamississippiamississippiamississippiaabcdefg$";
-        foreach(input_string_nxt[i]) begin
-            input_string[STRING_LEN-1-i]=input_string_nxt[i];
+    task test_string (input [7:0] in_string [STRING_LEN-1:0], input [7:0] in_test_bwt [STRING_LEN-1:0], input [3:0] test_n, output [7:0] out_string [STRING_LEN-1:0]);
+        $display("TESTS: %d", test_n);
+        $write("Input string: ");
+        foreach(in_string[i]) begin
+            $write("%s",in_string[i]);
+            input_string[STRING_LEN-1-i]=in_string[i];
         end
+         $display();
         #50;
         rst = 1;
         start_test = 0;
@@ -103,12 +106,57 @@ module bwt_top_tb();
         start_test = 1;
         #20;
         start_test = 0;
-        #200000;
+        #30000;
         
-        foreach(output_string[i])
+         $write("String after BWT: ");
+        foreach(output_string[i]) begin
             $write("%s",output_string[STRING_LEN-1-i]);
+            out_string[STRING_LEN-1-i]=output_string[i];
+        end 
+        $display();
+        if(in_test_bwt == test_bwt)
+            $display("TEST %d PASSED",test_n);
+        else
+            $display("TEST %d FAILED",test_n);  
             
         $display();
+    endtask 
+    
+    initial begin
+        #20;
+        $display("\n\t\t\t\t\t\t\t\t***** START TEST *****");
+        test_num = 1;
+        input_string_b = "sdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdu$";
+        test_bwt = "ussssssssssssssssuuuuuuuuuuuuuuuppppppppppppppp$dddddddddddddddd";
+        test_string(input_string_b,test_bwt,test_num,output_bwt);
+
+        test_num++;
+        input_string_b = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin$";
+        test_bwt = " .rt,mgmrntt$   s ea s rmtnocd psleoueaiiordclLiiuooPin pieicest";
+        test_string(input_string_b,test_bwt,test_num,output_bwt);
+            
+        test_num++;
+        input_string_b = "mississippimississippimississippimississippimississippimississi$";
+        test_bwt = "ispppppsssssssssssmmmmmmiiiii$pppppiiiiissssssssssssiiiiiiiiiiii";
+        test_string(input_string_b,test_bwt,test_num,output_bwt);
+            
+        test_num++;
+        input_string_b = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
+        test_bwt = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
+        test_string(input_string_b,test_bwt,test_num,output_bwt);
+        
+        test_num++;
+        input_string_b = "bananabananabananabananabananabananabananabananabananabananaban$";
+        test_bwt = "nnnnnnnnnnnbnnnnnnnnnnbbbbbbbbbbaaaaaaaaaa$aaaaaaaaaaaaaaaaaaaaa$";
+        test_string(input_string_b,test_bwt,test_num,output_bwt);
+        
+        test_num++;
+        input_string_b = "W Szczebrzeszynie chrzaszcz brzmi w trzcinie I Szczebrzeszyn z $";
+        test_bwt = "zeIWzewin    $zee  zzzziizzzzcmnnczyiyhtbbbaee  zz crrsSSccrrrss$";
+        test_string(input_string_b,test_bwt,test_num,output_bwt);
+            
+            
+        $display("\n\t\t\t\t\t\t\t\t***** TEST FINISHED *****\n");
         $finish;
     end 
     
