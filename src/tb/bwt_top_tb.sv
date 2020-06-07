@@ -22,7 +22,7 @@
 
 module bwt_top_tb();
 
-    localparam STRING_LEN = 32;
+    localparam STRING_LEN = 128;
     reg clk, rst, start, start_test, start_nxt;
     
     reg [7:0] input_string [STRING_LEN-1:0];
@@ -35,7 +35,7 @@ module bwt_top_tb();
     reg [7:0] output_string_char;
     reg done;
     
-    bwt_top#(32) bwt_test
+    bwt_top#(STRING_LEN) bwt_test
     (
     .clk(clk),
     .rst(rst),
@@ -90,8 +90,7 @@ module bwt_top_tb();
     
     initial begin
         $display("***** START TEST *****\n");
-//        data_in = {{8'h0,8'h1,8'h2},{8'h1,8'h1,8'h3},{8'h2,8'h1,8'h2},{8'h3,8'ha,8'h3},{8'h4,8'h1,8'h2},{8'h5,8'h7,8'h2},{8'h6,8'h1,8'h7},{8'h7,8'h1,8'h2}};
-        input_string_nxt = "mississipimississipimississipiq$";
+        input_string_nxt = "mississippiamississippiamississippiamississippiamississippiamississippiamississippiamississippiamississippiamississippiaabcdefg$";
         foreach(input_string_nxt[i]) begin
             input_string[STRING_LEN-1-i]=input_string_nxt[i];
         end
@@ -104,7 +103,7 @@ module bwt_top_tb();
         start_test = 1;
         #20;
         start_test = 0;
-        #50000;
+        #200000;
         
         foreach(output_string[i])
             $write("%s",output_string[STRING_LEN-1-i]);

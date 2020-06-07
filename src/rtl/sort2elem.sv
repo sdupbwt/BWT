@@ -30,7 +30,6 @@ module sort2elem
     input wire [7:0] byte_elem2[COLUMN-1:0],
     input wire sort_num,
     output reg [7:0] sorted_array[COLUMN-1:0],
-    output reg rd_fifo [1:0],
     output reg wr_fifo
     );
     
@@ -47,13 +46,11 @@ module sort2elem
     if(rst) begin
         sorted_array <= '{COLUMN{8'h0}};
         wr_fifo <= 0;
-        rd_fifo <= {1'b0, 1'b0};
         state <= IDLE;
     end 
     else begin
         sorted_array <= sorted_array_nxt;
         wr_fifo <= wr_fifo_nxt;
-        rd_fifo <= rd_fifo_nxt;
         state <= state_nxt;
     end   
     end 

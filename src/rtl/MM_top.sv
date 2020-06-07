@@ -28,7 +28,7 @@ module MM_top
     input wire rst,
     input wire [7:0] input_string [STRING_LEN-1:0],
     input wire start_sort,
-    output reg [7:0] suffixes_out [STRING_LEN-1:0],
+//    output reg [7:0] suffixes_out [STRING_LEN-1:0],
     output reg [7:0] output_string [STRING_LEN-1:0],
     output reg done
     );
@@ -56,7 +56,7 @@ module MM_top
     reg [7:0] buckets_nxt [0:STRING_LEN-1];
     reg [7:0] keys_data_nxt[0:STRING_LEN-1] [3-1:0];
     reg [7:0] keys_data[0:STRING_LEN-1] [3-1:0];
-    reg [7:0] suffixes_out_nxt[0:STRING_LEN-1];
+//    reg [7:0] suffixes_out_nxt[0:STRING_LEN-1];
     
     reg [7:0] counter_b, counter_b_nxt;
     reg [7:0] counter_k, counter_k_nxt;
@@ -73,7 +73,7 @@ module MM_top
             phase <= 0; 
             sort_data_in <= '{STRING_LEN{'{3{8'h0}}}};
             sort_done <= 0;
-            suffixes_out <= '{STRING_LEN{8'h0}};
+//            suffixes_out <= '{STRING_LEN{8'h0}};
             sort_start <= 0;
             keys_data <= '{STRING_LEN{'{3{8'h0}}}};
             counter_k <= 0;
@@ -89,7 +89,7 @@ module MM_top
             phase <= phase_nxt;
             sort_data_in <= sort_data_in_nxt;
             sort_done <= sort_done_nxt;
-            suffixes_out <= suffixes_out_nxt;
+//            suffixes_out <= suffixes_out_nxt;
             sort_start <= sort_start_nxt;
             keys_data <= keys_data_nxt;
             counter_b <= counter_b_nxt;
@@ -179,7 +179,7 @@ module MM_top
             end
             DONE: begin
                 for(char_ctr = 0; char_ctr < STRING_LEN; char_ctr = char_ctr + 1) begin
-                    suffixes_out_nxt[char_ctr] = sort_data_out[char_ctr][2];
+//                    suffixes_out_nxt[char_ctr] = sort_data_out[char_ctr][2];
                     if(sort_data_out[char_ctr][2] == 0)
                         output_string_nxt[char_ctr] = input_string[STRING_LEN-1];
                     else
