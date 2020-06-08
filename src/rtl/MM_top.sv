@@ -28,7 +28,6 @@ module MM_top
     input wire rst,
     input wire [7:0] input_string [STRING_LEN-1:0],
     input wire start_sort,
-//    output reg [7:0] suffixes_out [STRING_LEN-1:0],
     output reg [7:0] output_string [STRING_LEN-1:0],
     output reg done
     );
@@ -122,9 +121,6 @@ module MM_top
 //        phase_nxt = phase;
         case(state)
             IDLE: begin
-                for(char_ctr = 0; char_ctr < STRING_LEN; char_ctr = char_ctr + 1) begin
-                    sort_data_in_nxt[char_ctr] = {char_ctr,input_string[char_ctr],8'h0}; 
-                end
                 phase_nxt = 0;
                 max_bucket = 0;
                 counter_b_nxt = 8'h0;
@@ -148,6 +144,11 @@ module MM_top
                 sort_num_nxt = 1'h1;
                 if(phase != 0) 
                     sort_data_in_nxt = sort_data_out;
+                else begin
+                    for(char_ctr = 0; char_ctr < STRING_LEN; char_ctr = char_ctr + 1) begin
+                        sort_data_in_nxt[char_ctr] = {char_ctr,input_string[char_ctr],8'h0}; 
+                    end
+                end
             end
             SORT_2: begin
                 sort_start_nxt = 0;

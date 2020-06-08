@@ -106,7 +106,6 @@ module bwt_top
     .rst(rst),
     .input_string(input_string),
     .start_sort(start_bwt),
-//    .suffixes_out(suffixes_out),
     .output_string(output_string),
     .done(done_bwt)
     );

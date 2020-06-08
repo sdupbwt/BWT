@@ -273,7 +273,7 @@ module merge_sort_top
                                      .sort_num(sort_num));
     
     fifo #(ELEMENT_LEN,6,COLUMN) 
-        fifo64 [0:(STRING_LEN>>6)-1](.clk(clk), 
+        fifo64 (.clk(clk), 
                                     .reset(rst), 
                                     .rd(rd_fifo64[0]), 
                                     .wr(wr_fifo64[0]), 
