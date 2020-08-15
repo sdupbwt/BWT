@@ -21,7 +21,7 @@
 
 
 module bwt_top
-    #(parameter STRING_LEN=64)
+    #(parameter STRING_LEN=128)
     (
     input wire clk,
     input wire rst,

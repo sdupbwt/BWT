@@ -188,6 +188,17 @@ module MM_top
                 end
                 done_nxt = 1;
             end
+            default: begin
+                phase_nxt = 0;
+                max_bucket = 0;
+                counter_b_nxt = 8'h0;
+                counter_k_nxt = 8'h0;
+                current_bucket_nxt = 8'h1;
+                buckets_nxt = '{STRING_LEN{8'h0}};
+                keys_data_nxt = '{STRING_LEN{'{3{8'h0}}}};
+                sort_num_nxt = 0;
+                done_nxt = 0;
+            end
         endcase
     end
     

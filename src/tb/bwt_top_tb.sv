@@ -22,7 +22,7 @@
 
 module bwt_top_tb();
 
-    localparam STRING_LEN = 64;
+    localparam STRING_LEN = 128;
     reg clk, rst, start, start_test, start_nxt;
     
     reg [7:0] input_string [STRING_LEN-1:0];
@@ -106,7 +106,7 @@ module bwt_top_tb();
         start_test = 1;
         #20;
         start_test = 0;
-        #30000;
+        #300000;
         
          $write("String after BWT: ");
         foreach(output_string[i]) begin
@@ -128,34 +128,34 @@ module bwt_top_tb();
         $display("\t\t\t\t\t\t\t\t***** START TEST *****");
         
         test_num = 1;
-        input_string_b = "sdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdu$";
-        test_bwt = "ussssssssssssssssuuuuuuuuuuuuuuuppppppppppppppp$dddddddddddddddd";
+        input_string_b = "sdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdusdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdup$";
+        test_bwt = "pssssssssssssssssssssssssssssssssuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuupppppppppppppppu$pppppppppppppppdddddddddddddddddddddddddddddddd";
         test_string(input_string_b,test_bwt,test_num,output_bwt);
 
-        test_num++;
-        input_string_b ="Lorem ipsum dolor sit amet, consectetur adipiscing elit Proinii$";
-        test_bwt ="trt,mgmrit$   s ea s rmtnincod plseoueaiiordclLiiuooPin piiecest";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
+//        test_num++;
+//        input_string_b ="Lorem ipsum dolor sit amet, consectetur adipiscing elit Proinii$";
+//        test_bwt ="trt,mgmrit$   s ea s rmtnincod plseoueaiiordclLiiuooPin piiecest";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
             
-        test_num++;
-        input_string_b = "mississippimississippimississippimississippimississippimississi$";
-        test_bwt = "ispppppsssssssssssmmmmmmiiiii$pppppiiiiissssssssssssiiiiiiiiiiii";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
+//        test_num++;
+//        input_string_b = "mississippimississippimississippimississippimississippimississi$";
+//        test_bwt = "ispppppsssssssssssmmmmmmiiiii$pppppiiiiissssssssssssiiiiiiiiiiii";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
             
-        test_num++;
-        input_string_b = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
-        test_bwt = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
+//        test_num++;
+//        input_string_b = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
+//        test_bwt = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
         
-        test_num++;
-        input_string_b = "bananabananabananabananabananabananabananabananabananabananaban$";
-        test_bwt = "nnnnnnnnnnnbnnnnnnnnnnbbbbbbbbbbaaaaaaaaaa$aaaaaaaaaaaaaaaaaaaaa";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
+//        test_num++;
+//        input_string_b = "bananabananabananabananabananabananabananabananabananabananaban$";
+//        test_bwt = "nnnnnnnnnnnbnnnnnnnnnnbbbbbbbbbbaaaaaaaaaa$aaaaaaaaaaaaaaaaaaaaa";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
         
-        test_num++;
-        input_string_b = "w szczebrzeszynie chrzaszcz brzmi w trzcinie i szczebrzeszyn aa$";
-        test_bwt = "nzeeiwwiaa zee  zzzziizzzzc mnnczyyihtbbba  ee $ zzcrrsssccrrrss";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
+//        test_num++;
+//        input_string_b = "w szczebrzeszynie chrzaszcz brzmi w trzcinie i szczebrzeszyn aa$";
+//        test_bwt = "nzeeiwwiaa zee  zzzziizzzzc mnnczyyihtbbba  ee $ zzcrrsssccrrrss";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
         
         $display();
         $display("\n\t\t\t\t\t\t\t\t***** TEST FINISHED *****\n");

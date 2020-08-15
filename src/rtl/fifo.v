@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 07.05.2020 22:05:25
-// Design Name: 
-// Module Name: fifo
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 module fifo
 	#(
@@ -34,19 +15,26 @@ module fifo
 	);
 
 	//signal declaration
-	reg [B-1:0] array_reg [2**W-1:0][COLUMN-1:0];  // register array
 	reg [W-1:0] w_ptr_reg, w_ptr_next, w_ptr_succ;
 	reg [W-1:0] r_ptr_reg, r_ptr_next, r_ptr_succ;
 	reg full_reg, empty_reg, full_next, empty_next;
 	wire wr_en;
 
-	// body
-	// register file write operation
-	always @(posedge clk)
-		if (wr_en)
-			array_reg[w_ptr_reg] <= w_data;
-	// register file read operation
-	assign r_data = array_reg[r_ptr_reg];
+    // RAM instats
+    genvar i;
+        generate
+            for (i=0; i < COLUMN; i++) begin
+             ram_infer #(B, W) RAM (
+                .data (w_data[i]),
+                .read_addr (r_ptr_reg),
+                .write_addr (w_ptr_reg),
+                .we   (wr_en),
+                .clk    (clk),
+                .q    (r_data[i])
+             );     
+        end
+    endgenerate
+
 	// write enabled only when FIFO is not full
 	assign wr_en = wr & ~full_reg;
 
@@ -108,5 +96,35 @@ module fifo
 	// output
 	assign full = full_reg;
 	assign empty = empty_reg;
+
+endmodule
+
+module ram_infer
+#(
+		parameter B=8, // number of bits in a word
+		parameter W=8  // number of address bits
+)
+(
+	input [B-1:0] data,
+	input [W-1:0] read_addr, write_addr,
+	input we, clk,
+	output [B-1:0] q
+);
+
+	// Declare the RAM variable
+	reg [B-1:0] ram[2**W-1:0];
+
+	always @ (posedge clk)
+	begin
+		// Write
+		if (we)
+			ram[write_addr] <= data;
+    end
+		// Read (if read_addr == write_addr, return OLD data).	To return
+		// NEW data, use = (blocking write) rather than <= (non-blocking write)
+		// in the write assignment.	 NOTE: NEW data may require extra bypass
+		// logic around the RAM.
+	assign	q = ram[read_addr];
+	
 
 endmodule
