@@ -88,7 +88,7 @@ module bwt_top
     
     end
    
-    fifo #(8,6,1) fifo_input
+    fifo #(8,7,1) fifo_input
       (
       .clk(clk),                               
       .reset(rst),
