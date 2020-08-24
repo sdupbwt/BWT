@@ -1,0 +1,793 @@
+15:00:56 **** Build of project bwt_test_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/bwt_ip_v1_0/src"
+make -C microblaze_0/libsrc/bwt_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/bwt_ip_v1_0/src"
+make -C microblaze_0/libsrc/bwt_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bwt_ip..."
+bwt_ip_selftest.c: In function 'BWT_IP_Reg_SelfTest':
+bwt_ip_selftest.c:52:55: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( BWT_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+bwt_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+              ~~~~~^
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+'Finished building libraries'
+
+**** Build of configuration Debug for project bwt_test ****
+
+Nothing to build for project bwt_test
+15:01:41 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/programy/vivado2019_1/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: d:/programy/vivado2019_1/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: in function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: bwt_test.elf] Error 1
+15:01:45 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+d:/programy/vivado2019_1/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: d:/programy/vivado2019_1/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: in function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: bwt_test.elf] Error 1
+15:04:32 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:40: error: 'XPAR_AXI_GPIO_ANGLE_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&angleGpio, XPAR_AXI_GPIO_ANGLE_DEVICE_ID);
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                        XPAR_GPIO_0_DEVICE_ID
+../src/main.c:30:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:38: error: 'XPAR_AXI_GPIO_SIN_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&sinGpio, XPAR_AXI_GPIO_SIN_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:42:38: error: 'XPAR_AXI_GPIO_COS_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&cosGpio, XPAR_AXI_GPIO_COS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:14:26: error: 'XPAR_CORDIC_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_BWT_IP_0_S00_AXI_BASEADDR'?
+ #define CORDIC_BASE_ADDR XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:14:26: note: in definition of macro 'CORDIC_BASE_ADDR'
+ #define CORDIC_BASE_ADDR XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:17:26: error: 'CORDIC_IP_S00_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG1_OFFSET'?
+ #define ANGLE_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:17:26: note: in definition of macro 'ANGLE_REG_OFFSET'
+ #define ANGLE_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:16:28: error: 'CORDIC_IP_S00_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG0_OFFSET'?
+ #define CONTROL_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:16:28: note: in definition of macro 'CONTROL_REG_OFFSET'
+ #define CONTROL_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:18:27: error: 'CORDIC_IP_S00_AXI_SLV_REG2_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG2_OFFSET'?
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:18:27: note: in definition of macro 'STATUS_REG_OFFSET'
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: error: 'CORDIC_IP_S00_AXI_SLV_REG3_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG3_OFFSET'?
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: note: in definition of macro 'RESULT_REG_OFFSET'
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:05:04 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:40: error: 'XPAR_AXI_GPIO_ANGLE_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&angleGpio, XPAR_AXI_GPIO_ANGLE_DEVICE_ID);
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                        XPAR_GPIO_0_DEVICE_ID
+../src/main.c:30:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:38: error: 'XPAR_AXI_GPIO_SIN_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&sinGpio, XPAR_AXI_GPIO_SIN_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:42:38: error: 'XPAR_AXI_GPIO_COS_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&cosGpio, XPAR_AXI_GPIO_COS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:51:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:17:26: error: 'CORDIC_IP_S00_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG1_OFFSET'?
+ #define ANGLE_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:17:26: note: in definition of macro 'ANGLE_REG_OFFSET'
+ #define ANGLE_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:16:28: error: 'CORDIC_IP_S00_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG0_OFFSET'?
+ #define CONTROL_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:16:28: note: in definition of macro 'CONTROL_REG_OFFSET'
+ #define CONTROL_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:18:27: error: 'CORDIC_IP_S00_AXI_SLV_REG2_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG2_OFFSET'?
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:18:27: note: in definition of macro 'STATUS_REG_OFFSET'
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: error: 'CORDIC_IP_S00_AXI_SLV_REG3_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG3_OFFSET'?
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: note: in definition of macro 'RESULT_REG_OFFSET'
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:05:30 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:40: error: 'XPAR_AXI_GPIO_ANGLE_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&angleGpio, XPAR_AXI_GPIO_ANGLE_DEVICE_ID);
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                        XPAR_GPIO_0_DEVICE_ID
+../src/main.c:30:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:38: error: 'XPAR_AXI_GPIO_SIN_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&sinGpio, XPAR_AXI_GPIO_SIN_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:42:38: error: 'XPAR_AXI_GPIO_COS_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&cosGpio, XPAR_AXI_GPIO_COS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:51:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:17:26: error: 'CORDIC_IP_S00_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG1_OFFSET'?
+ #define ANGLE_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:17:26: note: in definition of macro 'ANGLE_REG_OFFSET'
+ #define ANGLE_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:16:28: error: 'CORDIC_IP_S00_AXI_SLV_REG0_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG0_OFFSET'?
+ #define CONTROL_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:16:28: note: in definition of macro 'CONTROL_REG_OFFSET'
+ #define CONTROL_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:18:27: error: 'CORDIC_IP_S00_AXI_SLV_REG2_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG2_OFFSET'?
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:18:27: note: in definition of macro 'STATUS_REG_OFFSET'
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: error: 'CORDIC_IP_S00_AXI_SLV_REG3_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG3_OFFSET'?
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: note: in definition of macro 'RESULT_REG_OFFSET'
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:06:11 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:40: error: 'XPAR_AXI_GPIO_ANGLE_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&angleGpio, XPAR_AXI_GPIO_ANGLE_DEVICE_ID);
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                        XPAR_GPIO_0_DEVICE_ID
+../src/main.c:30:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:38: error: 'XPAR_AXI_GPIO_SIN_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&sinGpio, XPAR_AXI_GPIO_SIN_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:42:38: error: 'XPAR_AXI_GPIO_COS_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&cosGpio, XPAR_AXI_GPIO_COS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:51:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:17:26: error: 'CORDIC_IP_S00_AXI_SLV_REG1_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG1_OFFSET'?
+ #define ANGLE_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:17:26: note: in definition of macro 'ANGLE_REG_OFFSET'
+ #define ANGLE_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:18:27: error: 'CORDIC_IP_S00_AXI_SLV_REG2_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG2_OFFSET'?
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:18:27: note: in definition of macro 'STATUS_REG_OFFSET'
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: error: 'CORDIC_IP_S00_AXI_SLV_REG3_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG3_OFFSET'?
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: note: in definition of macro 'RESULT_REG_OFFSET'
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:06:41 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:40: error: 'XPAR_AXI_GPIO_ANGLE_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&angleGpio, XPAR_AXI_GPIO_ANGLE_DEVICE_ID);
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                        XPAR_GPIO_0_DEVICE_ID
+../src/main.c:30:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:38: error: 'XPAR_AXI_GPIO_SIN_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&sinGpio, XPAR_AXI_GPIO_SIN_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:42:38: error: 'XPAR_AXI_GPIO_COS_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&cosGpio, XPAR_AXI_GPIO_COS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:51:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:51:40: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function); did you mean 'RESULT_REG_OFFSET'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                        ^~~~~~~~~~~~~~~~
+                                        RESULT_REG_OFFSET
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:18:27: error: 'CORDIC_IP_S00_AXI_SLV_REG2_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG2_OFFSET'?
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:18:27: note: in definition of macro 'STATUS_REG_OFFSET'
+ #define STATUS_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: error: 'CORDIC_IP_S00_AXI_SLV_REG3_OFFSET' undeclared (first use in this function); did you mean 'BWT_IP_S00_AXI_SLV_REG3_OFFSET'?
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:27: note: in definition of macro 'RESULT_REG_OFFSET'
+ #define RESULT_REG_OFFSET CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:10:42 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:40: error: 'XPAR_AXI_GPIO_ANGLE_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&angleGpio, XPAR_AXI_GPIO_ANGLE_DEVICE_ID);
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                        XPAR_GPIO_0_DEVICE_ID
+../src/main.c:30:40: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:38: error: 'XPAR_AXI_GPIO_SIN_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&sinGpio, XPAR_AXI_GPIO_SIN_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:42:38: error: 'XPAR_AXI_GPIO_COS_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&cosGpio, XPAR_AXI_GPIO_COS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:51:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:51:40: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function); did you mean 'RESULT_REG_OFFSET'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                        ^~~~~~~~~~~~~~~~
+                                        RESULT_REG_OFFSET
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:12:01 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:33:28: error: 'angleGpio' undeclared (first use in this function)
+  } XGpio_SetDataDirection(&angleGpio, CHANNEL, 0xFFF);
+                            ^~~~~~~~~
+../src/main.c:33:28: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:38: error: 'XPAR_AXI_GPIO_SIN_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&sinGpio, XPAR_AXI_GPIO_SIN_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:42:38: error: 'XPAR_AXI_GPIO_COS_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&cosGpio, XPAR_AXI_GPIO_COS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:51:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:51:40: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function); did you mean 'RESULT_REG_OFFSET'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                        ^~~~~~~~~~~~~~~~
+                                        RESULT_REG_OFFSET
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:12:11 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:36:38: error: 'XPAR_AXI_GPIO_SIN_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&sinGpio, XPAR_AXI_GPIO_SIN_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:36:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:42:38: error: 'XPAR_AXI_GPIO_COS_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&cosGpio, XPAR_AXI_GPIO_COS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:48:29: error: 'angleGpio' undeclared (first use in this function)
+  data = XGpio_DiscreteRead(&angleGpio, CHANNEL);
+                             ^~~~~~~~~
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:51:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:51:40: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function); did you mean 'RESULT_REG_OFFSET'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                        ^~~~~~~~~~~~~~~~
+                                        RESULT_REG_OFFSET
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:13:05 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:42:38: error: 'XPAR_AXI_GPIO_COS_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_GPIO_0_DEVICE_ID'?
+  status = XGpio_Initialize(&cosGpio, XPAR_AXI_GPIO_COS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      XPAR_GPIO_0_DEVICE_ID
+../src/main.c:42:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:48:29: error: 'angleGpio' undeclared (first use in this function)
+  data = XGpio_DiscreteRead(&angleGpio, CHANNEL);
+                             ^~~~~~~~~
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:51:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:51:40: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function); did you mean 'RESULT_REG_OFFSET'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                        ^~~~~~~~~~~~~~~~
+                                        RESULT_REG_OFFSET
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:13:40 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:51:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:51:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:51:40: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function); did you mean 'RESULT_REG_OFFSET'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                        ^~~~~~~~~~~~~~~~
+                                        RESULT_REG_OFFSET
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:13:48 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:10:
+../src/main.c: In function 'main':
+../src/main.c:51:19: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  BWT_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                   ^~~~~~~~~~~~~~~~
+../../bwt_test_bsp/microblaze_0/include/bwt_ip.h:35:15: note: in definition of macro 'BWT_IP_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+               ^~~~~~~~~~~
+../src/main.c:51:19: note: each undeclared identifier is reported only once for each function it appears in
+  BWT_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                   ^~~~~~~~~~~~~~~~
+../../bwt_test_bsp/microblaze_0/include/bwt_ip.h:35:15: note: in definition of macro 'BWT_IP_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+               ^~~~~~~~~~~
+../src/main.c:51:37: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function); did you mean 'RESULT_REG_OFFSET'?
+  BWT_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                     ^~~~~~~~~~~~~~~~
+../../bwt_test_bsp/microblaze_0/include/bwt_ip.h:35:31: note: in definition of macro 'BWT_IP_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+../src/main.c:54:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, CONTROL_REG_OFFSET, 1);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:14:30 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:54:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, CONTROL_REG_OFFSET, 1);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:54:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, CONTROL_REG_OFFSET, 1);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:54:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:14:41 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:54:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 1);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:55:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, CONTROL_REG_OFFSET, 0);
+                      ^~~~~~~~~~~~~~~~
+                      BWT_BASE_ADDR
+../src/main.c:55:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:14:45 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:54:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg'; did you mean 'BWT_IP_mWriteReg'? [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 1);
+  ^~~~~~~~~~~~~~~~~~~
+  BWT_IP_mWriteReg
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:58:29: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+                             ^~~~~~~~~~~~~~~~
+                             BWT_BASE_ADDR
+../src/main.c:58:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:14:55 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:58:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+          ^~~~~~~~~~~~~~~~~~
+          BWT_IP_mReadReg
+../src/main.c:58:29: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+                             ^~~~~~~~~~~~~~~~
+                             BWT_BASE_ADDR
+../src/main.c:58:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:15:03 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:10:
+../src/main.c: In function 'main':
+../src/main.c:58:26: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  while( (BWT_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+                          ^~~~~~~~~~~~~~~~
+../../bwt_test_bsp/microblaze_0/include/bwt_ip.h:55:15: note: in definition of macro 'BWT_IP_mReadReg'
+     Xil_In32((BaseAddress) + (RegOffset))
+               ^~~~~~~~~~~
+../src/main.c:58:26: note: each undeclared identifier is reported only once for each function it appears in
+  while( (BWT_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0);
+                          ^~~~~~~~~~~~~~~~
+../../bwt_test_bsp/microblaze_0/include/bwt_ip.h:55:15: note: in definition of macro 'BWT_IP_mReadReg'
+     Xil_In32((BaseAddress) + (RegOffset))
+               ^~~~~~~~~~~
+../src/main.c:61:11: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  result = CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, RESULT_REG_OFFSET);
+           ^~~~~~~~~~~~~~~~~~
+           BWT_IP_mReadReg
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:15:12 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:61:11: warning: implicit declaration of function 'CORDIC_IP_mReadReg'; did you mean 'BWT_IP_mReadReg'? [-Wimplicit-function-declaration]
+  result = CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, RESULT_REG_OFFSET);
+           ^~~~~~~~~~~~~~~~~~
+           BWT_IP_mReadReg
+../src/main.c:61:30: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function); did you mean 'BWT_BASE_ADDR'?
+  result = CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, RESULT_REG_OFFSET);
+                              ^~~~~~~~~~~~~~~~
+                              BWT_BASE_ADDR
+../src/main.c:61:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:15:23 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:68:23: error: 'sinGpio' undeclared (first use in this function); did you mean 'cosGpio'?
+  XGpio_DiscreteWrite(&sinGpio, CHANNEL, sin);
+                       ^~~~~~~
+                       cosGpio
+../src/main.c:68:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+15:17:03 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:64:2: error: 'output' undeclared (first use in this function); did you mean 'outbyte'?
+  output = RESULT_REG_SIN( result );
+  ^~~~~~
+  outbyte
+../src/main.c:64:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:27:19: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, sin, cos;
+                   ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+18:34:52 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:68:48: error: 'sin' undeclared (first use in this function); did you mean 'main'?
+  XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, sin);
+                                                ^~~
+                                                main
+../src/main.c:68:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:27:14: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  u32 result, output, cos;
+              ^~~~~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+18:35:12 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3492	    304	   3116	   6912	   1b00	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+18:43:39 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3492	    304	   3116	   6912	   1b00	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+18:49:32 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.

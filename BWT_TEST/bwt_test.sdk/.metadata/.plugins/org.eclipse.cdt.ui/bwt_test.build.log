@@ -1,0 +1,6 @@
+18:49:32 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+
+18:49:37 Build Finished (took 4s.476ms)
+
