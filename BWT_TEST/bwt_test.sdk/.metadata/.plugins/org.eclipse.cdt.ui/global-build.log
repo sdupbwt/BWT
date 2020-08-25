@@ -791,3 +791,528 @@ mb-size bwt_test.elf  |tee "bwt_test.elf.size"
 18:49:32 **** Incremental Build of configuration Debug for project bwt_test ****
 make all 
 make: Nothing to be done for 'all'.
+20:00:32 **** Auto Build of project bwt_test_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/bwt_ip_v1_0/src"
+make -C microblaze_0/libsrc/bwt_ip_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/bwt_ip_v1_0/src"
+make -C microblaze_0/libsrc/bwt_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bwt_ip..."
+bwt_ip_selftest.c: In function 'BWT_IP_Reg_SelfTest':
+bwt_ip_selftest.c:52:55: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( BWT_IP_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+bwt_ip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+              ~~~~~^
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+'Finished building libraries'
+20:12:13 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3520	    304	   3112	   6936	   1b18	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+20:12:18 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+20:14:23 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3448	    304	   3112	   6864	   1ad0	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+20:14:26 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+20:56:30 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+21:12:57 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+21:13:02 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3548	    304	   3116	   6968	   1b38	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+21:13:05 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+21:16:10 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3548	    304	   3116	   6968	   1b38	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+21:16:13 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+22:48:23 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3448	    304	   3112	   6864	   1ad0	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+22:48:27 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+22:49:30 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:74:2: warning: label 'FAILURE' defined but not used [-Wunused-label]
+  FAILURE:
+  ^~~~~~~
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+../src/main.c:24:6: warning: unused variable 'status' [-Wunused-variable]
+  int status;
+      ^~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2820	    272	   3116	   6208	   1840	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+22:49:32 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+23:01:03 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+../src/main.c:25:39: warning: unused variable 'cosGpio' [-Wunused-variable]
+  XGpio inputCharGpio, outputCharGpio, cosGpio;
+                                       ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3520	    304	   3112	   6936	   1b18	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+23:02:23 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:22: warning: unused variable 'cos' [-Wunused-variable]
+  u32 result, output, cos;
+                      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3520	    304	   3112	   6936	   1b18	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+23:02:30 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3520	    304	   3112	   6936	   1b18	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+23:03:18 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+23:05:10 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:75:2: error: break statement not within loop or switch
+  break;
+  ^~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+23:05:11 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:75:2: error: break statement not within loop or switch
+  break;
+  ^~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+23:06:23 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3548	    304	   3116	   6968	   1b38	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+23:06:25 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+19:12:30 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3568	    304	   3112	   6984	   1b48	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+19:12:36 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+19:16:59 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3564	    304	   3116	   6984	   1b48	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+19:17:02 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+19:19:41 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3592	    304	   3112	   7008	   1b60	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+19:19:43 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+19:21:32 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3560	    304	   3112	   6976	   1b40	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+19:21:34 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+19:23:36 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:14: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  u32 result, output;
+              ^~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3532	    304	   3116	   6952	   1b28	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+19:23:38 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+19:33:47 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:28:5: warning: unused variable 'counter' [-Wunused-variable]
+  u8 counter;
+     ^~~~~~~
+../src/main.c:27:14: warning: variable 'output' set but not used [-Wunused-but-set-variable]
+  u32 result, output;
+              ^~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3516	    304	   3116	   6936	   1b18	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+19:33:49 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.
+21:45:57 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:14: warning: unused variable 'output' [-Wunused-variable]
+  u32 result, output;
+              ^~~~~~
+../src/main.c:27:6: warning: unused variable 'result' [-Wunused-variable]
+  u32 result, output;
+      ^~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3408	    304	   3112	   6824	   1aa8	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+21:46:17 **** Auto Build of configuration Debug for project bwt_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../bwt_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:14: warning: unused variable 'output' [-Wunused-variable]
+  u32 result, output;
+              ^~~~~~
+../src/main.c:27:6: warning: unused variable 'result' [-Wunused-variable]
+  u32 result, output;
+      ^~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: bwt_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bwt_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bwt_test.elf"  ./src/main.o   
+'Finished building target: bwt_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size bwt_test.elf  |tee "bwt_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3408	    304	   3112	   6824	   1aa8	bwt_test.elf
+'Finished building: bwt_test.elf.size'
+' '
+21:46:19 **** Incremental Build of configuration Debug for project bwt_test ****
+make all 
+make: Nothing to be done for 'all'.

@@ -2604,3 +2604,1807 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:/MTM/semestr8/
 
 !ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 18:48:38.428
 !MESSAGE XSCT command with result: [::hsi::utils::openhw D:/MTM/semestr8/SDUP_BWT/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-0
+!SESSION 2020-08-24 19:59:59.824 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk
+
+!ENTRY org.eclipse.ui 2 0 2020-08-24 20:00:04.107
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-08-24 20:00:04.107
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2020-08-24 20:00:05.737
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-08-24 20:00:05.737
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:26.076
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:26.077
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:26.079
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.468
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.472
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.476
+!MESSAGE XSCT Command: [setws C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.605
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.608
+!MESSAGE XSCT command with result: [setws C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk], Result: [null, ]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.620
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.636
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.637
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.687
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.692
+!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.733
+!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf], Result: [null, {"microblaze_0": {"freertos10_xilinx_v1_3": {"name": "freertos10_xilinx",
+"version": "1.3",
+"desc": "This Xilinx FreeRTOS port is based on FreeRTOS kernel version 10.1.1",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/ThirdParty/bsp/freertos10_xilinx_v1_3",
+},
+"standalone_v7_0": {"name": "standalone",
+"version": "7.0",
+"desc": "Standalone is a simple, low-level software layer. It provides access to basic processor features such as caches, interrupts and exceptions as well as the basic features of a hosted environment, such as standard input and output, profiling, abort and exit.",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/bsp/standalone_v7_0",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.740
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.791
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.796
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.797
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.950
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.956
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.957
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.973
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, bwt_ip_0 input_string_char microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr output_string_char]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.974
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.974
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.993
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"bwt_ip_0": {"name": "bwt_ip",
+"ver": "1.0",
+},
+"input_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"output_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.9",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.994
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf], Result: [null, {"device": "7z020",
+"family": "zynq",
+"timestamp": "Sun Aug 23 14:32:43 2020",
+"vivado_version": "2019.1",
+"part": "xc7z020clg484-1",
+}]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.996
+!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:31.997
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf], Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:32.381
+!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf], Result: [null, {"bwt_ip_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bwt_ip_v1_0": {"name": "bwt_ip",
+"version": "1.0",
+"repo": "C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/drivers/bwt_ip_v1_0",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"clk_wiz_1": {"version": "6.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"clk_wiz_v1_2": {"name": "clk_wiz",
+"version": "1.2",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/clk_wiz_v1_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"input_string_char": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpio_v4_4": {"name": "gpio",
+"version": "4.4",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_4",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"mdm_1": {"version": "3.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0": {"version": "11.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"cpu_v2_9": {"name": "cpu",
+"version": "2.9",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/cpu_v2_9",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_axi_periph": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_3": {"name": "bram",
+"version": "4.3",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_3",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_3": {"name": "bram",
+"version": "4.3",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_3",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_lmb_bram": {"version": "8.4",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"output_string_char": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"gpio_v4_4": {"name": "gpio",
+"version": "4.4",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_4",
+"compilerflags": "",
+"linkerflags": "",
+},
+},
+},
+"rst_clk_wiz_1_100M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2019.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:32.388
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:32.415
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf], Result: [null, {"bwt_ip_0": {"hier_name": "bwt_ip_0",
+"type": "bwt_ip",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"input_string_char": {"hier_name": "input_string_char",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"output_string_char": {"hier_name": "output_string_char",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: Worker-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:32.480
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:33.084
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.core.CommandLauncher.printCommandLine(CommandLauncher.java:287)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:250)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.127
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.134
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.135
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.143
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.144
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.161
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.163
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.177
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.178
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.187
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"bwt_ip_0": {"name": "bwt_ip",
+"ver": "1.0",
+},
+"input_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"output_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.9",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.189
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.193
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.214
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.245
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.246
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.253
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.255
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.262
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.263
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.272
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.273
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.284
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"bwt_ip_0": {"name": "bwt_ip",
+"ver": "1.0",
+},
+"input_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"output_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.9",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.286
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.299
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:33.300
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:33.321
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.333
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.343
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.344
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.354
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.356
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.369
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.370
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.383
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.384
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.395
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"bwt_ip_0": {"name": "bwt_ip",
+"ver": "1.0",
+},
+"input_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"output_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.9",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.397
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.413
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.549
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.560
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.562
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.571
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.575
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.602
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.603
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.613
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.615
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.641
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"bwt_ip_0": {"name": "bwt_ip",
+"ver": "1.0",
+},
+"input_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"output_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.9",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.643
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.650
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.700
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.712
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.713
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.738
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.739
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.747
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.748
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.757
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.758
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:33.768
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.775
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"bwt_ip_0": {"name": "bwt_ip",
+"ver": "1.0",
+},
+"input_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"output_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.9",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.777
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:33.778
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:33.792
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:33.949
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:33.975
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:34.146
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:34.170
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:34.223
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:34.239
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf microblaze_0], Result: [null, {"input_string_char_S_AXI": {"name": "input_string_char",
+"base": "0x40000000",
+"high": "0x4000FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"output_string_char_S_AXI": {"name": "output_string_char",
+"base": "0x40010000",
+"high": "0x4001FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"bwt_ip_0_S00_AXI": {"name": "bwt_ip_0",
+"base": "0x44A00000",
+"high": "0x44A0FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr_SLMB_Mem": {"name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"base": "0x00000000",
+"high": "0x00001FFF",
+"size": "8192",
+"slaveintf": "SLMB",
+"type": "MEMORY",
+"flags": "7",
+"segment": "Mem",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:34.292
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf mdm_1], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:34.302
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf mdm_1], Result: [null, {}]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:34.378
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:34.390
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:34.397
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:00:34.432
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_1/system.hdf microblaze_0], Result: [null, {"bwt_ip_0": {},
+"input_string_char": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel-1 GPIO DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel-1 GPIO TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-2 GPIO DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-2 GPIO TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GIER": {"description": "Global Interrupt Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global Interrupt Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-1 Interrupt Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel-2 Interrupt Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-1 Interrupt Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel-2 Interrupt Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {},
+"output_string_char": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel-1 GPIO DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "8",
+"interface": "S_AXI",
+"fields": {"Channel-1 GPIO TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-2 GPIO DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-2 GPIO TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"GIER": {"description": "Global Interrupt Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global Interrupt Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-1 Interrupt Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel-2 Interrupt Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel-1 Interrupt Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel-2 Interrupt Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+},
+}]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:35.005
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:35.017
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:35.257
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.303
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.325
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.452
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.904
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.926
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.928
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.932
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.936
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.937
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:39.939
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:40.242
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:40.255
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:40.353
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:40.865
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:40.876
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:41.060
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:43.393
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:43.407
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:43.624
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:46.932
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:46.938
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:46.940
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:46.940
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:47.711
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:47.715
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:47.717
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:47.720
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:49.008
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:49.013
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:49.015
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:55.386
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-08-24 20:00:55.421
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2020-08-24 20:00:55.854
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/bwt_test/Debug/sources.mk' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:336)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:434)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.save(GnuMakefileGenerator.java:838)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.populateSourcesMakefile(GnuMakefileGenerator.java:1167)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.generateMakefiles(GnuMakefileGenerator.java:676)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2020-08-24 20:00:55.855
+!MESSAGE Resource '/bwt_test/Debug/sources.mk' does not exist.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2020-08-24 20:00:55.855
+!MESSAGE Resource '/bwt_test/Debug/sources.mk' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 75 2020-08-24 20:00:56.018
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 75 2020-08-24 20:00:56.019
+!MESSAGE Errors running builder 'CDT Builder' on project 'bwt_test'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/bwt_test/Debug/sources.mk' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:336)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:434)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.save(GnuMakefileGenerator.java:838)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.populateSourcesMakefile(GnuMakefileGenerator.java:1167)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.generateMakefiles(GnuMakefileGenerator.java:676)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.core.resources 4 368 2020-08-24 20:00:56.019
+!MESSAGE Resource '/bwt_test/Debug/sources.mk' does not exist.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2020-08-24 20:00:56.019
+!MESSAGE Resource '/bwt_test/Debug/sources.mk' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 2 2020-08-24 20:01:09.809
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/bwt_test/Debug/makefile' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:336)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:434)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.save(GnuMakefileGenerator.java:838)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.populateTopMakefile(GnuMakefileGenerator.java:1198)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.generateMakefiles(GnuMakefileGenerator.java:741)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2020-08-24 20:01:09.809
+!MESSAGE Resource '/bwt_test/Debug/makefile' does not exist.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2020-08-24 20:01:09.809
+!MESSAGE Resource '/bwt_test/Debug/makefile' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 75 2020-08-24 20:01:09.823
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 75 2020-08-24 20:01:09.824
+!MESSAGE Errors running builder 'CDT Builder' on project 'bwt_test'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/bwt_test/Debug/makefile' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:336)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:434)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.save(GnuMakefileGenerator.java:838)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.populateTopMakefile(GnuMakefileGenerator.java:1198)
+	at org.eclipse.cdt.managedbuilder.makegen.gnu.GnuMakefileGenerator.generateMakefiles(GnuMakefileGenerator.java:741)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.core.resources 4 368 2020-08-24 20:01:09.824
+!MESSAGE Resource '/bwt_test/Debug/makefile' does not exist.
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2020-08-24 20:01:09.824
+!MESSAGE Resource '/bwt_test/Debug/makefile' does not exist.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.749
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.759
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.760
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.820
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.821
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.830
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.832
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.856
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.858
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.890
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper_hw_platform_0/system.hdf C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, {"bwt_ip_0": {"name": "bwt_ip",
+"ver": "1.0",
+},
+"input_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.3",
+},
+"output_string_char": {"name": "gpio",
+"ver": "4.4",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.9",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.892
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-08-24 20:12:17.898
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/bwt_test_bsp/system.mss], Result: [null, ]. Thread: main

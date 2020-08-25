@@ -1,4 +1,4 @@
-15:00:56 **** Build of project bwt_test_bsp ****
+20:00:32 **** Auto Build of project bwt_test_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_3/src"
 make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -13,7 +13,6 @@ make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILE
 "Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
 make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
 "Running Make libs in microblaze_0/libsrc/bwt_ip_v1_0/src"
 make -C microblaze_0/libsrc/bwt_ip_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling bwt_ip..."
@@ -46,5 +45,5 @@ microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly
          ^~~~~~~
 'Finished building libraries'
 
-15:01:17 Build Finished (took 21s.262ms)
+20:00:55 Build Finished (took 23s.276ms)
 

@@ -4,3 +4,9 @@
 14:59:20 INFO  : Processing command line option -hwspec D:/MTM/semestr8/SDUP_BWT/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper.hdf.
 14:59:20 INFO  : Successfully done setting XSCT server connection channel  
 14:59:20 INFO  : Successfully done setting SDK workspace  
+20:00:16 INFO  : Registering command handlers for SDK TCF services
+20:00:18 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\toshiba\Desktop\IV\sdup\projekt\BWT\BWT_TEST\bwt_test.sdk\temp_xsdb_launch_script.tcl
+20:00:26 INFO  : XSCT server has started successfully.
+20:00:31 INFO  : Successfully done setting XSCT server connection channel  
+20:00:31 INFO  : Successfully done setting SDK workspace  
+20:00:31 INFO  : Processing command line option -hwspec C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper.hdf.

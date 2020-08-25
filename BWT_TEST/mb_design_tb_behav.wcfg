@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="mb_design_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mb_design_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="31254108218fs"></ZoomEndTime>
+      <Cursor1Time time="1000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="168"></NameColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/mb_design_tb/clk_n" type="logic">
+      <obj_property name="ElementShortName">clk_n</obj_property>
+      <obj_property name="ObjectShortName">clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mb_design_tb/clk_p" type="logic">
+      <obj_property name="ElementShortName">clk_p</obj_property>
+      <obj_property name="ObjectShortName">clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mb_design_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mb_design_tb/r_angle" type="other">
+      <obj_property name="ElementShortName">r_angle</obj_property>
+      <obj_property name="ObjectShortName">r_angle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mb_design_tb/input_string_char" type="array">
+      <obj_property name="ElementShortName">input_string_char[7:0]</obj_property>
+      <obj_property name="ObjectShortName">input_string_char[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mb_design_tb/output_string_char_tri_io" type="array">
+      <obj_property name="ElementShortName">output_string_char_tri_io[7:0]</obj_property>
+      <obj_property name="ObjectShortName">output_string_char_tri_io[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mb_design_tb/mb_design_inst/mb_design_i/bwt_ip_0/inst/bwt_ip_v1_0_S00_AXI_inst/slv_reg0" type="array">
+      <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mb_design_tb/mb_design_inst/mb_design_i/bwt_ip_0/inst/bwt_ip_v1_0_S00_AXI_inst/slv_reg1" type="array">
+      <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mb_design_tb/mb_design_inst/mb_design_i/bwt_ip_0/inst/bwt_ip_v1_0_S00_AXI_inst/slv_reg2" type="array">
+      <obj_property name="ElementShortName">slv_reg2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mb_design_tb/mb_design_inst/mb_design_i/bwt_ip_0/inst/bwt_ip_v1_0_S00_AXI_inst/slv_reg3" type="array">
+      <obj_property name="ElementShortName">slv_reg3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg3[31:0]</obj_property>
+   </wvobject>
+</wave_config>
