@@ -2,5 +2,7 @@ vivado/*
 BWT_TEST/bwt_test.sdk/.metadata/*
 BWT_TEST/bwt_test.sim/*
 BWT_TEST/bwt_test.cache/*
+*.log
+BWT_TEST/vivado.jou
 
 !vivado/*.xpr
