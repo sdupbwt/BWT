@@ -35,13 +35,13 @@ module merge_sort_top
     
     localparam  ELEMENT_LEN = 8;
 
-    reg [7:0] data_in_odd [0:((STRING_LEN-1)>>1)][COLUMN-1:0];
-    reg [7:0] data_in_even [0:((STRING_LEN-1)>>1)][COLUMN-1:0];
+    reg [ELEMENT_LEN-1:0] data_in_odd [0:((STRING_LEN-1)>>1)][COLUMN-1:0];
+    reg [ELEMENT_LEN-1:0] data_in_even [0:((STRING_LEN-1)>>1)][COLUMN-1:0];
 
     // Variables for STAGE 2-element array
     reg rd_fifo2 [STRING_LEN>>1];
     wire [ELEMENT_LEN-1:0] arr2 [STRING_LEN>>1][COLUMN-1:0];
-    wire [7:0] fifo_arr2        [STRING_LEN>>1][COLUMN-1:0];
+    wire [ELEMENT_LEN-1:0] fifo_arr2        [STRING_LEN>>1][COLUMN-1:0];
     wire wr_fifo2 [STRING_LEN>>1];
     wire empt_fifo2 [STRING_LEN>>1];
 
@@ -101,27 +101,27 @@ module merge_sort_top
     wire wr_fifo32 [STRING_LEN>>5];
     reg rd_fifo32 [STRING_LEN>>5];
     
-    reg empt_fifo32_even [STRING_LEN>>6];
-    reg empt_fifo32_odd [STRING_LEN>>6];
-    reg [ELEMENT_LEN-1:0] fifo_arr32_even [STRING_LEN>>6][COLUMN-1:0];
-    reg [ELEMENT_LEN-1:0] fifo_arr32_odd [STRING_LEN>>6][COLUMN-1:0];
-    wire rd_fifo32_even [STRING_LEN>>6];
-    wire rd_fifo32_odd [STRING_LEN>>6];
+//    reg empt_fifo32_even [STRING_LEN>>6];
+//    reg empt_fifo32_odd [STRING_LEN>>6];
+//    reg [ELEMENT_LEN-1:0] fifo_arr32_even [STRING_LEN>>6][COLUMN-1:0];
+//    reg [ELEMENT_LEN-1:0] fifo_arr32_odd [STRING_LEN>>6][COLUMN-1:0];
+//    wire rd_fifo32_even [STRING_LEN>>6];
+//    wire rd_fifo32_odd [STRING_LEN>>6];
     
     
-    // Variables for STAGE 64-element array 
-    wire [ELEMENT_LEN-1:0] arr64 [STRING_LEN>>6][COLUMN-1:0];
-    wire [ELEMENT_LEN-1:0] fifo_arr64        [STRING_LEN>>6][COLUMN-1:0];
-    wire empt_fifo64 [STRING_LEN>>6];
-    wire wr_fifo64 [STRING_LEN>>6];
-    reg rd_fifo64 [STRING_LEN>>6];
+//    // Variables for STAGE 64-element array 
+//    wire [ELEMENT_LEN-1:0] arr64 [STRING_LEN>>6][COLUMN-1:0];
+//    wire [ELEMENT_LEN-1:0] fifo_arr64        [STRING_LEN>>6][COLUMN-1:0];
+//    wire empt_fifo64 [STRING_LEN>>6];
+//    wire wr_fifo64 [STRING_LEN>>6];
+//    reg rd_fifo64 [STRING_LEN>>6];
     
-    // Variables for STAGE 128-element array 
-    wire [ELEMENT_LEN-1:0] arr128 [STRING_LEN>>7][COLUMN-1:0];
-    wire [ELEMENT_LEN-1:0] fifo_arr128        [STRING_LEN>>7][COLUMN-1:0];
-    wire empt_fifo128 [STRING_LEN>>7];
-    wire wr_fifo128 [STRING_LEN>>7];
-    reg rd_fifo128 [STRING_LEN>>7];
+//    // Variables for STAGE 128-element array 
+//    wire [ELEMENT_LEN-1:0] arr128 [STRING_LEN>>7][COLUMN-1:0];
+//    wire [ELEMENT_LEN-1:0] fifo_arr128        [STRING_LEN>>7][COLUMN-1:0];
+//    wire empt_fifo128 [STRING_LEN>>7];
+//    wire wr_fifo128 [STRING_LEN>>7];
+//    reg rd_fifo128 [STRING_LEN>>7];
     
     reg [7:0] i, n;
     
@@ -162,14 +162,14 @@ module merge_sort_top
             rd_fifo16[2*n]      = rd_fifo16_even[n];
             rd_fifo16[2*n+1]    = rd_fifo16_odd[n];
         end
-        for(n=0; n <= (STRING_LEN>>6)-1; n++) begin
-            empt_fifo32_even[n] = empt_fifo32[2*n];
-            empt_fifo32_odd[n]  = empt_fifo32[2*n+1];
-            fifo_arr32_even[n]  = fifo_arr32[2*n];
-            fifo_arr32_odd[n]   = fifo_arr32[2*n+1];
-            rd_fifo32[2*n]      = rd_fifo32_even[n];
-            rd_fifo32[2*n+1]    = rd_fifo32_odd[n];
-        end
+//        for(n=0; n <= (STRING_LEN>>6)-1; n++) begin
+//            empt_fifo32_even[n] = empt_fifo32[2*n];
+//            empt_fifo32_odd[n]  = empt_fifo32[2*n+1];
+//            fifo_arr32_even[n]  = fifo_arr32[2*n];
+//            fifo_arr32_odd[n]   = fifo_arr32[2*n+1];
+//            rd_fifo32[2*n]      = rd_fifo32_even[n];
+//            rd_fifo32[2*n+1]    = rd_fifo32_odd[n];
+//        end
     end
     
     
@@ -273,85 +273,85 @@ module merge_sort_top
     sort_arrays #(2,2,COLUMN) 
         stage32 [0:(STRING_LEN>>5)-1](.clk(clk), 
                                      .rst(rst), 
-                                     .empty_FIFO_L(empt_fifo16_even[0:(STRING_LEN>>5)-1]), 
-                                     .empty_FIFO_R(empt_fifo16_odd[0:(STRING_LEN>>5)-1]), 
-                                     .array_L(fifo_arr16_even[0:(STRING_LEN>>5)-1]), 
-                                     .array_R(fifo_arr16_odd[0:(STRING_LEN>>5)-1]), 
-                                     .rd_fifo_L(rd_fifo16_even[0:(STRING_LEN>>5)-1]), 
-                                     .rd_fifo_R(rd_fifo16_odd[0:(STRING_LEN>>5)-1]), 
-                                     .wr_fifo(wr_fifo32[0:(STRING_LEN>>5)-1]), 
-                                     .merged_array(arr32[0:(STRING_LEN>>5)-1]), 
+                                     .empty_FIFO_L(empt_fifo16_even[0]), 
+                                     .empty_FIFO_R(empt_fifo16_odd[0]), 
+                                     .array_L(fifo_arr16_even[0]), 
+                                     .array_R(fifo_arr16_odd[0]), 
+                                     .rd_fifo_L(rd_fifo16_even[0]), 
+                                     .rd_fifo_R(rd_fifo16_odd[0]), 
+                                     .wr_fifo(wr_fifo32[0]), 
+                                     .merged_array(arr32[0]), 
                                      .sort_num(sort_num));
     
     fifo #(ELEMENT_LEN,5,COLUMN) 
         fifo32 [0:(STRING_LEN>>5)-1](.clk(clk), 
                                     .reset(rst), 
-                                    .rd(rd_fifo32[0:(STRING_LEN>>5)-1]), 
-                                    .wr(wr_fifo32[0:(STRING_LEN>>5)-1]), 
-                                    .w_data(arr32[0:(STRING_LEN>>5)-1]), 
-                                    .empty(empt_fifo32[0:(STRING_LEN>>5)-1]), 
-                                    .full(),                          
-                                    .r_data(fifo_arr32[0:(STRING_LEN>>5)-1]));
+                                    .rd(rd_fifo32[0]), 
+                                    .wr(wr_fifo32[0]), 
+                                    .w_data(arr32[0]), 
+                                    .empty(empt_fifo32[0]), 
+                                    .full(),                        
+                                    .r_data(fifo_arr32[0]));
     
-    //STAGE 64-element array
-    sort_arrays #(2,2,COLUMN) 
-        stage64 [0:(STRING_LEN>>6)-1](.clk(clk), 
-                                     .rst(rst), 
-                                     .empty_FIFO_L(empt_fifo32_even[0:(STRING_LEN>>6)-1]), 
-                                     .empty_FIFO_R(empt_fifo32_odd[0:(STRING_LEN>>6)-1]), 
-                                     .array_L(fifo_arr32_even[0:(STRING_LEN>>6)-1]), 
-                                     .array_R(fifo_arr32_odd[0:(STRING_LEN>>6)-1]), 
-                                     .rd_fifo_L(rd_fifo32_even[0:(STRING_LEN>>6)-1]), 
-                                     .rd_fifo_R(rd_fifo32_odd[0:(STRING_LEN>>6)-1]), 
-                                     .wr_fifo(wr_fifo64[0:(STRING_LEN>>6)-1]), 
-                                     .merged_array(arr64[0:(STRING_LEN>>6)-1]), 
-                                     .sort_num(sort_num));
+//    //STAGE 64-element array
+//    sort_arrays #(2,2,COLUMN) 
+//        stage64 [0:(STRING_LEN>>6)-1](.clk(clk), 
+//                                     .rst(rst), 
+//                                     .empty_FIFO_L(empt_fifo32_even[0:(STRING_LEN>>6)-1]), 
+//                                     .empty_FIFO_R(empt_fifo32_odd[0:(STRING_LEN>>6)-1]), 
+//                                     .array_L(fifo_arr32_even[0:(STRING_LEN>>6)-1]), 
+//                                     .array_R(fifo_arr32_odd[0:(STRING_LEN>>6)-1]), 
+//                                     .rd_fifo_L(rd_fifo32_even[0:(STRING_LEN>>6)-1]), 
+//                                     .rd_fifo_R(rd_fifo32_odd[0:(STRING_LEN>>6)-1]), 
+//                                     .wr_fifo(wr_fifo64[0:(STRING_LEN>>6)-1]), 
+//                                     .merged_array(arr64[0:(STRING_LEN>>6)-1]), 
+//                                     .sort_num(sort_num));
     
-    fifo #(ELEMENT_LEN,6,COLUMN) 
-        fifo64 [0:(STRING_LEN>>6)-1](.clk(clk), 
-                                    .reset(rst), 
-                                    .rd(rd_fifo64[0:(STRING_LEN>>6)-1]), 
-                                    .wr(wr_fifo64[0:(STRING_LEN>>6)-1]), 
-                                    .w_data(arr64[0:(STRING_LEN>>6)-1]), 
-                                    .empty(empt_fifo64[0:(STRING_LEN>>6)-1]), 
-                                    .full(),                          
-                                    .r_data(fifo_arr64[0:(STRING_LEN>>6)-1]));
+//    fifo #(ELEMENT_LEN,6,COLUMN) 
+//        fifo64 [0:(STRING_LEN>>6)-1](.clk(clk), 
+//                                    .reset(rst), 
+//                                    .rd(rd_fifo64[0:(STRING_LEN>>6)-1]), 
+//                                    .wr(wr_fifo64[0:(STRING_LEN>>6)-1]), 
+//                                    .w_data(arr64[0:(STRING_LEN>>6)-1]), 
+//                                    .empty(empt_fifo64[0:(STRING_LEN>>6)-1]), 
+//                                    .full(),                          
+//                                    .r_data(fifo_arr64[0:(STRING_LEN>>6)-1]));
     
     
-   //STAGE 128-element array
-    sort_arrays #(2,2,COLUMN) 
-        stage128 (.clk(clk), 
-                                     .rst(rst), 
-                                     .empty_FIFO_L(empt_fifo64[0]), 
-                                     .empty_FIFO_R(empt_fifo64[1]),
-                                     .array_L(fifo_arr64[8'd0]), 
-                                     .array_R(fifo_arr64[8'd1]), 
-                                     .rd_fifo_L(rd_fifo64[8'd0]), 
-                                     .rd_fifo_R(rd_fifo64[8'd1]), 
-                                     .wr_fifo(wr_fifo128[0]), 
-                                     .sort_num(sort_num),
-                                     .merged_array(arr128[0]));
+//   //STAGE 128-element array
+//    sort_arrays #(2,2,COLUMN) 
+//        stage128 (.clk(clk), 
+//                                     .rst(rst), 
+//                                     .empty_FIFO_L(empt_fifo64[0]), 
+//                                     .empty_FIFO_R(empt_fifo64[1]),
+//                                     .array_L(fifo_arr64[8'd0]), 
+//                                     .array_R(fifo_arr64[8'd1]), 
+//                                     .rd_fifo_L(rd_fifo64[8'd0]), 
+//                                     .rd_fifo_R(rd_fifo64[8'd1]), 
+//                                     .wr_fifo(wr_fifo128[0]), 
+//                                     .sort_num(sort_num),
+//                                     .merged_array(arr128[0]));
     
-    fifo #(ELEMENT_LEN,7,COLUMN) 
-        fifo128 (.clk(clk), 
-                                    .reset(rst), 
-                                    .rd(rd_fifo128[0]), 
-                                    .wr(wr_fifo128[0]), 
-                                    .w_data(arr128[0]), 
-                                    .empty(empt_fifo128[0]), 
-                                    .full(), 
-                                    .r_data(fifo_arr128[0]));    
+//    fifo #(ELEMENT_LEN,7,COLUMN) 
+//        fifo128 (.clk(clk), 
+//                                    .reset(rst), 
+//                                    .rd(rd_fifo128[0]), 
+//                                    .wr(wr_fifo128[0]), 
+//                                    .w_data(arr128[0]), 
+//                                    .empty(empt_fifo128[0]), 
+//                                    .full(), 
+//                                    .r_data(fifo_arr128[0]));    
     
                                 
     always @(posedge clk) begin
-        if(!empt_fifo128[0]) 
-            rd_fifo128[0] <= 1;
+        if(!empt_fifo32[0]) 
+            rd_fifo32[0] <= 1;
         else begin
-            rd_fifo128[0] <= 0;
+            rd_fifo32[0] <= 0;
             i <= 0;
         end
-        if(rd_fifo128[0]) begin
-            data_out[i] <= fifo_arr128[0];
+        if(rd_fifo32[0]) begin
+            data_out[i] <= fifo_arr32[0];
             i <= i+1;
         end
         else begin

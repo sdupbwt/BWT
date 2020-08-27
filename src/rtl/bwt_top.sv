@@ -21,7 +21,7 @@
 
 
 module bwt_top
-    #(parameter STRING_LEN=128)
+    #(parameter STRING_LEN=32)
     (
     input wire clk,
     input wire rst,
@@ -30,6 +30,8 @@ module bwt_top
     output reg [7:0] output_string_char,
     output reg valid_out
     );
+    
+    localparam ELEMENT_LEN = 8;
     
     wire [7:0] input_string_char_b[0:0];
     wire rd_fifo;
@@ -40,7 +42,6 @@ module bwt_top
     reg [7:0] ctr, ctr_nxt, ctr_send, ctr_send_nxt;
     wire pull_string, put_string;
     wire start_bwt, done_bwt;
-//    reg [7:0] suffixes_out [STRING_LEN-1:0];
     reg [7:0] output_string [STRING_LEN-1:0];
     reg valid_out_nxt;
     reg [7:0] output_string_char_nxt;
@@ -88,7 +89,7 @@ module bwt_top
     
     end
    
-    fifo #(8,7,1) fifo_input
+    fifo #(ELEMENT_LEN,5,1) fifo_input
       (
       .clk(clk),                               
       .reset(rst),

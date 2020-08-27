@@ -22,7 +22,7 @@
 
 module bwt_top_tb();
 
-    localparam STRING_LEN = 128;
+    localparam STRING_LEN = 32;
     reg clk, rst, start, start_test, start_nxt;
     
     reg [7:0] input_string [STRING_LEN-1:0];
@@ -135,50 +135,50 @@ module bwt_top_tb();
         $display("\t\t\t\t\t\t\t\t\t\t\t\t\t***** START SIMULATION *****");
         
         failed_tests = 0;
-        test_num = 1;
-        input_string_b = "sdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdusdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdup$";
-        test_bwt = "pssssssssssssssssssssssssssssssssuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuupppppppppppppppu$pppppppppppppppdddddddddddddddddddddddddddddddd";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
+//        test_num = 1;
+//        input_string_b = "sdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdusdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdup$";
+//        test_bwt = "pssssssssssssssssssssssssssssssssuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuupppppppppppppppu$pppppppppppppppdddddddddddddddddddddddddddddddd";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
 
-        test_num++;
-        input_string_b = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras ve$";
-        test_bwt ="..trth,mgam,,n,er,setdnaeit $ i l  r issas eea uvussc rlmtnubmnno ccdc prpsl eeouea iiii ordclLiiisuoCoePa iun  ip iieiceqgasts ";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
+//        test_num++;
+//        input_string_b = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras ve$";
+//        test_bwt ="..trth,mgam,,n,er,setdnaeit $ i l  r issas eea uvussc rlmtnubmnno ccdc prpsl eeouea iiii ordclLiiisuoCoePa iun  ip iieiceqgasts ";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
             
-        test_num++;
-        input_string_b = "mississippimississippimississippimississippimississippimississippimississippimississippimississippimississippimississippimissis$";
-        test_bwt = "spppppppppppsssssssssssssssssssssssmmmmmmmmmmmmiiiiiiiiiii$pppppppppppiiiiiiiiiiiisssssssssssssssssssssssiiiiiiiiiiiiiiiiiiiiiii";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
+//        test_num++;
+//        input_string_b = "mississippimississippimississippimississippimississippimississippimississippimississippimississippimississippimississippimissis$";
+//        test_bwt = "spppppppppppsssssssssssssssssssssssmmmmmmmmmmmmiiiiiiiiiii$pppppppppppiiiiiiiiiiiisssssssssssssssssssssssiiiiiiiiiiiiiiiiiiiiiii";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
             
-        test_num++;
-        input_string_b = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
-        test_bwt = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
-        
-        test_num++;
-        input_string_b = "bananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananab$";
-        test_bwt = "bnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaa$aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
-        
-        test_num++;
-        input_string_b = "w szczebrzeszynie chrzaszcz brzmi w trzcinie i szczebrzeszyn z tego slynie. Wol go pyta: Panie chrzaszczu, Po co pan tak brzecz$";
-        test_bwt = ":,.kzeeoleoooiwnzwinzuea   ttpPzz ee   z zezzziiiizzztzz ecc mnnnncaoszayyaiyPcggW  hhtbbbb a  aeey   z$ zzlpc crrrssssccrrrrcss";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
-        
-        test_num++;
-        input_string_b = "Vivamus iaculis, massa vitae bibendum iaculis, quam nisl venenatis justo, suscipit lobortis sem tellus eu augue. Donec vitae qu$";
-        test_bwt = ".uessmst,me,s,mlacussoe $siittuvmn i oesaanaauntsnbv u  bcttllnpvvV suue luae aeeoe tlDbi  ouuiiiisu iau iii arseqqgaccdlmsji   ";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
-        
-        test_num++;
-        input_string_b = "qwertyuiopasdfghjklzxcvbnm,./1234567890-=qwertyuiopasdfghjklzxcvbnm,./1234567890-=qwertyuiop[asdfghjkl;zxcvbnm,./1234567890-=qw$";
-        test_bwt = "wmmm000,,,...999///111222333444555666777888l---p[ppvvvxxxssswwwdddfffggguuuhhhjjjkkknnnbbbiiiooo===$eeeaaarrryyycccqqqqzzzttt;ll";
-        test_string(input_string_b,test_bwt,test_num,output_bwt);
+//        test_num++;
+//        input_string_b = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
+//        test_bwt = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa$";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
         
 //        test_num++;
-//        input_string_b = "mississippi$";
-//        test_bwt =       "ipssm$pissii";
+//        input_string_b = "bananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananabananab$";
+//        test_bwt = "bnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaa$aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 //        test_string(input_string_b,test_bwt,test_num,output_bwt);
+        
+//        test_num++;
+//        input_string_b = "w szczebrzeszynie chrzaszcz brzmi w trzcinie i szczebrzeszyn z tego slynie. Wol go pyta: Panie chrzaszczu, Po co pan tak brzecz$";
+//        test_bwt = ":,.kzeeoleoooiwnzwinzuea   ttpPzz ee   z zezzziiiizzztzz ecc mnnnncaoszayyaiyPcggW  hhtbbbb a  aeey   z$ zzlpc crrrssssccrrrrcss";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
+        
+//        test_num++;
+//        input_string_b = "Vivamus iaculis, massa vitae bibendum iaculis, quam nisl venenatis justo, suscipit lobortis sem tellus eu augue. Donec vitae qu$";
+//        test_bwt = ".uessmst,me,s,mlacussoe $siittuvmn i oesaanaauntsnbv u  bcttllnpvvV suue luae aeeoe tlDbi  ouuiiiisu iau iii arseqqgaccdlmsji   ";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
+        
+//        test_num++;
+//        input_string_b = "qwertyuiopasdfghjklzxcvbnm,./1234567890-=qwertyuiopasdfghjklzxcvbnm,./1234567890-=qwertyuiop[asdfghjkl;zxcvbnm,./1234567890-=qw$";
+//        test_bwt = "wmmm000,,,...999///111222333444555666777888l---p[ppvvvxxxssswwwdddfffggguuuhhhjjjkkknnnbbbiiiooo===$eeeaaarrryyycccqqqqzzzttt;ll";
+//        test_string(input_string_b,test_bwt,test_num,output_bwt);
+        
+        test_num++;
+        input_string_b = "mississippimississippimississip$";
+        test_bwt =       "pppssssssmmmii$ippiissssssiiiiii";
+        test_string(input_string_b,test_bwt,test_num,output_bwt);
         
         $display();
         $display("\n\t\t\t\t\t\t\t\t\t\t\t\t\t ***** SIMULATION FINISHED *****\n");
