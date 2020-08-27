@@ -69,18 +69,18 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/mb_design/ip/mb_design_output_string_char_0/sim/mb_design_output_string_char_0.vhd" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../bd/mb_design/ipshared/49cf/hdl/bwt_ip_v1_0_S00_AXI.v" \
+"../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0_S00_AXI.v" \
 
 vlog -work xil_defaultlib -64 -sv "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../bd/mb_design/ipshared/49cf/src/MM_top.sv" \
-"../../../bd/mb_design/ipshared/49cf/src/bwt_top.sv" \
-"../../../bd/mb_design/ipshared/49cf/src/fifo.sv" \
-"../../../bd/mb_design/ipshared/49cf/src/merge_sort_top.sv" \
-"../../../bd/mb_design/ipshared/49cf/src/sort2elem.sv" \
-"../../../bd/mb_design/ipshared/49cf/src/sort_arrays.sv" \
+"../../../bd/mb_design/ipshared/9266/src/MM_top.sv" \
+"../../../bd/mb_design/ipshared/9266/src/bwt_top.sv" \
+"../../../bd/mb_design/ipshared/9266/src/fifo.sv" \
+"../../../bd/mb_design/ipshared/9266/src/merge_sort_top.sv" \
+"../../../bd/mb_design/ipshared/9266/src/sort2elem.sv" \
+"../../../bd/mb_design/ipshared/9266/src/sort_arrays.sv" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../bd/mb_design/ipshared/49cf/hdl/bwt_ip_v1_0.v" \
+"../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0.v" \
 "../../../bd/mb_design/ip/mb_design_bwt_ip_0_0_1/sim/mb_design_bwt_ip_0_0.v" \
 
 vcom -work lmb_v10_v3_0_9 -64 -93 \

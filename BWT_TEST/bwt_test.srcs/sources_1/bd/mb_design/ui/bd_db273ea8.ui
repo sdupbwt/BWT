@@ -1,6 +1,6 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
 #  -string -flagsOSRD
 preplace port input_string_char -pg 1 -lvl 4 -x 1140 -y -180 -defaultsOSRD
 preplace port output_string_char -pg 1 -lvl 4 -x 1140 -y -350 -defaultsOSRD
@@ -27,11 +27,11 @@ preplace netloc microblaze_0_ilmb_1 1 2 1 770 30n
 preplace netloc diff_clock_rtl_1 1 0 1 NJ 230
 preplace netloc microblaze_0_axi_periph_M02_AXI 1 0 4 -30 -90 NJ -90 NJ -90 1110
 preplace netloc output_string_char_GPIO 1 3 1 NJ -350
-preplace netloc microblaze_0_debug 1 1 1 250J -20n
-preplace netloc microblaze_0_axi_periph_M00_AXI 1 2 2 790J -100 1100
 preplace netloc input_string_char_GPIO 1 3 1 NJ -180
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 2 2 790J -430 1120
 preplace netloc microblaze_0_dlmb_1 1 2 1 740 10n
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 2 2 790J -430 1120
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 2 2 790J -100 1100
+preplace netloc microblaze_0_debug 1 1 1 250J -20n
 levelinfo -pg 1 -60 110 500 950 1140
 pagesize -pg 1 -db -bbox -sgen -150 -440 1310 440
 "

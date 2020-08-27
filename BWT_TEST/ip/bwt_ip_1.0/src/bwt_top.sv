@@ -46,7 +46,7 @@ module bwt_top
     reg valid_out_nxt;
     reg [7:0] output_string_char_nxt;
     
-    assign pull_string = full_fifo ? 1 : ((pull_string && !empt_fifo) ? 1 : 0);
+    assign pull_string = full_fifo ? 1 : ((!empt_fifo) ? 1 : 0);
     assign start_bwt = ctr == STRING_LEN-1;
     assign put_string = done_bwt ? 1 : ((put_string && !full_fifo_out) ? 1 : 0);
     assign input_string_char_b[0] = input_string_char;

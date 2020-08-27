@@ -135,7 +135,7 @@ module bwt_top_tb();
         $display("\t\t\t\t\t\t\t\t\t\t\t\t\t***** START SIMULATION *****");
         
         failed_tests = 0;
-//        test_num = 1;
+        test_num = 1;
 //        input_string_b = "sdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdusdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdupsdup$";
 //        test_bwt = "pssssssssssssssssssssssssssssssssuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuupppppppppppppppu$pppppppppppppppdddddddddddddddddddddddddddddddd";
 //        test_string(input_string_b,test_bwt,test_num,output_bwt);
