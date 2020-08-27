@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat May 16 13:42:49 2020
+# Process ID: 1280
+# Current directory: D:/MTM/semestr8/SDUP_BWT/BWT/src/ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10752 D:\MTM\semestr8\SDUP_BWT\BWT\src\ip\edit_bwt_axis_v1_0.xpr
+# Log file: D:/MTM/semestr8/SDUP_BWT/BWT/src/ip/vivado.log
+# Journal file: D:/MTM/semestr8/SDUP_BWT/BWT/src/ip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/MTM/semestr8/SDUP_BWT/BWT/src/ip/edit_bwt_axis_v1_0.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation

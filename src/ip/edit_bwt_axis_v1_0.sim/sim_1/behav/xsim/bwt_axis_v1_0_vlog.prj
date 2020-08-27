@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog   \
+"../../../../bwt_axis_1.0/hdl/bwt_axis_v1_0_M00_AXIS.v" \
+"../../../../bwt_axis_1.0/hdl/bwt_axis_v1_0_S00_AXIS.v" \
+
+sv xil_defaultlib  \
+"../../../../bwt_axis_1.0/src/merge_sort_top.sv" \
+
+verilog   \
+"../../../../bwt_axis_1.0/hdl/bwt_axis_v1_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat May 16 14:02:36 2020
+# Process ID: 15640
+# Current directory: D:/MTM/semestr8/SDUP_BWT/BWT/src/ip/edit_bwt_axis_v1_0.runs/synth_1
+# Command line: vivado.exe -log bwt_axis_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bwt_axis_v1_0.tcl
+# Log file: D:/MTM/semestr8/SDUP_BWT/BWT/src/ip/edit_bwt_axis_v1_0.runs/synth_1/bwt_axis_v1_0.vds
+# Journal file: D:/MTM/semestr8/SDUP_BWT/BWT/src/ip/edit_bwt_axis_v1_0.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source bwt_axis_v1_0.tcl -notrace

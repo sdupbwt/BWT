@@ -40,11 +40,11 @@ vmap axi_data_fifo_v2_1_18 activehdl/axi_data_fifo_v2_1_18
 vmap axi_crossbar_v2_1_20 activehdl/axi_crossbar_v2_1_20
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93 \
-"C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
+"D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vcom -work microblaze_v11_0_1 -93 \
 "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/f8c3/hdl/microblaze_v11_0_vh_rfs.vhd" \
@@ -69,18 +69,18 @@ vcom -work xil_defaultlib -93 \
 "../../../bd/mb_design/ip/mb_design_output_string_char_0/sim/mb_design_output_string_char_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../bd/mb_design/ipshared/80da/hdl/bwt_ip_v1_0_S00_AXI.v" \
+"../../../bd/mb_design/ipshared/49cf/hdl/bwt_ip_v1_0_S00_AXI.v" \
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../bd/mb_design/ipshared/80da/src/MM_top.sv" \
-"../../../bd/mb_design/ipshared/80da/src/bwt_top.sv" \
-"../../../bd/mb_design/ipshared/80da/src/fifo.sv" \
-"../../../bd/mb_design/ipshared/80da/src/merge_sort_top.sv" \
-"../../../bd/mb_design/ipshared/80da/src/sort2elem.sv" \
-"../../../bd/mb_design/ipshared/80da/src/sort_arrays.sv" \
+"../../../bd/mb_design/ipshared/49cf/src/MM_top.sv" \
+"../../../bd/mb_design/ipshared/49cf/src/bwt_top.sv" \
+"../../../bd/mb_design/ipshared/49cf/src/fifo.sv" \
+"../../../bd/mb_design/ipshared/49cf/src/merge_sort_top.sv" \
+"../../../bd/mb_design/ipshared/49cf/src/sort2elem.sv" \
+"../../../bd/mb_design/ipshared/49cf/src/sort_arrays.sv" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../bd/mb_design/ipshared/80da/hdl/bwt_ip_v1_0.v" \
+"../../../bd/mb_design/ipshared/49cf/hdl/bwt_ip_v1_0.v" \
 "../../../bd/mb_design/ip/mb_design_bwt_ip_0_0_1/sim/mb_design_bwt_ip_0_0.v" \
 
 vcom -work lmb_v10_v3_0_9 -93 \
