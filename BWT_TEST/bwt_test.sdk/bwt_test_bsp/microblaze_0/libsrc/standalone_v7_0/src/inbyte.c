@@ -7,5 +7,7 @@ char inbyte(void);
 }
 #endif 
 
-char inbyte(void) {
+char inbyte(void)
+{
+
 }
