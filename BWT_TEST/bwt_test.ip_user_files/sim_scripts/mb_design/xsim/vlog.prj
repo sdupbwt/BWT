@@ -1,4 +1,7 @@
 verilog xil_defaultlib --include "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" --include "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
+"../../../bd/mb_design/ip/mb_design_lmb_bram_1/sim/mb_design_lmb_bram_1.v" \
+"../../../bd/mb_design/ip/mb_design_clk_wiz_1_1/mb_design_clk_wiz_1_1_clk_wiz.v" \
+"../../../bd/mb_design/ip/mb_design_clk_wiz_1_1/mb_design_clk_wiz_1_1.v" \
 "../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0_S00_AXI.v" \
 
 sv xil_defaultlib --include "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" --include "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
@@ -11,11 +14,8 @@ sv xil_defaultlib --include "../../../../bwt_test.srcs/sources_1/bd/mb_design/ip
 
 verilog xil_defaultlib --include "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" --include "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
 "../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0.v" \
-"../../../bd/mb_design/ip/mb_design_bwt_ip_0_0_1/sim/mb_design_bwt_ip_0_0.v" \
-"../../../bd/mb_design/ip/mb_design_lmb_bram_0_1/sim/mb_design_lmb_bram_0.v" \
-"../../../bd/mb_design/ip/mb_design_clk_wiz_1_0_1/mb_design_clk_wiz_1_0_clk_wiz.v" \
-"../../../bd/mb_design/ip/mb_design_clk_wiz_1_0_1/mb_design_clk_wiz_1_0.v" \
-"../../../bd/mb_design/ip/mb_design_xbar_0_1/sim/mb_design_xbar_0.v" \
+"../../../bd/mb_design/ip/mb_design_bwt_ip_0_1/sim/mb_design_bwt_ip_0_1.v" \
+"../../../bd/mb_design/ip/mb_design_xbar_1/sim/mb_design_xbar_1.v" \
 "../../../bd/mb_design/sim/mb_design.v" \
 
 verilog xil_defaultlib "glbl.v"

@@ -5,12 +5,6 @@
 -makelib ies_lib/xpm \
   "D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
--makelib ies_lib/microblaze_v11_0_1 \
-  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/f8c3/hdl/microblaze_v11_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ip/mb_design_microblaze_0_0_1/sim/mb_design_microblaze_0_0.vhd" \
--endlib
 -makelib ies_lib/axi_lite_ipif_v3_0_4 \
   "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
 -endlib
@@ -27,6 +21,48 @@
   "../../../bd/mb_design/ip/mb_design_input_string_char_0/sim/mb_design_input_string_char_0.vhd" \
   "../../../bd/mb_design/ip/mb_design_output_string_char_0/sim/mb_design_output_string_char_0.vhd" \
 -endlib
+-makelib ies_lib/microblaze_v11_0_1 \
+  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/f8c3/hdl/microblaze_v11_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_design/ip/mb_design_microblaze_0_2/sim/mb_design_microblaze_0_2.vhd" \
+-endlib
+-makelib ies_lib/lmb_v10_v3_0_9 \
+  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_design/ip/mb_design_dlmb_v10_1/sim/mb_design_dlmb_v10_1.vhd" \
+  "../../../bd/mb_design/ip/mb_design_ilmb_v10_1/sim/mb_design_ilmb_v10_1.vhd" \
+-endlib
+-makelib ies_lib/lmb_bram_if_cntlr_v4_0_16 \
+  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/6335/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_design/ip/mb_design_dlmb_bram_if_cntlr_1/sim/mb_design_dlmb_bram_if_cntlr_1.vhd" \
+  "../../../bd/mb_design/ip/mb_design_ilmb_bram_if_cntlr_1/sim/mb_design_ilmb_bram_if_cntlr_1.vhd" \
+-endlib
+-makelib ies_lib/blk_mem_gen_v8_4_3 \
+  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c001/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_design/ip/mb_design_lmb_bram_1/sim/mb_design_lmb_bram_1.v" \
+-endlib
+-makelib ies_lib/mdm_v3_2_16 \
+  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/550e/hdl/mdm_v3_2_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_design/ip/mb_design_mdm_1_1/sim/mb_design_mdm_1_1.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_design/ip/mb_design_clk_wiz_1_1/mb_design_clk_wiz_1_1_clk_wiz.v" \
+  "../../../bd/mb_design/ip/mb_design_clk_wiz_1_1/mb_design_clk_wiz_1_1.v" \
+-endlib
+-makelib ies_lib/proc_sys_reset_v5_0_13 \
+  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_1/sim/mb_design_rst_clk_wiz_1_100M_1.vhd" \
+-endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0_S00_AXI.v" \
 -endlib
@@ -40,43 +76,7 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0.v" \
-  "../../../bd/mb_design/ip/mb_design_bwt_ip_0_0_1/sim/mb_design_bwt_ip_0_0.v" \
--endlib
--makelib ies_lib/lmb_v10_v3_0_9 \
-  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ip/mb_design_dlmb_v10_0_1/sim/mb_design_dlmb_v10_0.vhd" \
-  "../../../bd/mb_design/ip/mb_design_ilmb_v10_0_1/sim/mb_design_ilmb_v10_0.vhd" \
--endlib
--makelib ies_lib/lmb_bram_if_cntlr_v4_0_16 \
-  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/6335/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ip/mb_design_dlmb_bram_if_cntlr_0_1/sim/mb_design_dlmb_bram_if_cntlr_0.vhd" \
-  "../../../bd/mb_design/ip/mb_design_ilmb_bram_if_cntlr_0_1/sim/mb_design_ilmb_bram_if_cntlr_0.vhd" \
--endlib
--makelib ies_lib/blk_mem_gen_v8_4_3 \
-  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c001/simulation/blk_mem_gen_v8_4.v" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ip/mb_design_lmb_bram_0_1/sim/mb_design_lmb_bram_0.v" \
--endlib
--makelib ies_lib/mdm_v3_2_16 \
-  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/550e/hdl/mdm_v3_2_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ip/mb_design_mdm_1_0_1/sim/mb_design_mdm_1_0.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ip/mb_design_clk_wiz_1_0_1/mb_design_clk_wiz_1_0_clk_wiz.v" \
-  "../../../bd/mb_design/ip/mb_design_clk_wiz_1_0_1/mb_design_clk_wiz_1_0.v" \
--endlib
--makelib ies_lib/proc_sys_reset_v5_0_13 \
-  "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_0_1/sim/mb_design_rst_clk_wiz_1_100M_0.vhd" \
+  "../../../bd/mb_design/ip/mb_design_bwt_ip_0_1/sim/mb_design_bwt_ip_0_1.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
   "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -103,7 +103,7 @@
   "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ace7/hdl/axi_crossbar_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ip/mb_design_xbar_0_1/sim/mb_design_xbar_0.v" \
+  "../../../bd/mb_design/ip/mb_design_xbar_1/sim/mb_design_xbar_1.v" \
   "../../../bd/mb_design/sim/mb_design.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \

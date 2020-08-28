@@ -3,11 +3,11 @@ vlib modelsim_lib/msim
 
 vlib modelsim_lib/msim/xil_defaultlib
 vlib modelsim_lib/msim/xpm
-vlib modelsim_lib/msim/microblaze_v11_0_1
 vlib modelsim_lib/msim/axi_lite_ipif_v3_0_4
 vlib modelsim_lib/msim/lib_cdc_v1_0_2
 vlib modelsim_lib/msim/interrupt_control_v3_1_4
 vlib modelsim_lib/msim/axi_gpio_v2_0_21
+vlib modelsim_lib/msim/microblaze_v11_0_1
 vlib modelsim_lib/msim/lmb_v10_v3_0_9
 vlib modelsim_lib/msim/lmb_bram_if_cntlr_v4_0_16
 vlib modelsim_lib/msim/blk_mem_gen_v8_4_3
@@ -22,11 +22,11 @@ vlib modelsim_lib/msim/axi_crossbar_v2_1_20
 
 vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap xpm modelsim_lib/msim/xpm
-vmap microblaze_v11_0_1 modelsim_lib/msim/microblaze_v11_0_1
 vmap axi_lite_ipif_v3_0_4 modelsim_lib/msim/axi_lite_ipif_v3_0_4
 vmap lib_cdc_v1_0_2 modelsim_lib/msim/lib_cdc_v1_0_2
 vmap interrupt_control_v3_1_4 modelsim_lib/msim/interrupt_control_v3_1_4
 vmap axi_gpio_v2_0_21 modelsim_lib/msim/axi_gpio_v2_0_21
+vmap microblaze_v11_0_1 modelsim_lib/msim/microblaze_v11_0_1
 vmap lmb_v10_v3_0_9 modelsim_lib/msim/lmb_v10_v3_0_9
 vmap lmb_bram_if_cntlr_v4_0_16 modelsim_lib/msim/lmb_bram_if_cntlr_v4_0_16
 vmap blk_mem_gen_v8_4_3 modelsim_lib/msim/blk_mem_gen_v8_4_3
@@ -46,12 +46,6 @@ vlog -work xil_defaultlib -64 -incr -sv "+incdir+../../../../bwt_test.srcs/sourc
 vcom -work xpm -64 -93 \
 "D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
-vcom -work microblaze_v11_0_1 -64 -93 \
-"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/f8c3/hdl/microblaze_v11_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/mb_design/ip/mb_design_microblaze_0_0_1/sim/mb_design_microblaze_0_0.vhd" \
-
 vcom -work axi_lite_ipif_v3_0_4 -64 -93 \
 "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
 
@@ -68,6 +62,48 @@ vcom -work xil_defaultlib -64 -93 \
 "../../../bd/mb_design/ip/mb_design_input_string_char_0/sim/mb_design_input_string_char_0.vhd" \
 "../../../bd/mb_design/ip/mb_design_output_string_char_0/sim/mb_design_output_string_char_0.vhd" \
 
+vcom -work microblaze_v11_0_1 -64 -93 \
+"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/f8c3/hdl/microblaze_v11_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/mb_design/ip/mb_design_microblaze_0_2/sim/mb_design_microblaze_0_2.vhd" \
+
+vcom -work lmb_v10_v3_0_9 -64 -93 \
+"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/mb_design/ip/mb_design_dlmb_v10_1/sim/mb_design_dlmb_v10_1.vhd" \
+"../../../bd/mb_design/ip/mb_design_ilmb_v10_1/sim/mb_design_ilmb_v10_1.vhd" \
+
+vcom -work lmb_bram_if_cntlr_v4_0_16 -64 -93 \
+"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/6335/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/mb_design/ip/mb_design_dlmb_bram_if_cntlr_1/sim/mb_design_dlmb_bram_if_cntlr_1.vhd" \
+"../../../bd/mb_design/ip/mb_design_ilmb_bram_if_cntlr_1/sim/mb_design_ilmb_bram_if_cntlr_1.vhd" \
+
+vlog -work blk_mem_gen_v8_4_3 -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
+"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c001/simulation/blk_mem_gen_v8_4.v" \
+
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
+"../../../bd/mb_design/ip/mb_design_lmb_bram_1/sim/mb_design_lmb_bram_1.v" \
+
+vcom -work mdm_v3_2_16 -64 -93 \
+"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/550e/hdl/mdm_v3_2_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/mb_design/ip/mb_design_mdm_1_1/sim/mb_design_mdm_1_1.vhd" \
+
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
+"../../../bd/mb_design/ip/mb_design_clk_wiz_1_1/mb_design_clk_wiz_1_1_clk_wiz.v" \
+"../../../bd/mb_design/ip/mb_design_clk_wiz_1_1/mb_design_clk_wiz_1_1.v" \
+
+vcom -work proc_sys_reset_v5_0_13 -64 -93 \
+"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_1/sim/mb_design_rst_clk_wiz_1_100M_1.vhd" \
+
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
 "../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0_S00_AXI.v" \
 
@@ -81,43 +117,7 @@ vlog -work xil_defaultlib -64 -incr -sv "+incdir+../../../../bwt_test.srcs/sourc
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
 "../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0.v" \
-"../../../bd/mb_design/ip/mb_design_bwt_ip_0_0_1/sim/mb_design_bwt_ip_0_0.v" \
-
-vcom -work lmb_v10_v3_0_9 -64 -93 \
-"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/mb_design/ip/mb_design_dlmb_v10_0_1/sim/mb_design_dlmb_v10_0.vhd" \
-"../../../bd/mb_design/ip/mb_design_ilmb_v10_0_1/sim/mb_design_ilmb_v10_0.vhd" \
-
-vcom -work lmb_bram_if_cntlr_v4_0_16 -64 -93 \
-"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/6335/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/mb_design/ip/mb_design_dlmb_bram_if_cntlr_0_1/sim/mb_design_dlmb_bram_if_cntlr_0.vhd" \
-"../../../bd/mb_design/ip/mb_design_ilmb_bram_if_cntlr_0_1/sim/mb_design_ilmb_bram_if_cntlr_0.vhd" \
-
-vlog -work blk_mem_gen_v8_4_3 -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c001/simulation/blk_mem_gen_v8_4.v" \
-
-vlog -work xil_defaultlib -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../bd/mb_design/ip/mb_design_lmb_bram_0_1/sim/mb_design_lmb_bram_0.v" \
-
-vcom -work mdm_v3_2_16 -64 -93 \
-"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/550e/hdl/mdm_v3_2_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/mb_design/ip/mb_design_mdm_1_0_1/sim/mb_design_mdm_1_0.vhd" \
-
-vlog -work xil_defaultlib -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../bd/mb_design/ip/mb_design_clk_wiz_1_0_1/mb_design_clk_wiz_1_0_clk_wiz.v" \
-"../../../bd/mb_design/ip/mb_design_clk_wiz_1_0_1/mb_design_clk_wiz_1_0.v" \
-
-vcom -work proc_sys_reset_v5_0_13 -64 -93 \
-"../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_0_1/sim/mb_design_rst_clk_wiz_1_100M_0.vhd" \
+"../../../bd/mb_design/ip/mb_design_bwt_ip_0_1/sim/mb_design_bwt_ip_0_1.v" \
 
 vlog -work generic_baseblocks_v2_1_0 -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
 "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -144,7 +144,7 @@ vlog -work axi_crossbar_v2_1_20 -64 -incr "+incdir+../../../../bwt_test.srcs/sou
 "../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ace7/hdl/axi_crossbar_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/c923" "+incdir+../../../../bwt_test.srcs/sources_1/bd/mb_design/ipshared/ec67/hdl" \
-"../../../bd/mb_design/ip/mb_design_xbar_0_1/sim/mb_design_xbar_0.v" \
+"../../../bd/mb_design/ip/mb_design_xbar_1/sim/mb_design_xbar_1.v" \
 "../../../bd/mb_design/sim/mb_design.v" \
 
 vlog -work xil_defaultlib \

@@ -39,11 +39,11 @@ module mb_design_tb();
         #2_000;
         
         //Set angles to count
-        repeat(128) begin
-            #2_000;
-            @(posedge clk_p);
-            input_string_char_tri_io = input_string_char_tri_io + 1;
-        end
+//        repeat(128) begin
+//            #2_000;
+//            @(posedge clk_p);
+//            input_string_char_tri_io = input_string_char_tri_io + 1;
+//        end
         
         #750_000;
 //        $fclose(f);
