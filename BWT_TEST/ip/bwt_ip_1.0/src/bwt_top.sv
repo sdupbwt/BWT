@@ -26,6 +26,7 @@ module bwt_top
     input wire clk,
     input wire rst,
     input wire start,
+    input wire send_data,
     input wire [7:0] input_string_char,
     output reg [7:0] output_string_char,
     output reg valid_out
@@ -45,6 +46,7 @@ module bwt_top
     reg [7:0] output_string [STRING_LEN-1:0];
     reg valid_out_nxt;
     reg [7:0] output_string_char_nxt;
+    reg fifo_wr;
     
     assign pull_string = full_fifo ? 1 : ((!empt_fifo) ? 1 : 0);
     assign start_bwt = ctr == STRING_LEN-1;
@@ -71,30 +73,44 @@ module bwt_top
     end
     
     always @* begin
-    ctr_nxt = 0;
-    ctr_send_nxt = 0;
-    output_string_char_nxt = output_string_char;
-    valid_out_nxt = 0;
-    input_string_nxt = input_string;
+        ctr_nxt = ctr;
+        ctr_send_nxt = ctr_send;
+        output_string_char_nxt = output_string_char;
+        valid_out_nxt = 0;
+        input_string_nxt = input_string;
+        
+        if(pull_string) begin
+            input_string_nxt[ctr] = string_char[0];
+//            ctr_nxt = ctr+1;
+        end
+        else if((done_bwt || valid_out != 0) && ctr_send < STRING_LEN) begin
+            valid_out_nxt = 1;
+            if(send_data) begin
+                output_string_char_nxt = output_string[ctr_send];
+                if(output_string_char_nxt == 0)
+                    output_string_char_nxt = "H";
+                ctr_send_nxt = ctr_send+1;
+            end 
+        end
+    end
     
-    if(pull_string) begin
-        input_string_nxt[ctr] = string_char[0];
-        ctr_nxt = ctr+1;
-    end
-    else if((done_bwt || ctr_send != 0) && ctr_send < STRING_LEN) begin
-        output_string_char_nxt = output_string[ctr_send];
-        valid_out_nxt = 1;
-        ctr_send_nxt = ctr_send+1;
+    always @(posedge start or negedge start) begin
+        fifo_wr <= 1;
+        ctr_nxt <= ctr+1;
     end
     
+    always @(posedge clk) begin 
+        if(fifo_wr)
+            fifo_wr <= 0;
     end
+    
    
     fifo #(ELEMENT_LEN,5,1) fifo_input
       (
       .clk(clk),                               
       .reset(rst),
       .rd(rd_fifo),
-      .wr(start),
+      .wr(fifo_wr),
       .w_data(input_string_char_b),      
       .empty(empt_fifo), 
       .full(full_fifo),                                 
