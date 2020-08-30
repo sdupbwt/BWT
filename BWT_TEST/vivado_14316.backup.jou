@@ -1,0 +1,103 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Aug 27 21:56:36 2020
+# Process ID: 14316
+# Current directory: C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2344 C:\Users\toshiba\Desktop\IV\sdup\projekt\BWT\BWT_TEST\bwt_test.xpr
+# Log file: C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/vivado.log
+# Journal file: C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run impl_1
+check_timing -exclude {constant_clock pulse_width_clock unconstrained_internal_endpoints no_input_delay no_output_delay multiple_clock generated_clocks partial_input_delay partial_output_delay latch_loops } -verbose -name timing_1
+open_bd_design {C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.srcs/sources_1/bd/mb_design/mb_design.bd}
+write_hwdef -force  -file C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper.hdf
+launch_sdk -workspace C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk -hwspec C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.sdk/mb_design_wrapper.hdf
+open_bd_design {C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.srcs/sources_1/bd/mb_design/mb_design.bd}
+open_bd_design {C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.srcs/sources_1/bd/mb_design/mb_design.bd}
+delete_bd_objs [get_bd_intf_nets microblaze_0_dlmb_1] [get_bd_intf_nets microblaze_0_ilmb_1] [get_bd_intf_nets microblaze_0_M_AXI_DP] [get_bd_intf_nets microblaze_0_debug] [get_bd_nets rst_clk_wiz_1_100M_mb_reset] [get_bd_cells microblaze_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {None} clk {/clk_wiz_1/clk_out1 (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {128KB} preset {None}}  [get_bd_cells microblaze_0]
+delete_bd_objs [get_bd_nets rst_clk_wiz_1_100M_bus_struct_reset] [get_bd_cells microblaze_0_local_memory]
+delete_bd_objs [get_bd_nets reset_rtl_1] [get_bd_nets clk_wiz_1_locked] [get_bd_cells rst_clk_wiz_1_100M]
+delete_bd_objs [get_bd_intf_nets diff_clock_rtl_1] [get_bd_nets mdm_1_Debug_SYS_Rst] [get_bd_cells clk_wiz_1]
+delete_bd_objs [get_bd_intf_nets microblaze_0_axi_periph_M00_AXI] [get_bd_intf_nets microblaze_0_axi_periph_M01_AXI] [get_bd_intf_nets microblaze_0_axi_periph_M02_AXI] [get_bd_cells microblaze_0_axi_periph]
+delete_bd_objs [get_bd_cells mdm_1]
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {None} clk {New Clocking Wizard (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {128KB} preset {None}}  [get_bd_cells microblaze_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_input_string_char/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_input_string_char/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_output_string_char/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_output_string_char/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/bwt_ip_0/S00_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins bwt_ip_0/S00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins clk_wiz_1/CLK_IN1_D]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins clk_wiz_1/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+endgroup
+delete_bd_objs [get_bd_ports reset]
+delete_bd_objs [get_bd_intf_ports clock]
+regenerate_bd_layout
+undo
+undo
+undo
+delete_bd_objs [get_bd_intf_nets diff_clock_rtl_1] [get_bd_intf_ports diff_clock_rtl]
+delete_bd_objs [get_bd_nets reset_rtl_1] [get_bd_ports reset_rtl]
+undo
+undo
+undo
+undo
+delete_bd_objs [get_bd_ports reset]
+delete_bd_objs [get_bd_intf_ports clock]
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {None} clk {New Clocking Wizard (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {128KB} preset {None}}  [get_bd_cells microblaze_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_input_string_char/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_input_string_char/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_output_string_char/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_output_string_char/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/bwt_ip_0/S00_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins bwt_ip_0/S00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins clk_wiz_1/CLK_IN1_D]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins clk_wiz_1/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+endgroup
+regenerate_bd_layout
+set_property name clock [get_bd_intf_ports diff_clock_rtl]
+set_property name reset [get_bd_ports reset_rtl]
+save_bd_design
+make_wrapper -files [get_files C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.srcs/sources_1/bd/mb_design/mb_design.bd] -top
+report_ip_status -name ip_status 
+open_bd_design {C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.srcs/sources_1/bd/mb_design/mb_design.bd}
+delete_bd_objs [get_bd_intf_nets microblaze_0_M_AXI_DP] [get_bd_intf_nets microblaze_0_axi_periph_M00_AXI] [get_bd_intf_nets microblaze_0_axi_periph_M01_AXI] [get_bd_intf_nets microblaze_0_axi_periph_M02_AXI] [get_bd_cells microblaze_0_axi_periph]
+delete_bd_objs [get_bd_intf_nets microblaze_0_dlmb_1] [get_bd_nets rst_clk_wiz_1_100M_bus_struct_reset] [get_bd_intf_nets microblaze_0_ilmb_1] [get_bd_cells microblaze_0_local_memory]
+delete_bd_objs [get_bd_intf_nets microblaze_0_debug] [get_bd_nets rst_clk_wiz_1_100M_mb_reset] [get_bd_cells microblaze_0]
+delete_bd_objs [get_bd_cells mdm_1]
+delete_bd_objs [get_bd_nets reset_rtl_1] [get_bd_nets mdm_1_debug_sys_rst] [get_bd_nets clk_wiz_1_locked] [get_bd_cells rst_clk_wiz_1_100M]
+delete_bd_objs [get_bd_intf_nets diff_clock_rtl_1] [get_bd_cells clk_wiz_1]
+delete_bd_objs [get_bd_intf_ports clock]
+delete_bd_objs [get_bd_ports reset]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {0} axi_periph {Enabled} cache {None} clk {New Clocking Wizard (100 MHz)} debug_module {Debug Only} ecc {None} local_mem {128KB} preset {None}}  [get_bd_cells microblaze_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_input_string_char/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_input_string_char/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/axi_output_string_char/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_output_string_char/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/microblaze_0 (Periph)} Slave {/bwt_ip_0/S00_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins bwt_ip_0/S00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins clk_wiz_1/CLK_IN1_D]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins clk_wiz_1/reset]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+endgroup
+set_property name reset [get_bd_ports reset_rtl]
+set_property name clock [get_bd_intf_ports diff_clock_rtl]
+save_bd_design
+regenerate_bd_layout
+save_bd_design
+make_wrapper -files [get_files C:/Users/toshiba/Desktop/IV/sdup/projekt/BWT/BWT_TEST/bwt_test.srcs/sources_1/bd/mb_design/mb_design.bd] -top

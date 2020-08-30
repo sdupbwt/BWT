@@ -8,5 +8,7 @@ vhdl xil_defaultlib  \
 "../../../bd/mb_design/ip/mb_design_ilmb_bram_if_cntlr_1/sim/mb_design_ilmb_bram_if_cntlr_1.vhd" \
 "../../../bd/mb_design/ip/mb_design_mdm_1_1/sim/mb_design_mdm_1_1.vhd" \
 "../../../bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_1/sim/mb_design_rst_clk_wiz_1_100M_1.vhd" \
+"../../../bd/mb_design/ip/mb_design_axi_gpio_0_0_1/sim/mb_design_axi_gpio_0_0.vhd" \
+"../../../bd/mb_design/ip/mb_design_axi_gpio_1_0/sim/mb_design_axi_gpio_1_0.vhd" \
 
 nosort
