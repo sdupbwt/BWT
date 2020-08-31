@@ -23,17 +23,18 @@
 module mb_design_tb();
 
     reg clk_n, clk_p;
-    reg reset_n;
+    reg reset;
     reg [7:0] input_string_char_tri_io;
     wire [7:0] output_string_char_tri_io, input_string_char;
+    wire [7:0] leds_8bits_tri_o, sws_8bits_tri_i;
     
     assign input_string_char = input_string_char_tri_io;
    
     // Reset stimulus
     initial
     begin
-        reset_n = 1'b0;
-        #10 reset_n = 1'b1;
+        reset = 1'b1;
+        #10 reset = 1'b0;
         input_string_char_tri_io = "a";
         
         #2_000;
@@ -63,6 +64,9 @@ module mb_design_tb();
         clk_p = ~clk_p; //toggle clk every 5 time units
     end
     //Instantiate tested module
-    mb_design_wrapper mb_design_inst ( clk_n, clk_p, input_string_char, output_string_char_tri_io, reset_n);
+    mb_design_wrapper mb_design_inst ( clk_n, clk_p, input_string_char, leds_8bits_tri_o,
+    output_string_char_tri_io,
+    reset,
+    sws_8bits_tri_i);
     
 endmodule
