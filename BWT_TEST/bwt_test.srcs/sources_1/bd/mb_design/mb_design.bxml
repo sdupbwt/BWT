@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="mb_design" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1598654613"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1598654613"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1598654613"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1598654613"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1598893692"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1598893692"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1598893692"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1598893692"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\mb_design_input_string_char_0\mb_design_input_string_char_0.xci" Type="IP">
         <Instance HierarchyPath="axi_input_string_char"/>
@@ -114,6 +114,22 @@
       <File Name="ip\mb_design_microblaze_0_axi_periph_1\mb_design_microblaze_0_axi_periph_1.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_design_axi_gpio_0_0_1\mb_design_axi_gpio_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_led"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\mb_design_axi_gpio_1_0\mb_design_axi_gpio_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_sw"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>

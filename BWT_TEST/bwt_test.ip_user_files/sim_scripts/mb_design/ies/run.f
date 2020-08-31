@@ -64,18 +64,18 @@
   "../../../bd/mb_design/ip/mb_design_rst_clk_wiz_1_100M_1/sim/mb_design_rst_clk_wiz_1_100M_1.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0_S00_AXI.v" \
+  "../../../bd/mb_design/ipshared/c7e0/hdl/bwt_ip_v1_0_S00_AXI.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/mb_design/ipshared/9266/src/MM_top.sv" \
-  "../../../bd/mb_design/ipshared/9266/src/bwt_top.sv" \
-  "../../../bd/mb_design/ipshared/9266/src/fifo.sv" \
-  "../../../bd/mb_design/ipshared/9266/src/merge_sort_top.sv" \
-  "../../../bd/mb_design/ipshared/9266/src/sort2elem.sv" \
-  "../../../bd/mb_design/ipshared/9266/src/sort_arrays.sv" \
+  "../../../bd/mb_design/ipshared/c7e0/src/MM_top.sv" \
+  "../../../bd/mb_design/ipshared/c7e0/src/bwt_top.sv" \
+  "../../../bd/mb_design/ipshared/c7e0/src/fifo.sv" \
+  "../../../bd/mb_design/ipshared/c7e0/src/merge_sort_top.sv" \
+  "../../../bd/mb_design/ipshared/c7e0/src/sort2elem.sv" \
+  "../../../bd/mb_design/ipshared/c7e0/src/sort_arrays.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/mb_design/ipshared/9266/hdl/bwt_ip_v1_0.v" \
+  "../../../bd/mb_design/ipshared/c7e0/hdl/bwt_ip_v1_0.v" \
   "../../../bd/mb_design/ip/mb_design_bwt_ip_0_1/sim/mb_design_bwt_ip_0_1.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
@@ -104,6 +104,12 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/mb_design/ip/mb_design_xbar_1/sim/mb_design_xbar_1.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/mb_design/ip/mb_design_axi_gpio_0_0_1/sim/mb_design_axi_gpio_0_0.vhd" \
+  "../../../bd/mb_design/ip/mb_design_axi_gpio_1_0/sim/mb_design_axi_gpio_1_0.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
   "../../../bd/mb_design/sim/mb_design.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
