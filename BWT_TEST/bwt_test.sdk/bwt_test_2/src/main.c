@@ -9,6 +9,10 @@
 #include "xgpio.h"
 #include "bwt_ip.h"
 #include "bwt.h"
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+
 /**************************** user definitions ********************************/
 #define CHANNEL 1
 //Cordic processor base addres redefinition
@@ -29,6 +33,7 @@ u8 InputStr[LENGTH_STR] = "Bananabananabananabananabananab$";
 u8 uB_BWT_Str[LENGTH_STR];// = "b$nnnnnnnnnnbbbbBaaaaaaaaaaaaaaa";
 u8 FPGA_BWT_Str[LENGTH_STR];
 
+
 int main(){
 	int status;
 	XGpio inputCharGpio, outputCharGpio, ledGpio;
@@ -37,6 +42,7 @@ int main(){
 	u8 led1 = 0x80;
 	u8 led_all = 0xFF;
 	u8 ctrl_tgl = 0;
+	u8 input_char;
 
 	/* Initialize driver for the input string GPIOe */
 	status = XGpio_Initialize(&inputCharGpio, XPAR_AXI_INPUT_STRING_CHAR_DEVICE_ID);
@@ -57,8 +63,17 @@ int main(){
 	if (status != XST_SUCCESS) {
 	goto FAILURE;
 	} XGpio_SetDataDirection(&ledGpio, CHANNEL, 0x00);
-	XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0x00);
+	XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0xff);
   
+
+
+    init_platform();
+
+    print("Enter angle (in degrees, two digits 00 to 90)");
+    input_char = inbyte();
+    print("\n\r");
+
+
 	//Start bwt processor - pulse start bit in control register and send string to bwt
 
 	for (LoopCounter = 0; LoopCounter < LENGTH_STR; LoopCounter++)
@@ -69,7 +84,7 @@ int main(){
 		//XGpio_DiscreteWrite(&ledGpio, CHANNEL, led1);
 
 		/* Flip LEDs. */
-		led1 = ~led1;
+		//led1 = ~led1;
 	}
 
 //	BWT_IP_mWriteReg(BWT_BASE_ADDR, INPUT_STRING_REG_OFFSET, '$');
@@ -86,19 +101,21 @@ int main(){
 
 	}
 
-	XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0x00);
+	XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0x01);
 	XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xf);
 
 	BWT(InputStr,uB_BWT_Str);
 
+	XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0x02);
 	XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xc);
+
 	for(LoopCounter = 0; LoopCounter < LENGTH_STR; LoopCounter++)
 	{
 		XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, uB_BWT_Str[LoopCounter]);
 		if (uB_BWT_Str[LoopCounter] != FPGA_BWT_Str[LoopCounter])
 		{
 			StrResult = 1;
-			XGpio_DiscreteWrite(&ledGpio, CHANNEL, led_all);
+			XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0xf0);
 		}
 		else
 			StrResult = 0;
@@ -116,8 +133,17 @@ int main(){
 	{
 
 		XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xb);
-		XGpio_DiscreteWrite(&ledGpio, CHANNEL, ~led_all);
+		XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0x0f);
 	}
+
+
+    print("Sinus value is ");
+
+    print("\n\r");
+    print("Cosinus value is ");
+
+    print("\n\r");
+    print("\n\r");
 		//Read data - gpio input
 		//data = XGpio_DiscreteRead(&inputCharGpio, CHANNEL);
 
