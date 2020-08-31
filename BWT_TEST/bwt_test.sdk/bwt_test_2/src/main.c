@@ -24,7 +24,7 @@
 /***************************** Main function *********************************/
 
 u8 InputStr[LENGTH_STR] = "Bananabananabananabananabananab$";
-u8 uB_BWT_Str[LENGTH_STR] = "b$nnnnnnnnnnbbbbBaaaaaaaaaaaaaaa";
+u8 uB_BWT_Str[LENGTH_STR];// = "b$nnnnnnnnnnbbbbBaaaaaaaaaaaaaaa";
 u8 FPGA_BWT_Str[LENGTH_STR];
 
 int main(){
@@ -62,39 +62,44 @@ int main(){
 
 	LoopCounter = 0;
 	XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xa);
-	while(1){
-		if ((BWT_IP_mReadReg(BWT_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) != 0)
-		{
+
+	for(LoopCounter = 0; LoopCounter < LENGTH_STR; LoopCounter++)
+	{
 			FPGA_BWT_Str[LoopCounter] = BWT_IP_mReadReg(BWT_BASE_ADDR, RESULT_REG_OFFSET);
 			XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, FPGA_BWT_Str[LoopCounter]);
-			if ((BWT_IP_mReadReg(BWT_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0)
-			{
-				break;
-			}
-			LoopCounter++;
-		}
 	}
 
 	XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xf);
 
-//		BWT(InputStr,uB_BWT_Str);
+	BWT(InputStr,uB_BWT_Str);
 
+	XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xc);
+	for(LoopCounter = 0; LoopCounter < LENGTH_STR; LoopCounter++)
+	{
+		XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, uB_BWT_Str[LoopCounter]);
+		if (uB_BWT_Str[LoopCounter] != FPGA_BWT_Str[LoopCounter])
+			StrResult = 1;
+		else
+			StrResult = 0;
+	}
 
-		for(LoopCounter = 0; LoopCounter < LENGTH_STR; LoopCounter++)
-		{
-			XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, FPGA_BWT_Str[LoopCounter]);
-			if (uB_BWT_Str[LoopCounter] != FPGA_BWT_Str[LoopCounter])
-			{
-				StrResult = 1;
-			}
-		}
+	XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xf);
 
-		XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0x1);
+	for(LoopCounter = 0; LoopCounter < LENGTH_STR; LoopCounter++)
+	{
+		XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, FPGA_BWT_Str[LoopCounter]);
+	}
 
-		if (!StrResult)
-		{
-			XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xb);
-		}
+	XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xf);
+
+	XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, StrResult);
+
+	XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xf);
+
+//		if (!StrResult)
+//		{
+//			XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xb);
+//		}
 		//Read data - gpio input
 		//data = XGpio_DiscreteRead(&inputCharGpio, CHANNEL);
 

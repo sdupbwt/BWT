@@ -415,7 +415,7 @@
         
         bwt_top bwt_top_inst( S_AXI_ACLK, //clock,
                                     ARESET, //reset,
-                                    slv_reg0[0], //start
+                                    (slv_reg_wren && axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 2'h0), //start
                                     (slv_reg_rden && axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 2'h3),
                                     slv_reg1[7:0], //input_string_char
                                     slv_wire3[7:0],//output_string_char

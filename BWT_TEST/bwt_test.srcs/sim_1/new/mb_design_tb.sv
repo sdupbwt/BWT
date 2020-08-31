@@ -45,7 +45,7 @@ module mb_design_tb();
 //            input_string_char_tri_io = input_string_char_tri_io + 1;
 //        end
         
-        #750_000;
+        #6_800_000;
 //        $fclose(f);
         $finish;
     end
