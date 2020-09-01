@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/bwt/ip/bwt_axi_gpio_0_0/sim/bwt_axi_gpio_0_0.vhd" \
+"../../../bd/bwt/ip/bwt_rst_ps7_0_100M_0/sim/bwt_rst_ps7_0_100M_0.vhd" \
+
+nosort
