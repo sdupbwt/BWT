@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Sep  2 18:57:02 2020
+// Date        : Thu Sep  3 01:17:59 2020
 // Host        : DESKTOP-64JSPKI running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ip/bwt_bwt_ip_0_0/bwt_bwt_ip_0_0_stub.v

@@ -64,15 +64,14 @@
 
 #define STATUS_REG_OFFSET BWT_IP_S00_AXI_SLV_REG2_OFFSET		//valid
 #define RESULT_REG_OFFSET BWT_IP_S00_AXI_SLV_REG3_OFFSET		//output, fpga -> uB
-//#define RESULT_REG_SIN(param) ((u32)param & (u32)(0x00000FFF))
-//#define RESULT_REG_COS(param) (((u32)param & (u32)(0x0FFF0000)) >> 16 )
 //#define LED1 0x80									/* Initial LED value - XX0000XX */
 //#define LED_DELAY 1000000							/* Software delay length */
 /***************************** Main function *********************************/
 
-char8 InputStr[LENGTH_STR] = "Bananabananabananabananabananab$";
+char8 InputStr[LENGTH_STR] =      "ancdefghijklmnoprstuw1234567890$";
 char8 uB_BWT_Str[LENGTH_STR];// = "b$nnnnnnnnnnbbbbBaaaaaaaaaaaaaaa";
 char8 FPGA_BWT_Str[LENGTH_STR];
+char8 TEST_Str[LENGTH_STR];
 
 
 int main(){
@@ -115,12 +114,12 @@ int main(){
     //print(input_char);
     print("\n\r");
 
-    BWT_IP_mWriteReg(BWT_BASE_ADDR, INPUT_STRING_REG_OFFSET, 0x4200);
-
-    result[0] = (char8)((BWT_IP_mReadReg(BWT_BASE_ADDR, RESULT_REG_OFFSET))>>8);
-    result[1] = 'F';
-   	print(result);
-   	print("\n\r");
+//    BWT_IP_mWriteReg(BWT_BASE_ADDR, INPUT_STRING_REG_OFFSET, 0x4200);
+//
+//    result[0] = (char8)((BWT_IP_mReadReg(BWT_BASE_ADDR, RESULT_REG_OFFSET))>>8);
+//    result[1] = 'F';
+//   	print(result);
+//   	print("\n\r");
 
 
 	//Start bwt processor - pulse start bit in control register and send string to bwt
@@ -155,13 +154,14 @@ int main(){
 			if ((BWT_IP_mReadReg(BWT_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) != 0)
 			{
 				BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0x02);
-				FPGA_BWT_Str[LoopCounter] = BWT_IP_mReadReg(BWT_BASE_ADDR, RESULT_REG_OFFSET);
-
 				BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0x00);
+				FPGA_BWT_Str[LoopCounter] = BWT_IP_mReadReg(BWT_BASE_ADDR, RESULT_REG_OFFSET);
+				TEST_Str[LoopCounter] = (BWT_IP_mReadReg(BWT_BASE_ADDR, RESULT_REG_OFFSET))>>8;
 
-				print(FPGA_BWT_Str);
-				print("\n\r");
-				if (LoopCounter >= LENGTH_STR )
+
+//				print(FPGA_BWT_Str);
+//				print("\n\r");
+				if ((BWT_IP_mReadReg(BWT_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0)
 				{
 					print("if 2");
 					print("\n\r");
@@ -181,6 +181,10 @@ int main(){
 
 	print("FPGA BWT: ");
 	print(FPGA_BWT_Str);
+	print("\n\r");
+
+	print("TEST BWT: ");
+	print(TEST_Str);
 	print("\n\r");
 
 	XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0x01);
@@ -221,12 +225,6 @@ int main(){
 		//XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xb);
 		XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0x0f);
 	}
-
-
-    print("Sinus value is ");
-
-    print("\n\r");
-    print("Cosinus value is ");
 
     print("\n\r");
     print("\n\r");

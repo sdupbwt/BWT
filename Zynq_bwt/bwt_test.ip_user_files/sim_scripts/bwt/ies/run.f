@@ -27,18 +27,18 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/bwt/ip/bwt_processing_system7_0_0/sim/bwt_processing_system7_0_0.v" \
-  "../../../bd/bwt/ipshared/1abd/hdl/bwt_ip_v1_0_S00_AXI.v" \
+  "../../../bd/bwt/ipshared/423a/hdl/bwt_ip_v1_0_S00_AXI.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/bwt/ipshared/1abd/src/MM_top.sv" \
-  "../../../bd/bwt/ipshared/1abd/src/bwt_top.sv" \
-  "../../../bd/bwt/ipshared/1abd/src/fifo.sv" \
-  "../../../bd/bwt/ipshared/1abd/src/merge_sort_top.sv" \
-  "../../../bd/bwt/ipshared/1abd/src/sort2elem.sv" \
-  "../../../bd/bwt/ipshared/1abd/src/sort_arrays.sv" \
+  "../../../bd/bwt/ipshared/423a/src/MM_top.sv" \
+  "../../../bd/bwt/ipshared/423a/src/bwt_top.sv" \
+  "../../../bd/bwt/ipshared/423a/src/fifo.sv" \
+  "../../../bd/bwt/ipshared/423a/src/merge_sort_top.sv" \
+  "../../../bd/bwt/ipshared/423a/src/sort2elem.sv" \
+  "../../../bd/bwt/ipshared/423a/src/sort_arrays.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/bwt/ipshared/1abd/hdl/bwt_ip_v1_0.v" \
+  "../../../bd/bwt/ipshared/423a/hdl/bwt_ip_v1_0.v" \
   "../../../bd/bwt/ip/bwt_bwt_ip_0_0/sim/bwt_bwt_ip_0_0.v" \
 -endlib
 -makelib ies_lib/axi_lite_ipif_v3_0_4 \

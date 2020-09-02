@@ -66,18 +66,18 @@ vlog -work processing_system7_vip_v1_0_7 -64 -incr -sv -L axi_vip_v1_1_5 -L proc
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/bwt/ipshared/ec67/hdl" "+incdir+../../../../bwt_test.srcs/sources_1/bd/bwt/ipshared/8c62/hdl" "+incdir+../../../../bwt_test.srcs/sources_1/bd/bwt/ip/bwt_processing_system7_0_0" "+incdir+D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../bd/bwt/ip/bwt_processing_system7_0_0/sim/bwt_processing_system7_0_0.v" \
-"../../../bd/bwt/ipshared/1abd/hdl/bwt_ip_v1_0_S00_AXI.v" \
+"../../../bd/bwt/ipshared/423a/hdl/bwt_ip_v1_0_S00_AXI.v" \
 
 vlog -work xil_defaultlib -64 -incr -sv -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip "+incdir+../../../../bwt_test.srcs/sources_1/bd/bwt/ipshared/ec67/hdl" "+incdir+../../../../bwt_test.srcs/sources_1/bd/bwt/ipshared/8c62/hdl" "+incdir+../../../../bwt_test.srcs/sources_1/bd/bwt/ip/bwt_processing_system7_0_0" "+incdir+D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/include" \
-"../../../bd/bwt/ipshared/1abd/src/MM_top.sv" \
-"../../../bd/bwt/ipshared/1abd/src/bwt_top.sv" \
-"../../../bd/bwt/ipshared/1abd/src/fifo.sv" \
-"../../../bd/bwt/ipshared/1abd/src/merge_sort_top.sv" \
-"../../../bd/bwt/ipshared/1abd/src/sort2elem.sv" \
-"../../../bd/bwt/ipshared/1abd/src/sort_arrays.sv" \
+"../../../bd/bwt/ipshared/423a/src/MM_top.sv" \
+"../../../bd/bwt/ipshared/423a/src/bwt_top.sv" \
+"../../../bd/bwt/ipshared/423a/src/fifo.sv" \
+"../../../bd/bwt/ipshared/423a/src/merge_sort_top.sv" \
+"../../../bd/bwt/ipshared/423a/src/sort2elem.sv" \
+"../../../bd/bwt/ipshared/423a/src/sort_arrays.sv" \
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../bwt_test.srcs/sources_1/bd/bwt/ipshared/ec67/hdl" "+incdir+../../../../bwt_test.srcs/sources_1/bd/bwt/ipshared/8c62/hdl" "+incdir+../../../../bwt_test.srcs/sources_1/bd/bwt/ip/bwt_processing_system7_0_0" "+incdir+D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/include" \
-"../../../bd/bwt/ipshared/1abd/hdl/bwt_ip_v1_0.v" \
+"../../../bd/bwt/ipshared/423a/hdl/bwt_ip_v1_0.v" \
 "../../../bd/bwt/ip/bwt_bwt_ip_0_0/sim/bwt_bwt_ip_0_0.v" \
 
 vcom -work axi_lite_ipif_v3_0_4 -64 -93 \

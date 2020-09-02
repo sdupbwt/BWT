@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed Sep  2 18:57:02 2020
+-- Date        : Thu Sep  3 01:17:59 2020
 -- Host        : DESKTOP-64JSPKI running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ip/bwt_bwt_ip_0_0/bwt_bwt_ip_0_0_sim_netlist.vhdl
@@ -18,11 +18,11 @@ entity bwt_bwt_ip_0_0_bwt_top is
   port (
     slv_wire2 : out STD_LOGIC;
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
-    D : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 13 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
-    \output_check_reg[7]_0\ : in STD_LOGIC_VECTOR ( 15 downto 0 )
+    \output_string_char_reg[7]_i_8_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of bwt_bwt_ip_0_0_bwt_top : entity is "bwt_top";
@@ -34,20 +34,21 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   signal \ctr[0]_i_1_n_0\ : STD_LOGIC;
   signal \ctr[5]_i_2_n_0\ : STD_LOGIC;
   signal \ctr[6]_i_2_n_0\ : STD_LOGIC;
+  signal \ctr[7]_i_1_n_0\ : STD_LOGIC;
   signal \ctr[7]_i_3_n_0\ : STD_LOGIC;
   signal ctr_nxt : STD_LOGIC_VECTOR ( 7 downto 1 );
-  signal ctr_nxt_0 : STD_LOGIC;
   signal ctr_send : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \ctr_send[0]_i_1_n_0\ : STD_LOGIC;
   signal \ctr_send[5]_i_2_n_0\ : STD_LOGIC;
+  signal \ctr_send[7]_i_1_n_0\ : STD_LOGIC;
   signal \ctr_send[7]_i_3_n_0\ : STD_LOGIC;
   signal \ctr_send[7]_i_4_n_0\ : STD_LOGIC;
-  signal ctr_send_nxt : STD_LOGIC;
   signal ctr_send_nxt0_in : STD_LOGIC_VECTOR ( 7 downto 1 );
   signal done_bwt : STD_LOGIC;
   signal done_bwt_reg_i_1_n_0 : STD_LOGIC;
   signal done_bwt_reg_i_2_n_0 : STD_LOGIC;
   signal input_string : STD_LOGIC;
+  signal \input_string_reg[0][7]_i_1_n_0\ : STD_LOGIC;
   signal \input_string_reg[10][7]_i_1_n_0\ : STD_LOGIC;
   signal \input_string_reg[11][7]_i_1_n_0\ : STD_LOGIC;
   signal \input_string_reg[12][7]_i_1_n_0\ : STD_LOGIC;
@@ -78,7 +79,6 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   signal \input_string_reg[2][7]_i_1_n_0\ : STD_LOGIC;
   signal \input_string_reg[30][7]_i_1_n_0\ : STD_LOGIC;
   signal \input_string_reg[30][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_string_reg[31][7]_i_1_n_0\ : STD_LOGIC;
   signal \input_string_reg[31][7]_i_2_n_0\ : STD_LOGIC;
   signal \input_string_reg[3][7]_i_1_n_0\ : STD_LOGIC;
   signal \input_string_reg[4][7]_i_1_n_0\ : STD_LOGIC;
@@ -343,6 +343,12 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   signal \input_string_reg_n_0_[9][5]\ : STD_LOGIC;
   signal \input_string_reg_n_0_[9][6]\ : STD_LOGIC;
   signal \input_string_reg_n_0_[9][7]\ : STD_LOGIC;
+  signal \output_check_reg[0]_i_1_n_0\ : STD_LOGIC;
+  signal \output_check_reg[1]_i_1_n_0\ : STD_LOGIC;
+  signal \output_check_reg[2]_i_1_n_0\ : STD_LOGIC;
+  signal \output_check_reg[3]_i_1_n_0\ : STD_LOGIC;
+  signal \output_check_reg[4]_i_1_n_0\ : STD_LOGIC;
+  signal \output_check_reg[6]_i_1_n_0\ : STD_LOGIC;
   signal \output_string_char_reg[0]_i_10_n_0\ : STD_LOGIC;
   signal \output_string_char_reg[0]_i_11_n_0\ : STD_LOGIC;
   signal \output_string_char_reg[0]_i_12_n_0\ : STD_LOGIC;
@@ -453,26 +459,26 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   signal state_nxt : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal valid_out_nxt : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_state[0]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \FSM_sequential_state[1]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \FSM_sequential_state[0]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \FSM_sequential_state[1]_i_1\ : label is "soft_lutpair23";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[0]\ : label is "READ_DATA:01,WRITE_DATA:10,WAIT_TO_ZERO:11,IDLE:00";
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[1]\ : label is "READ_DATA:01,WRITE_DATA:10,WAIT_TO_ZERO:11,IDLE:00";
-  attribute SOFT_HLUTNM of \ctr[0]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \ctr[1]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \ctr[2]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \ctr[3]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \ctr[5]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \ctr[6]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \ctr_send[1]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \ctr_send[2]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \ctr_send[3]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \ctr_send[5]_i_2\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \ctr_send[6]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \ctr_send[7]_i_2\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \ctr[0]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \ctr[1]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \ctr[2]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \ctr[3]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \ctr[5]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \ctr[6]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \ctr_send[1]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \ctr_send[2]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \ctr_send[3]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \ctr_send[5]_i_2\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \ctr_send[6]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \ctr_send[7]_i_2\ : label is "soft_lutpair20";
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of done_bwt_reg : label is "LD";
-  attribute SOFT_HLUTNM of done_bwt_reg_i_2 : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of done_bwt_reg_i_2 : label is "soft_lutpair26";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[0][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[0][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[0][2]\ : label is "LD";
@@ -481,7 +487,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[0][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[0][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[0][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[0][7]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \input_string_reg[0][7]_i_1\ : label is "soft_lutpair1";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[10][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[10][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[10][2]\ : label is "LD";
@@ -490,7 +496,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[10][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[10][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[10][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[10][7]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \input_string_reg[10][7]_i_1\ : label is "soft_lutpair7";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[11][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[11][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[11][2]\ : label is "LD";
@@ -499,7 +505,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[11][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[11][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[11][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[11][7]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \input_string_reg[11][7]_i_1\ : label is "soft_lutpair6";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[12][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[12][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[12][2]\ : label is "LD";
@@ -508,7 +514,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[12][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[12][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[12][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[12][7]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \input_string_reg[12][7]_i_1\ : label is "soft_lutpair2";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[13][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[13][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[13][2]\ : label is "LD";
@@ -517,7 +523,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[13][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[13][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[13][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[13][7]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \input_string_reg[13][7]_i_1\ : label is "soft_lutpair14";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[14][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[14][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[14][2]\ : label is "LD";
@@ -526,7 +532,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[14][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[14][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[14][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[14][7]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \input_string_reg[14][7]_i_1\ : label is "soft_lutpair8";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[15][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[15][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[15][2]\ : label is "LD";
@@ -535,7 +541,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[15][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[15][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[15][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[15][7]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \input_string_reg[15][7]_i_1\ : label is "soft_lutpair5";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[16][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[16][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[16][2]\ : label is "LD";
@@ -544,7 +550,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[16][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[16][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[16][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[16][7]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \input_string_reg[16][7]_i_1\ : label is "soft_lutpair9";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[17][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[17][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[17][2]\ : label is "LD";
@@ -553,7 +559,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[17][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[17][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[17][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[17][7]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \input_string_reg[17][7]_i_1\ : label is "soft_lutpair3";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[18][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[18][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[18][2]\ : label is "LD";
@@ -562,7 +568,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[18][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[18][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[18][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[18][7]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \input_string_reg[18][7]_i_1\ : label is "soft_lutpair10";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[19][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[19][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[19][2]\ : label is "LD";
@@ -571,7 +577,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[19][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[19][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[19][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[19][7]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \input_string_reg[19][7]_i_1\ : label is "soft_lutpair0";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[1][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[1][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[1][2]\ : label is "LD";
@@ -580,7 +586,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[1][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[1][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[1][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[1][7]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \input_string_reg[1][7]_i_1\ : label is "soft_lutpair14";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[20][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[20][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[20][2]\ : label is "LD";
@@ -589,7 +595,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[20][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[20][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[20][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[20][7]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \input_string_reg[20][7]_i_1\ : label is "soft_lutpair17";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[21][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[21][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[21][2]\ : label is "LD";
@@ -598,7 +604,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[21][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[21][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[21][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[21][7]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \input_string_reg[21][7]_i_1\ : label is "soft_lutpair13";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[22][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[22][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[22][2]\ : label is "LD";
@@ -607,7 +613,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[22][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[22][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[22][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[22][7]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \input_string_reg[22][7]_i_1\ : label is "soft_lutpair12";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[23][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[23][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[23][2]\ : label is "LD";
@@ -616,7 +622,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[23][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[23][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[23][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[23][7]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \input_string_reg[23][7]_i_1\ : label is "soft_lutpair4";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[24][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[24][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[24][2]\ : label is "LD";
@@ -634,7 +640,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[25][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[25][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[25][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[25][7]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \input_string_reg[25][7]_i_1\ : label is "soft_lutpair13";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[26][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[26][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[26][2]\ : label is "LD";
@@ -643,7 +649,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[26][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[26][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[26][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[26][7]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \input_string_reg[26][7]_i_1\ : label is "soft_lutpair10";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[27][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[27][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[27][2]\ : label is "LD";
@@ -652,7 +658,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[27][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[27][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[27][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[27][7]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \input_string_reg[27][7]_i_1\ : label is "soft_lutpair4";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[28][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[28][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[28][2]\ : label is "LD";
@@ -661,7 +667,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[28][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[28][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[28][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[28][7]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \input_string_reg[28][7]_i_1\ : label is "soft_lutpair17";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[29][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[29][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[29][2]\ : label is "LD";
@@ -670,7 +676,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[29][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[29][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[29][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[29][7]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \input_string_reg[29][7]_i_1\ : label is "soft_lutpair3";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[2][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[2][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[2][2]\ : label is "LD";
@@ -679,7 +685,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[2][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[2][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[2][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[2][7]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \input_string_reg[2][7]_i_1\ : label is "soft_lutpair7";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[30][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[30][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[30][2]\ : label is "LD";
@@ -688,7 +694,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[30][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[30][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[30][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[30][7]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \input_string_reg[30][7]_i_1\ : label is "soft_lutpair12";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[31][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[31][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[31][2]\ : label is "LD";
@@ -697,7 +703,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[31][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[31][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[31][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[31][7]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \input_string_reg[31][7]_i_1\ : label is "soft_lutpair0";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[3][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[3][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[3][2]\ : label is "LD";
@@ -706,7 +712,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[3][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[3][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[3][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[3][7]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \input_string_reg[3][7]_i_1\ : label is "soft_lutpair5";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[4][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[4][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[4][2]\ : label is "LD";
@@ -715,7 +721,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[4][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[4][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[4][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[4][7]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \input_string_reg[4][7]_i_1\ : label is "soft_lutpair2";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[5][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[5][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[5][2]\ : label is "LD";
@@ -724,7 +730,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[5][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[5][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[5][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[5][7]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \input_string_reg[5][7]_i_1\ : label is "soft_lutpair15";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[6][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[6][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[6][2]\ : label is "LD";
@@ -733,7 +739,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[6][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[6][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[6][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[6][7]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \input_string_reg[6][7]_i_1\ : label is "soft_lutpair8";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[7][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[7][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[7][2]\ : label is "LD";
@@ -742,7 +748,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[7][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[7][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[7][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[7][7]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \input_string_reg[7][7]_i_1\ : label is "soft_lutpair6";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[8][0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[8][1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[8][2]\ : label is "LD";
@@ -760,7 +766,19 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \input_string_reg[9][5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[9][6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \input_string_reg[9][7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \input_string_reg[9][7]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \input_string_reg[9][7]_i_1\ : label is "soft_lutpair15";
+  attribute XILINX_LEGACY_PRIM of \output_check_reg[0]\ : label is "LD";
+  attribute SOFT_HLUTNM of \output_check_reg[0]_i_1\ : label is "soft_lutpair21";
+  attribute XILINX_LEGACY_PRIM of \output_check_reg[1]\ : label is "LD";
+  attribute SOFT_HLUTNM of \output_check_reg[1]_i_1\ : label is "soft_lutpair19";
+  attribute XILINX_LEGACY_PRIM of \output_check_reg[2]\ : label is "LD";
+  attribute SOFT_HLUTNM of \output_check_reg[2]_i_1\ : label is "soft_lutpair19";
+  attribute XILINX_LEGACY_PRIM of \output_check_reg[3]\ : label is "LD";
+  attribute SOFT_HLUTNM of \output_check_reg[3]_i_1\ : label is "soft_lutpair21";
+  attribute XILINX_LEGACY_PRIM of \output_check_reg[4]\ : label is "LD";
+  attribute SOFT_HLUTNM of \output_check_reg[4]_i_1\ : label is "soft_lutpair11";
+  attribute XILINX_LEGACY_PRIM of \output_check_reg[6]\ : label is "LD";
+  attribute SOFT_HLUTNM of \output_check_reg[6]_i_1\ : label is "soft_lutpair11";
   attribute XILINX_LEGACY_PRIM of \output_string_char_reg[0]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \output_string_char_reg[1]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \output_string_char_reg[2]\ : label is "LD";
@@ -769,7 +787,7 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_top is
   attribute XILINX_LEGACY_PRIM of \output_string_char_reg[5]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \output_string_char_reg[6]\ : label is "LD";
   attribute XILINX_LEGACY_PRIM of \output_string_char_reg[7]\ : label is "LD";
-  attribute SOFT_HLUTNM of \output_string_char_reg[7]_i_2\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \output_string_char_reg[7]_i_2\ : label is "soft_lutpair22";
 begin
   SR(0) <= \^sr\(0);
   slv_wire2 <= \^slv_wire2\;
@@ -930,7 +948,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
       I2 => ctr(5),
       I3 => ctr(7),
       I4 => state(1),
-      O => ctr_nxt_0
+      O => \ctr[7]_i_1_n_0\
     );
 \ctr[7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -960,7 +978,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_nxt_0,
+      CE => \ctr[7]_i_1_n_0\,
       D => \ctr[0]_i_1_n_0\,
       Q => ctr(0),
       R => \^sr\(0)
@@ -968,7 +986,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_nxt_0,
+      CE => \ctr[7]_i_1_n_0\,
       D => ctr_nxt(1),
       Q => ctr(1),
       R => \^sr\(0)
@@ -976,7 +994,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_nxt_0,
+      CE => \ctr[7]_i_1_n_0\,
       D => ctr_nxt(2),
       Q => ctr(2),
       R => \^sr\(0)
@@ -984,7 +1002,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_nxt_0,
+      CE => \ctr[7]_i_1_n_0\,
       D => ctr_nxt(3),
       Q => ctr(3),
       R => \^sr\(0)
@@ -992,7 +1010,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_nxt_0,
+      CE => \ctr[7]_i_1_n_0\,
       D => ctr_nxt(4),
       Q => ctr(4),
       R => \^sr\(0)
@@ -1000,7 +1018,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_nxt_0,
+      CE => \ctr[7]_i_1_n_0\,
       D => ctr_nxt(5),
       Q => ctr(5),
       R => \^sr\(0)
@@ -1008,7 +1026,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_nxt_0,
+      CE => \ctr[7]_i_1_n_0\,
       D => ctr_nxt(6),
       Q => ctr(6),
       R => \^sr\(0)
@@ -1016,7 +1034,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_nxt_0,
+      CE => \ctr[7]_i_1_n_0\,
       D => ctr_nxt(7),
       Q => ctr(7),
       R => \^sr\(0)
@@ -1119,7 +1137,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
       I2 => ctr_send(6),
       I3 => ctr_send(5),
       I4 => state(0),
-      O => ctr_send_nxt
+      O => \ctr_send[7]_i_1_n_0\
     );
 \ctr_send[7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -1162,7 +1180,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_send_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_send_nxt,
+      CE => \ctr_send[7]_i_1_n_0\,
       D => \ctr_send[0]_i_1_n_0\,
       Q => ctr_send(0),
       R => \^sr\(0)
@@ -1170,7 +1188,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_send_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_send_nxt,
+      CE => \ctr_send[7]_i_1_n_0\,
       D => ctr_send_nxt0_in(1),
       Q => ctr_send(1),
       R => \^sr\(0)
@@ -1178,7 +1196,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_send_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_send_nxt,
+      CE => \ctr_send[7]_i_1_n_0\,
       D => ctr_send_nxt0_in(2),
       Q => ctr_send(2),
       R => \^sr\(0)
@@ -1186,7 +1204,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_send_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_send_nxt,
+      CE => \ctr_send[7]_i_1_n_0\,
       D => ctr_send_nxt0_in(3),
       Q => ctr_send(3),
       R => \^sr\(0)
@@ -1194,7 +1212,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_send_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_send_nxt,
+      CE => \ctr_send[7]_i_1_n_0\,
       D => ctr_send_nxt0_in(4),
       Q => ctr_send(4),
       R => \^sr\(0)
@@ -1202,7 +1220,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_send_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_send_nxt,
+      CE => \ctr_send[7]_i_1_n_0\,
       D => ctr_send_nxt0_in(5),
       Q => ctr_send(5),
       R => \^sr\(0)
@@ -1210,7 +1228,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_send_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_send_nxt,
+      CE => \ctr_send[7]_i_1_n_0\,
       D => ctr_send_nxt0_in(6),
       Q => ctr_send(6),
       R => \^sr\(0)
@@ -1218,7 +1236,7 @@ axi_awready_i_1: unisim.vcomponents.LUT1
 \ctr_send_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => ctr_send_nxt,
+      CE => \ctr_send[7]_i_1_n_0\,
       D => ctr_send_nxt0_in(7),
       Q => ctr_send(7),
       R => \^sr\(0)
@@ -1259,8 +1277,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
-      G => input_string,
+      D => \output_string_char_reg[7]_i_8_0\(0),
+      G => \input_string_reg[0][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[0][0]\
     );
@@ -1270,8 +1288,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
-      G => input_string,
+      D => \output_string_char_reg[7]_i_8_0\(1),
+      G => \input_string_reg[0][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[0][1]\
     );
@@ -1281,8 +1299,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
-      G => input_string,
+      D => \output_string_char_reg[7]_i_8_0\(2),
+      G => \input_string_reg[0][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[0][2]\
     );
@@ -1292,8 +1310,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
-      G => input_string,
+      D => \output_string_char_reg[7]_i_8_0\(3),
+      G => \input_string_reg[0][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[0][3]\
     );
@@ -1303,8 +1321,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
-      G => input_string,
+      D => \output_string_char_reg[7]_i_8_0\(4),
+      G => \input_string_reg[0][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[0][4]\
     );
@@ -1314,8 +1332,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
-      G => input_string,
+      D => \output_string_char_reg[7]_i_8_0\(5),
+      G => \input_string_reg[0][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[0][5]\
     );
@@ -1325,8 +1343,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
-      G => input_string,
+      D => \output_string_char_reg[7]_i_8_0\(6),
+      G => \input_string_reg[0][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[0][6]\
     );
@@ -1336,8 +1354,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
-      G => input_string,
+      D => \output_string_char_reg[7]_i_8_0\(7),
+      G => \input_string_reg[0][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[0][7]\
     );
@@ -1351,7 +1369,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
       I2 => \input_string_reg[12][7]_i_2_n_0\,
       I3 => ctr(3),
       I4 => state(1),
-      O => input_string
+      O => \input_string_reg[0][7]_i_1_n_0\
     );
 \input_string_reg[10][0]\: unisim.vcomponents.LDCE
     generic map(
@@ -1359,7 +1377,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[10][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[10][0]\
@@ -1370,7 +1388,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[10][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[10][1]\
@@ -1381,7 +1399,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[10][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[10][2]\
@@ -1392,7 +1410,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[10][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[10][3]\
@@ -1403,7 +1421,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[10][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[10][4]\
@@ -1414,7 +1432,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[10][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[10][5]\
@@ -1425,7 +1443,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[10][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[10][6]\
@@ -1436,7 +1454,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[10][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[10][7]\
@@ -1459,7 +1477,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[11][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[11][0]\
@@ -1470,7 +1488,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[11][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[11][1]\
@@ -1481,7 +1499,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[11][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[11][2]\
@@ -1492,7 +1510,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[11][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[11][3]\
@@ -1503,7 +1521,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[11][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[11][4]\
@@ -1514,7 +1532,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[11][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[11][5]\
@@ -1525,7 +1543,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[11][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[11][6]\
@@ -1536,7 +1554,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[11][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[11][7]\
@@ -1559,7 +1577,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[12][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[12][0]\
@@ -1570,7 +1588,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[12][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[12][1]\
@@ -1581,7 +1599,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[12][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[12][2]\
@@ -1592,7 +1610,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[12][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[12][3]\
@@ -1603,7 +1621,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[12][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[12][4]\
@@ -1614,7 +1632,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[12][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[12][5]\
@@ -1625,7 +1643,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[12][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[12][6]\
@@ -1636,7 +1654,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[12][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[12][7]\
@@ -1672,7 +1690,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[13][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[13][0]\
@@ -1683,7 +1701,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[13][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[13][1]\
@@ -1694,7 +1712,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[13][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[13][2]\
@@ -1705,7 +1723,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[13][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[13][3]\
@@ -1716,7 +1734,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[13][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[13][4]\
@@ -1727,7 +1745,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[13][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[13][5]\
@@ -1738,7 +1756,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[13][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[13][6]\
@@ -1749,7 +1767,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[13][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[13][7]\
@@ -1785,7 +1803,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[14][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[14][0]\
@@ -1796,7 +1814,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[14][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[14][1]\
@@ -1807,7 +1825,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[14][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[14][2]\
@@ -1818,7 +1836,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[14][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[14][3]\
@@ -1829,7 +1847,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[14][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[14][4]\
@@ -1840,7 +1858,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[14][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[14][5]\
@@ -1851,7 +1869,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[14][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[14][6]\
@@ -1862,7 +1880,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[14][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[14][7]\
@@ -1898,7 +1916,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[15][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[15][0]\
@@ -1909,7 +1927,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[15][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[15][1]\
@@ -1920,7 +1938,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[15][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[15][2]\
@@ -1931,7 +1949,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[15][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[15][3]\
@@ -1942,7 +1960,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[15][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[15][4]\
@@ -1953,7 +1971,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[15][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[15][5]\
@@ -1964,7 +1982,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[15][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[15][6]\
@@ -1975,7 +1993,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[15][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[15][7]\
@@ -2011,7 +2029,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[16][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[16][0]\
@@ -2022,7 +2040,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[16][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[16][1]\
@@ -2033,7 +2051,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[16][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[16][2]\
@@ -2044,7 +2062,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[16][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[16][3]\
@@ -2055,7 +2073,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[16][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[16][4]\
@@ -2066,7 +2084,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[16][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[16][5]\
@@ -2077,7 +2095,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[16][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[16][6]\
@@ -2088,7 +2106,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[16][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[16][7]\
@@ -2111,7 +2129,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[17][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[17][0]\
@@ -2122,7 +2140,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[17][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[17][1]\
@@ -2133,7 +2151,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[17][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[17][2]\
@@ -2144,7 +2162,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[17][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[17][3]\
@@ -2155,7 +2173,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[17][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[17][4]\
@@ -2166,7 +2184,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[17][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[17][5]\
@@ -2177,7 +2195,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[17][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[17][6]\
@@ -2188,7 +2206,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[17][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[17][7]\
@@ -2211,7 +2229,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[18][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[18][0]\
@@ -2222,7 +2240,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[18][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[18][1]\
@@ -2233,7 +2251,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[18][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[18][2]\
@@ -2244,7 +2262,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[18][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[18][3]\
@@ -2255,7 +2273,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[18][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[18][4]\
@@ -2266,7 +2284,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[18][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[18][5]\
@@ -2277,7 +2295,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[18][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[18][6]\
@@ -2288,7 +2306,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[18][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[18][7]\
@@ -2311,7 +2329,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[19][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[19][0]\
@@ -2322,7 +2340,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[19][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[19][1]\
@@ -2333,7 +2351,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[19][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[19][2]\
@@ -2344,7 +2362,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[19][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[19][3]\
@@ -2355,7 +2373,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[19][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[19][4]\
@@ -2366,7 +2384,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[19][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[19][5]\
@@ -2377,7 +2395,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[19][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[19][6]\
@@ -2388,7 +2406,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[19][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[19][7]\
@@ -2411,7 +2429,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[1][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[1][0]\
@@ -2422,7 +2440,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[1][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[1][1]\
@@ -2433,7 +2451,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[1][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[1][2]\
@@ -2444,7 +2462,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[1][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[1][3]\
@@ -2455,7 +2473,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[1][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[1][4]\
@@ -2466,7 +2484,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[1][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[1][5]\
@@ -2477,7 +2495,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[1][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[1][6]\
@@ -2488,7 +2506,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[1][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[1][7]\
@@ -2511,7 +2529,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[20][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[20][0]\
@@ -2522,7 +2540,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[20][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[20][1]\
@@ -2533,7 +2551,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[20][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[20][2]\
@@ -2544,7 +2562,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[20][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[20][3]\
@@ -2555,7 +2573,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[20][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[20][4]\
@@ -2566,7 +2584,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[20][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[20][5]\
@@ -2577,7 +2595,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[20][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[20][6]\
@@ -2588,7 +2606,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[20][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[20][7]\
@@ -2611,7 +2629,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[21][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[21][0]\
@@ -2622,7 +2640,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[21][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[21][1]\
@@ -2633,7 +2651,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[21][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[21][2]\
@@ -2644,7 +2662,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[21][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[21][3]\
@@ -2655,7 +2673,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[21][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[21][4]\
@@ -2666,7 +2684,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[21][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[21][5]\
@@ -2677,7 +2695,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[21][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[21][6]\
@@ -2688,7 +2706,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[21][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[21][7]\
@@ -2711,7 +2729,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[22][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[22][0]\
@@ -2722,7 +2740,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[22][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[22][1]\
@@ -2733,7 +2751,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[22][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[22][2]\
@@ -2744,7 +2762,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[22][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[22][3]\
@@ -2755,7 +2773,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[22][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[22][4]\
@@ -2766,7 +2784,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[22][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[22][5]\
@@ -2777,7 +2795,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[22][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[22][6]\
@@ -2788,7 +2806,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[22][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[22][7]\
@@ -2811,7 +2829,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[23][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[23][0]\
@@ -2822,7 +2840,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[23][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[23][1]\
@@ -2833,7 +2851,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[23][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[23][2]\
@@ -2844,7 +2862,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[23][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[23][3]\
@@ -2855,7 +2873,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[23][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[23][4]\
@@ -2866,7 +2884,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[23][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[23][5]\
@@ -2877,7 +2895,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[23][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[23][6]\
@@ -2888,7 +2906,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[23][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[23][7]\
@@ -2911,7 +2929,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[24][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[24][0]\
@@ -2922,7 +2940,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[24][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[24][1]\
@@ -2933,7 +2951,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[24][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[24][2]\
@@ -2944,7 +2962,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[24][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[24][3]\
@@ -2955,7 +2973,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[24][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[24][4]\
@@ -2966,7 +2984,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[24][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[24][5]\
@@ -2977,7 +2995,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[24][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[24][6]\
@@ -2988,7 +3006,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[24][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[24][7]\
@@ -3011,7 +3029,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[25][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[25][0]\
@@ -3022,7 +3040,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[25][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[25][1]\
@@ -3033,7 +3051,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[25][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[25][2]\
@@ -3044,7 +3062,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[25][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[25][3]\
@@ -3055,7 +3073,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[25][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[25][4]\
@@ -3066,7 +3084,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[25][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[25][5]\
@@ -3077,7 +3095,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[25][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[25][6]\
@@ -3088,7 +3106,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[25][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[25][7]\
@@ -3111,7 +3129,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[26][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[26][0]\
@@ -3122,7 +3140,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[26][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[26][1]\
@@ -3133,7 +3151,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[26][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[26][2]\
@@ -3144,7 +3162,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[26][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[26][3]\
@@ -3155,7 +3173,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[26][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[26][4]\
@@ -3166,7 +3184,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[26][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[26][5]\
@@ -3177,7 +3195,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[26][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[26][6]\
@@ -3188,7 +3206,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[26][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[26][7]\
@@ -3211,7 +3229,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[27][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[27][0]\
@@ -3222,7 +3240,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[27][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[27][1]\
@@ -3233,7 +3251,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[27][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[27][2]\
@@ -3244,7 +3262,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[27][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[27][3]\
@@ -3255,7 +3273,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[27][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[27][4]\
@@ -3266,7 +3284,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[27][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[27][5]\
@@ -3277,7 +3295,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[27][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[27][6]\
@@ -3288,7 +3306,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[27][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[27][7]\
@@ -3311,7 +3329,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[28][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[28][0]\
@@ -3322,7 +3340,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[28][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[28][1]\
@@ -3333,7 +3351,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[28][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[28][2]\
@@ -3344,7 +3362,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[28][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[28][3]\
@@ -3355,7 +3373,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[28][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[28][4]\
@@ -3366,7 +3384,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[28][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[28][5]\
@@ -3377,7 +3395,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[28][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[28][6]\
@@ -3388,7 +3406,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[28][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[28][7]\
@@ -3424,7 +3442,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[29][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[29][0]\
@@ -3435,7 +3453,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[29][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[29][1]\
@@ -3446,7 +3464,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[29][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[29][2]\
@@ -3457,7 +3475,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[29][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[29][3]\
@@ -3468,7 +3486,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[29][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[29][4]\
@@ -3479,7 +3497,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[29][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[29][5]\
@@ -3490,7 +3508,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[29][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[29][6]\
@@ -3501,7 +3519,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[29][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[29][7]\
@@ -3537,7 +3555,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[2][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[2][0]\
@@ -3548,7 +3566,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[2][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[2][1]\
@@ -3559,7 +3577,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[2][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[2][2]\
@@ -3570,7 +3588,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[2][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[2][3]\
@@ -3581,7 +3599,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[2][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[2][4]\
@@ -3592,7 +3610,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[2][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[2][5]\
@@ -3603,7 +3621,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[2][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[2][6]\
@@ -3614,7 +3632,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[2][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[2][7]\
@@ -3637,7 +3655,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[30][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[30][0]\
@@ -3648,7 +3666,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[30][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[30][1]\
@@ -3659,7 +3677,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[30][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[30][2]\
@@ -3670,7 +3688,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[30][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[30][3]\
@@ -3681,7 +3699,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[30][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[30][4]\
@@ -3692,7 +3710,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[30][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[30][5]\
@@ -3703,7 +3721,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[30][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[30][6]\
@@ -3714,7 +3732,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[30][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[30][7]\
@@ -3750,8 +3768,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
-      G => \input_string_reg[31][7]_i_1_n_0\,
+      D => \output_string_char_reg[7]_i_8_0\(0),
+      G => input_string,
       GE => '1',
       Q => \input_string_reg_n_0_[31][0]\
     );
@@ -3761,8 +3779,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
-      G => \input_string_reg[31][7]_i_1_n_0\,
+      D => \output_string_char_reg[7]_i_8_0\(1),
+      G => input_string,
       GE => '1',
       Q => \input_string_reg_n_0_[31][1]\
     );
@@ -3772,8 +3790,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
-      G => \input_string_reg[31][7]_i_1_n_0\,
+      D => \output_string_char_reg[7]_i_8_0\(2),
+      G => input_string,
       GE => '1',
       Q => \input_string_reg_n_0_[31][2]\
     );
@@ -3783,8 +3801,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
-      G => \input_string_reg[31][7]_i_1_n_0\,
+      D => \output_string_char_reg[7]_i_8_0\(3),
+      G => input_string,
       GE => '1',
       Q => \input_string_reg_n_0_[31][3]\
     );
@@ -3794,8 +3812,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
-      G => \input_string_reg[31][7]_i_1_n_0\,
+      D => \output_string_char_reg[7]_i_8_0\(4),
+      G => input_string,
       GE => '1',
       Q => \input_string_reg_n_0_[31][4]\
     );
@@ -3805,8 +3823,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
-      G => \input_string_reg[31][7]_i_1_n_0\,
+      D => \output_string_char_reg[7]_i_8_0\(5),
+      G => input_string,
       GE => '1',
       Q => \input_string_reg_n_0_[31][5]\
     );
@@ -3816,8 +3834,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
-      G => \input_string_reg[31][7]_i_1_n_0\,
+      D => \output_string_char_reg[7]_i_8_0\(6),
+      G => input_string,
       GE => '1',
       Q => \input_string_reg_n_0_[31][6]\
     );
@@ -3827,8 +3845,8 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
-      G => \input_string_reg[31][7]_i_1_n_0\,
+      D => \output_string_char_reg[7]_i_8_0\(7),
+      G => input_string,
       GE => '1',
       Q => \input_string_reg_n_0_[31][7]\
     );
@@ -3842,7 +3860,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
       I2 => \input_string_reg[31][7]_i_2_n_0\,
       I3 => ctr(3),
       I4 => state(1),
-      O => \input_string_reg[31][7]_i_1_n_0\
+      O => input_string
     );
 \input_string_reg[31][7]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -3863,7 +3881,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[3][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[3][0]\
@@ -3874,7 +3892,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[3][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[3][1]\
@@ -3885,7 +3903,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[3][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[3][2]\
@@ -3896,7 +3914,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[3][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[3][3]\
@@ -3907,7 +3925,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[3][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[3][4]\
@@ -3918,7 +3936,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[3][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[3][5]\
@@ -3929,7 +3947,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[3][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[3][6]\
@@ -3940,7 +3958,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[3][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[3][7]\
@@ -3963,7 +3981,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[4][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[4][0]\
@@ -3974,7 +3992,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[4][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[4][1]\
@@ -3985,7 +4003,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[4][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[4][2]\
@@ -3996,7 +4014,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[4][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[4][3]\
@@ -4007,7 +4025,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[4][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[4][4]\
@@ -4018,7 +4036,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[4][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[4][5]\
@@ -4029,7 +4047,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[4][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[4][6]\
@@ -4040,7 +4058,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[4][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[4][7]\
@@ -4063,7 +4081,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[5][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[5][0]\
@@ -4074,7 +4092,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[5][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[5][1]\
@@ -4085,7 +4103,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[5][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[5][2]\
@@ -4096,7 +4114,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[5][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[5][3]\
@@ -4107,7 +4125,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[5][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[5][4]\
@@ -4118,7 +4136,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[5][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[5][5]\
@@ -4129,7 +4147,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[5][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[5][6]\
@@ -4140,7 +4158,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[5][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[5][7]\
@@ -4163,7 +4181,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[6][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[6][0]\
@@ -4174,7 +4192,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[6][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[6][1]\
@@ -4185,7 +4203,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[6][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[6][2]\
@@ -4196,7 +4214,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[6][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[6][3]\
@@ -4207,7 +4225,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[6][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[6][4]\
@@ -4218,7 +4236,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[6][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[6][5]\
@@ -4229,7 +4247,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[6][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[6][6]\
@@ -4240,7 +4258,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[6][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[6][7]\
@@ -4263,7 +4281,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[7][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[7][0]\
@@ -4274,7 +4292,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[7][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[7][1]\
@@ -4285,7 +4303,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[7][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[7][2]\
@@ -4296,7 +4314,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[7][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[7][3]\
@@ -4307,7 +4325,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[7][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[7][4]\
@@ -4318,7 +4336,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[7][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[7][5]\
@@ -4329,7 +4347,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[7][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[7][6]\
@@ -4340,7 +4358,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[7][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[7][7]\
@@ -4363,7 +4381,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[8][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[8][0]\
@@ -4374,7 +4392,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[8][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[8][1]\
@@ -4385,7 +4403,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[8][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[8][2]\
@@ -4396,7 +4414,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[8][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[8][3]\
@@ -4407,7 +4425,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[8][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[8][4]\
@@ -4418,7 +4436,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[8][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[8][5]\
@@ -4429,7 +4447,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[8][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[8][6]\
@@ -4440,7 +4458,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[8][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[8][7]\
@@ -4463,7 +4481,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(0),
+      D => \output_string_char_reg[7]_i_8_0\(0),
       G => \input_string_reg[9][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[9][0]\
@@ -4474,7 +4492,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(1),
+      D => \output_string_char_reg[7]_i_8_0\(1),
       G => \input_string_reg[9][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[9][1]\
@@ -4485,7 +4503,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(2),
+      D => \output_string_char_reg[7]_i_8_0\(2),
       G => \input_string_reg[9][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[9][2]\
@@ -4496,7 +4514,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(3),
+      D => \output_string_char_reg[7]_i_8_0\(3),
       G => \input_string_reg[9][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[9][3]\
@@ -4507,7 +4525,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(4),
+      D => \output_string_char_reg[7]_i_8_0\(4),
       G => \input_string_reg[9][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[9][4]\
@@ -4518,7 +4536,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(5),
+      D => \output_string_char_reg[7]_i_8_0\(5),
       G => \input_string_reg[9][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[9][5]\
@@ -4529,7 +4547,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(6),
+      D => \output_string_char_reg[7]_i_8_0\(6),
       G => \input_string_reg[9][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[9][6]\
@@ -4540,7 +4558,7 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
     )
         port map (
       CLR => '0',
-      D => \output_check_reg[7]_0\(7),
+      D => \output_string_char_reg[7]_i_8_0\(7),
       G => \input_string_reg[9][7]_i_1_n_0\,
       GE => '1',
       Q => \input_string_reg_n_0_[9][7]\
@@ -4557,69 +4575,142 @@ done_bwt_reg_i_2: unisim.vcomponents.LUT2
       I4 => state(1),
       O => \input_string_reg[9][7]_i_1_n_0\
     );
-\output_check_reg[0]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => s00_axi_aresetn,
-      D => \output_check_reg[7]_0\(8),
-      Q => D(8),
-      R => '0'
+\output_check_reg[0]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => \output_check_reg[0]_i_1_n_0\,
+      G => \output_string_char_reg[7]_i_2_n_0\,
+      GE => '1',
+      Q => D(8)
     );
-\output_check_reg[1]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => s00_axi_aresetn,
-      D => \output_check_reg[7]_0\(9),
-      Q => D(9),
-      R => '0'
+\output_check_reg[0]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"10EF"
+    )
+        port map (
+      I0 => ctr_send(2),
+      I1 => ctr_send(3),
+      I2 => ctr_send(4),
+      I3 => ctr_send(0),
+      O => \output_check_reg[0]_i_1_n_0\
     );
-\output_check_reg[2]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => s00_axi_aresetn,
-      D => \output_check_reg[7]_0\(10),
-      Q => D(10),
-      R => '0'
+\output_check_reg[1]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => \output_check_reg[1]_i_1_n_0\,
+      G => \output_string_char_reg[7]_i_2_n_0\,
+      GE => '1',
+      Q => D(9)
     );
-\output_check_reg[3]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => s00_axi_aresetn,
-      D => \output_check_reg[7]_0\(11),
-      Q => D(11),
-      R => '0'
+\output_check_reg[1]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"295555AA"
+    )
+        port map (
+      I0 => ctr_send(1),
+      I1 => ctr_send(2),
+      I2 => ctr_send(3),
+      I3 => ctr_send(4),
+      I4 => ctr_send(0),
+      O => \output_check_reg[1]_i_1_n_0\
     );
-\output_check_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => s00_axi_aresetn,
-      D => \output_check_reg[7]_0\(12),
-      Q => D(12),
-      R => '0'
+\output_check_reg[2]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => \output_check_reg[2]_i_1_n_0\,
+      G => \output_string_char_reg[7]_i_2_n_0\,
+      GE => '1',
+      Q => D(10)
     );
-\output_check_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => s00_axi_aresetn,
-      D => \output_check_reg[7]_0\(13),
-      Q => D(13),
-      R => '0'
+\output_check_reg[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"855FEAA0"
+    )
+        port map (
+      I0 => ctr_send(1),
+      I1 => ctr_send(3),
+      I2 => ctr_send(0),
+      I3 => ctr_send(4),
+      I4 => ctr_send(2),
+      O => \output_check_reg[2]_i_1_n_0\
     );
-\output_check_reg[6]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => s00_axi_aresetn,
-      D => \output_check_reg[7]_0\(14),
-      Q => D(14),
-      R => '0'
+\output_check_reg[3]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => \output_check_reg[3]_i_1_n_0\,
+      G => \output_string_char_reg[7]_i_2_n_0\,
+      GE => '1',
+      Q => D(11)
     );
-\output_check_reg[7]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => s00_axi_aresetn,
-      D => \output_check_reg[7]_0\(15),
-      Q => D(15),
-      R => '0'
+\output_check_reg[3]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"607F0080"
+    )
+        port map (
+      I0 => ctr_send(1),
+      I1 => ctr_send(0),
+      I2 => ctr_send(2),
+      I3 => ctr_send(4),
+      I4 => ctr_send(3),
+      O => \output_check_reg[3]_i_1_n_0\
+    );
+\output_check_reg[4]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => \output_check_reg[4]_i_1_n_0\,
+      G => \output_string_char_reg[7]_i_2_n_0\,
+      GE => '1',
+      Q => D(12)
+    );
+\output_check_reg[4]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFF8000"
+    )
+        port map (
+      I0 => ctr_send(0),
+      I1 => ctr_send(3),
+      I2 => ctr_send(2),
+      I3 => ctr_send(1),
+      I4 => ctr_send(4),
+      O => \output_check_reg[4]_i_1_n_0\
+    );
+\output_check_reg[6]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => \output_check_reg[6]_i_1_n_0\,
+      G => \output_string_char_reg[7]_i_2_n_0\,
+      GE => '1',
+      Q => D(13)
+    );
+\output_check_reg[6]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0313FFFF"
+    )
+        port map (
+      I0 => ctr_send(1),
+      I1 => ctr_send(3),
+      I2 => ctr_send(2),
+      I3 => ctr_send(0),
+      I4 => ctr_send(4),
+      O => \output_check_reg[6]_i_1_n_0\
     );
 \output_string_char_reg[0]\: unisim.vcomponents.LDCE
     generic map(
@@ -5905,8 +5996,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI is
   port (
-    S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_WREADY : out STD_LOGIC;
+    S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
@@ -5918,8 +6009,8 @@ entity bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI is
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC;
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_aresetn : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
@@ -5944,7 +6035,6 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI is
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal axi_wready0 : STD_LOGIC;
-  signal input_check : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal p_0_in : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal reg_data_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^s00_axi_bvalid\ : STD_LOGIC;
@@ -5984,39 +6074,23 @@ architecture STRUCTURE of bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI is
   signal \slv_reg0_reg_n_0_[7]\ : STD_LOGIC;
   signal \slv_reg0_reg_n_0_[8]\ : STD_LOGIC;
   signal \slv_reg0_reg_n_0_[9]\ : STD_LOGIC;
-  signal slv_reg1 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal slv_reg1 : STD_LOGIC_VECTOR ( 31 downto 8 );
   signal \slv_reg1[15]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg1[23]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg1[31]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg1[7]_i_1_n_0\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[16]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[17]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[18]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[19]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[20]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[21]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[22]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[23]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[24]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[25]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[26]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[27]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[28]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[29]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[30]\ : STD_LOGIC;
-  signal \slv_reg1_reg_n_0_[31]\ : STD_LOGIC;
+  signal slv_reg1_0 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal slv_reg2 : STD_LOGIC;
-  signal slv_reg3 : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal slv_reg3 : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal \slv_reg_rden__0\ : STD_LOGIC;
   signal \slv_reg_wren__0\ : STD_LOGIC;
   signal slv_wire2 : STD_LOGIC;
-  signal slv_wire3 : STD_LOGIC_VECTOR ( 15 downto 8 );
-  signal slv_wire3_0 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal slv_wire3 : STD_LOGIC_VECTOR ( 14 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \slv_reg1[31]_i_2\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \slv_reg1[31]_i_2\ : label is "soft_lutpair27";
 begin
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
@@ -6187,367 +6261,365 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => slv_reg3(0),
-      I1 => slv_reg1(0),
-      I2 => axi_araddr(2),
-      I3 => slv_reg2,
-      I4 => axi_araddr(3),
+      I1 => slv_reg2,
+      I2 => axi_araddr(3),
+      I3 => slv_reg1_0(0),
+      I4 => axi_araddr(2),
       I5 => slv_reg0(0),
       O => reg_data_out(0)
     );
 \axi_rdata[10]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(10),
-      I1 => input_check(2),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[10]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1(10),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[10]\,
       O => reg_data_out(10)
     );
 \axi_rdata[11]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(11),
-      I1 => input_check(3),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[11]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1(11),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[11]\,
       O => reg_data_out(11)
     );
 \axi_rdata[12]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(12),
-      I1 => input_check(4),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[12]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1(12),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[12]\,
       O => reg_data_out(12)
     );
-\axi_rdata[13]_i_1\: unisim.vcomponents.LUT5
+\axi_rdata[13]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"E5E0"
     )
         port map (
-      I0 => slv_reg3(13),
-      I1 => input_check(5),
+      I0 => axi_araddr(3),
+      I1 => slv_reg1(13),
       I2 => axi_araddr(2),
       I3 => \slv_reg0_reg_n_0_[13]\,
-      I4 => axi_araddr(3),
       O => reg_data_out(13)
     );
 \axi_rdata[14]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(14),
-      I1 => input_check(6),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[14]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1(14),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[14]\,
       O => reg_data_out(14)
     );
-\axi_rdata[15]_i_1\: unisim.vcomponents.LUT5
+\axi_rdata[15]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"00E2"
     )
         port map (
-      I0 => slv_reg3(15),
-      I1 => input_check(7),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[15]\,
-      I4 => axi_araddr(3),
+      I0 => \slv_reg0_reg_n_0_[15]\,
+      I1 => axi_araddr(2),
+      I2 => slv_reg1(15),
+      I3 => axi_araddr(3),
       O => reg_data_out(15)
     );
 \axi_rdata[16]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[16]\,
+      I0 => \slv_reg0_reg_n_0_[16]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[16]\,
+      I2 => slv_reg1(16),
       I3 => axi_araddr(3),
       O => reg_data_out(16)
     );
 \axi_rdata[17]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[17]\,
+      I0 => \slv_reg0_reg_n_0_[17]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[17]\,
+      I2 => slv_reg1(17),
       I3 => axi_araddr(3),
       O => reg_data_out(17)
     );
 \axi_rdata[18]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[18]\,
+      I0 => \slv_reg0_reg_n_0_[18]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[18]\,
+      I2 => slv_reg1(18),
       I3 => axi_araddr(3),
       O => reg_data_out(18)
     );
 \axi_rdata[19]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[19]\,
+      I0 => \slv_reg0_reg_n_0_[19]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[19]\,
+      I2 => slv_reg1(19),
       I3 => axi_araddr(3),
       O => reg_data_out(19)
     );
 \axi_rdata[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(1),
-      I1 => slv_reg1(1),
-      I2 => axi_araddr(2),
-      I3 => slv_reg0(1),
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1_0(1),
+      I3 => axi_araddr(2),
+      I4 => slv_reg0(1),
       O => reg_data_out(1)
     );
 \axi_rdata[20]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[20]\,
+      I0 => \slv_reg0_reg_n_0_[20]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[20]\,
+      I2 => slv_reg1(20),
       I3 => axi_araddr(3),
       O => reg_data_out(20)
     );
 \axi_rdata[21]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[21]\,
+      I0 => \slv_reg0_reg_n_0_[21]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[21]\,
+      I2 => slv_reg1(21),
       I3 => axi_araddr(3),
       O => reg_data_out(21)
     );
 \axi_rdata[22]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[22]\,
+      I0 => \slv_reg0_reg_n_0_[22]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[22]\,
+      I2 => slv_reg1(22),
       I3 => axi_araddr(3),
       O => reg_data_out(22)
     );
 \axi_rdata[23]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[23]\,
+      I0 => \slv_reg0_reg_n_0_[23]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[23]\,
+      I2 => slv_reg1(23),
       I3 => axi_araddr(3),
       O => reg_data_out(23)
     );
 \axi_rdata[24]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[24]\,
+      I0 => \slv_reg0_reg_n_0_[24]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[24]\,
+      I2 => slv_reg1(24),
       I3 => axi_araddr(3),
       O => reg_data_out(24)
     );
 \axi_rdata[25]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[25]\,
+      I0 => \slv_reg0_reg_n_0_[25]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[25]\,
+      I2 => slv_reg1(25),
       I3 => axi_araddr(3),
       O => reg_data_out(25)
     );
 \axi_rdata[26]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[26]\,
+      I0 => \slv_reg0_reg_n_0_[26]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[26]\,
+      I2 => slv_reg1(26),
       I3 => axi_araddr(3),
       O => reg_data_out(26)
     );
 \axi_rdata[27]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[27]\,
+      I0 => \slv_reg0_reg_n_0_[27]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[27]\,
+      I2 => slv_reg1(27),
       I3 => axi_araddr(3),
       O => reg_data_out(27)
     );
 \axi_rdata[28]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[28]\,
+      I0 => \slv_reg0_reg_n_0_[28]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[28]\,
+      I2 => slv_reg1(28),
       I3 => axi_araddr(3),
       O => reg_data_out(28)
     );
 \axi_rdata[29]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[29]\,
+      I0 => \slv_reg0_reg_n_0_[29]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[29]\,
+      I2 => slv_reg1(29),
       I3 => axi_araddr(3),
       O => reg_data_out(29)
     );
 \axi_rdata[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(2),
-      I1 => slv_reg1(2),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[2]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1_0(2),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[2]\,
       O => reg_data_out(2)
     );
 \axi_rdata[30]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[30]\,
+      I0 => \slv_reg0_reg_n_0_[30]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[30]\,
+      I2 => slv_reg1(30),
       I3 => axi_araddr(3),
       O => reg_data_out(30)
     );
 \axi_rdata[31]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00B8"
+      INIT => X"00E2"
     )
         port map (
-      I0 => \slv_reg1_reg_n_0_[31]\,
+      I0 => \slv_reg0_reg_n_0_[31]\,
       I1 => axi_araddr(2),
-      I2 => \slv_reg0_reg_n_0_[31]\,
+      I2 => slv_reg1(31),
       I3 => axi_araddr(3),
       O => reg_data_out(31)
     );
 \axi_rdata[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(3),
-      I1 => slv_reg1(3),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[3]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1_0(3),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[3]\,
       O => reg_data_out(3)
     );
 \axi_rdata[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(4),
-      I1 => slv_reg1(4),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[4]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1_0(4),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[4]\,
       O => reg_data_out(4)
     );
 \axi_rdata[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(5),
-      I1 => slv_reg1(5),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[5]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1_0(5),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[5]\,
       O => reg_data_out(5)
     );
 \axi_rdata[6]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(6),
-      I1 => slv_reg1(6),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[6]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1_0(6),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[6]\,
       O => reg_data_out(6)
     );
 \axi_rdata[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(7),
-      I1 => slv_reg1(7),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[7]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1_0(7),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[7]\,
       O => reg_data_out(7)
     );
 \axi_rdata[8]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(8),
-      I1 => input_check(0),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[8]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1(8),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[8]\,
       O => reg_data_out(8)
     );
 \axi_rdata[9]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0A0CFC0"
+      INIT => X"B833B800"
     )
         port map (
       I0 => slv_reg3(9),
-      I1 => input_check(1),
-      I2 => axi_araddr(2),
-      I3 => \slv_reg0_reg_n_0_[9]\,
-      I4 => axi_araddr(3),
+      I1 => axi_araddr(3),
+      I2 => slv_reg1(9),
+      I3 => axi_araddr(2),
+      I4 => \slv_reg0_reg_n_0_[9]\,
       O => reg_data_out(9)
     );
 \axi_rdata_reg[0]\: unisim.vcomponents.FDRE
@@ -6846,12 +6918,11 @@ axi_wready_reg: unisim.vcomponents.FDRE
     );
 bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
      port map (
-      D(15 downto 8) => slv_wire3(15 downto 8),
-      D(7 downto 0) => slv_wire3_0(7 downto 0),
+      D(13) => slv_wire3(14),
+      D(12 downto 0) => slv_wire3(12 downto 0),
       Q(1 downto 0) => slv_reg0(1 downto 0),
       SR(0) => ARESET,
-      \output_check_reg[7]_0\(15 downto 8) => input_check(7 downto 0),
-      \output_check_reg[7]_0\(7 downto 0) => slv_reg1(7 downto 0),
+      \output_string_char_reg[7]_i_8_0\(7 downto 0) => slv_reg1_0(7 downto 0),
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_aresetn => s00_axi_aresetn,
       slv_wire2 => slv_wire2
@@ -7216,7 +7287,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
       D => s00_axi_wdata(0),
-      Q => slv_reg1(0),
+      Q => slv_reg1_0(0),
       R => ARESET
     );
 \slv_reg1_reg[10]\: unisim.vcomponents.FDRE
@@ -7224,7 +7295,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[15]_i_1_n_0\,
       D => s00_axi_wdata(10),
-      Q => input_check(2),
+      Q => slv_reg1(10),
       R => ARESET
     );
 \slv_reg1_reg[11]\: unisim.vcomponents.FDRE
@@ -7232,7 +7303,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[15]_i_1_n_0\,
       D => s00_axi_wdata(11),
-      Q => input_check(3),
+      Q => slv_reg1(11),
       R => ARESET
     );
 \slv_reg1_reg[12]\: unisim.vcomponents.FDRE
@@ -7240,7 +7311,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[15]_i_1_n_0\,
       D => s00_axi_wdata(12),
-      Q => input_check(4),
+      Q => slv_reg1(12),
       R => ARESET
     );
 \slv_reg1_reg[13]\: unisim.vcomponents.FDRE
@@ -7248,7 +7319,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[15]_i_1_n_0\,
       D => s00_axi_wdata(13),
-      Q => input_check(5),
+      Q => slv_reg1(13),
       R => ARESET
     );
 \slv_reg1_reg[14]\: unisim.vcomponents.FDRE
@@ -7256,7 +7327,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[15]_i_1_n_0\,
       D => s00_axi_wdata(14),
-      Q => input_check(6),
+      Q => slv_reg1(14),
       R => ARESET
     );
 \slv_reg1_reg[15]\: unisim.vcomponents.FDRE
@@ -7264,7 +7335,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[15]_i_1_n_0\,
       D => s00_axi_wdata(15),
-      Q => input_check(7),
+      Q => slv_reg1(15),
       R => ARESET
     );
 \slv_reg1_reg[16]\: unisim.vcomponents.FDRE
@@ -7272,7 +7343,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[23]_i_1_n_0\,
       D => s00_axi_wdata(16),
-      Q => \slv_reg1_reg_n_0_[16]\,
+      Q => slv_reg1(16),
       R => ARESET
     );
 \slv_reg1_reg[17]\: unisim.vcomponents.FDRE
@@ -7280,7 +7351,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[23]_i_1_n_0\,
       D => s00_axi_wdata(17),
-      Q => \slv_reg1_reg_n_0_[17]\,
+      Q => slv_reg1(17),
       R => ARESET
     );
 \slv_reg1_reg[18]\: unisim.vcomponents.FDRE
@@ -7288,7 +7359,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[23]_i_1_n_0\,
       D => s00_axi_wdata(18),
-      Q => \slv_reg1_reg_n_0_[18]\,
+      Q => slv_reg1(18),
       R => ARESET
     );
 \slv_reg1_reg[19]\: unisim.vcomponents.FDRE
@@ -7296,7 +7367,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[23]_i_1_n_0\,
       D => s00_axi_wdata(19),
-      Q => \slv_reg1_reg_n_0_[19]\,
+      Q => slv_reg1(19),
       R => ARESET
     );
 \slv_reg1_reg[1]\: unisim.vcomponents.FDRE
@@ -7304,7 +7375,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
       D => s00_axi_wdata(1),
-      Q => slv_reg1(1),
+      Q => slv_reg1_0(1),
       R => ARESET
     );
 \slv_reg1_reg[20]\: unisim.vcomponents.FDRE
@@ -7312,7 +7383,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[23]_i_1_n_0\,
       D => s00_axi_wdata(20),
-      Q => \slv_reg1_reg_n_0_[20]\,
+      Q => slv_reg1(20),
       R => ARESET
     );
 \slv_reg1_reg[21]\: unisim.vcomponents.FDRE
@@ -7320,7 +7391,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[23]_i_1_n_0\,
       D => s00_axi_wdata(21),
-      Q => \slv_reg1_reg_n_0_[21]\,
+      Q => slv_reg1(21),
       R => ARESET
     );
 \slv_reg1_reg[22]\: unisim.vcomponents.FDRE
@@ -7328,7 +7399,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[23]_i_1_n_0\,
       D => s00_axi_wdata(22),
-      Q => \slv_reg1_reg_n_0_[22]\,
+      Q => slv_reg1(22),
       R => ARESET
     );
 \slv_reg1_reg[23]\: unisim.vcomponents.FDRE
@@ -7336,7 +7407,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[23]_i_1_n_0\,
       D => s00_axi_wdata(23),
-      Q => \slv_reg1_reg_n_0_[23]\,
+      Q => slv_reg1(23),
       R => ARESET
     );
 \slv_reg1_reg[24]\: unisim.vcomponents.FDRE
@@ -7344,7 +7415,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[31]_i_1_n_0\,
       D => s00_axi_wdata(24),
-      Q => \slv_reg1_reg_n_0_[24]\,
+      Q => slv_reg1(24),
       R => ARESET
     );
 \slv_reg1_reg[25]\: unisim.vcomponents.FDRE
@@ -7352,7 +7423,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[31]_i_1_n_0\,
       D => s00_axi_wdata(25),
-      Q => \slv_reg1_reg_n_0_[25]\,
+      Q => slv_reg1(25),
       R => ARESET
     );
 \slv_reg1_reg[26]\: unisim.vcomponents.FDRE
@@ -7360,7 +7431,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[31]_i_1_n_0\,
       D => s00_axi_wdata(26),
-      Q => \slv_reg1_reg_n_0_[26]\,
+      Q => slv_reg1(26),
       R => ARESET
     );
 \slv_reg1_reg[27]\: unisim.vcomponents.FDRE
@@ -7368,7 +7439,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[31]_i_1_n_0\,
       D => s00_axi_wdata(27),
-      Q => \slv_reg1_reg_n_0_[27]\,
+      Q => slv_reg1(27),
       R => ARESET
     );
 \slv_reg1_reg[28]\: unisim.vcomponents.FDRE
@@ -7376,7 +7447,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[31]_i_1_n_0\,
       D => s00_axi_wdata(28),
-      Q => \slv_reg1_reg_n_0_[28]\,
+      Q => slv_reg1(28),
       R => ARESET
     );
 \slv_reg1_reg[29]\: unisim.vcomponents.FDRE
@@ -7384,7 +7455,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[31]_i_1_n_0\,
       D => s00_axi_wdata(29),
-      Q => \slv_reg1_reg_n_0_[29]\,
+      Q => slv_reg1(29),
       R => ARESET
     );
 \slv_reg1_reg[2]\: unisim.vcomponents.FDRE
@@ -7392,7 +7463,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
       D => s00_axi_wdata(2),
-      Q => slv_reg1(2),
+      Q => slv_reg1_0(2),
       R => ARESET
     );
 \slv_reg1_reg[30]\: unisim.vcomponents.FDRE
@@ -7400,7 +7471,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[31]_i_1_n_0\,
       D => s00_axi_wdata(30),
-      Q => \slv_reg1_reg_n_0_[30]\,
+      Q => slv_reg1(30),
       R => ARESET
     );
 \slv_reg1_reg[31]\: unisim.vcomponents.FDRE
@@ -7408,7 +7479,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[31]_i_1_n_0\,
       D => s00_axi_wdata(31),
-      Q => \slv_reg1_reg_n_0_[31]\,
+      Q => slv_reg1(31),
       R => ARESET
     );
 \slv_reg1_reg[3]\: unisim.vcomponents.FDRE
@@ -7416,7 +7487,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
       D => s00_axi_wdata(3),
-      Q => slv_reg1(3),
+      Q => slv_reg1_0(3),
       R => ARESET
     );
 \slv_reg1_reg[4]\: unisim.vcomponents.FDRE
@@ -7424,7 +7495,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
       D => s00_axi_wdata(4),
-      Q => slv_reg1(4),
+      Q => slv_reg1_0(4),
       R => ARESET
     );
 \slv_reg1_reg[5]\: unisim.vcomponents.FDRE
@@ -7432,7 +7503,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
       D => s00_axi_wdata(5),
-      Q => slv_reg1(5),
+      Q => slv_reg1_0(5),
       R => ARESET
     );
 \slv_reg1_reg[6]\: unisim.vcomponents.FDRE
@@ -7440,7 +7511,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
       D => s00_axi_wdata(6),
-      Q => slv_reg1(6),
+      Q => slv_reg1_0(6),
       R => ARESET
     );
 \slv_reg1_reg[7]\: unisim.vcomponents.FDRE
@@ -7448,7 +7519,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[7]_i_1_n_0\,
       D => s00_axi_wdata(7),
-      Q => slv_reg1(7),
+      Q => slv_reg1_0(7),
       R => ARESET
     );
 \slv_reg1_reg[8]\: unisim.vcomponents.FDRE
@@ -7456,7 +7527,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[15]_i_1_n_0\,
       D => s00_axi_wdata(8),
-      Q => input_check(0),
+      Q => slv_reg1(8),
       R => ARESET
     );
 \slv_reg1_reg[9]\: unisim.vcomponents.FDRE
@@ -7464,7 +7535,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       C => s00_axi_aclk,
       CE => \slv_reg1[15]_i_1_n_0\,
       D => s00_axi_wdata(9),
-      Q => input_check(1),
+      Q => slv_reg1(9),
       R => ARESET
     );
 \slv_reg2_reg[0]\: unisim.vcomponents.FDRE
@@ -7479,7 +7550,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => slv_wire3_0(0),
+      D => slv_wire3(0),
       Q => slv_reg3(0),
       R => '0'
     );
@@ -7507,14 +7578,6 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       Q => slv_reg3(12),
       R => '0'
     );
-\slv_reg3_reg[13]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => '1',
-      D => slv_wire3(13),
-      Q => slv_reg3(13),
-      R => '0'
-    );
 \slv_reg3_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
@@ -7523,19 +7586,11 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
       Q => slv_reg3(14),
       R => '0'
     );
-\slv_reg3_reg[15]\: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => '1',
-      D => slv_wire3(15),
-      Q => slv_reg3(15),
-      R => '0'
-    );
 \slv_reg3_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => slv_wire3_0(1),
+      D => slv_wire3(1),
       Q => slv_reg3(1),
       R => '0'
     );
@@ -7543,7 +7598,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => slv_wire3_0(2),
+      D => slv_wire3(2),
       Q => slv_reg3(2),
       R => '0'
     );
@@ -7551,7 +7606,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => slv_wire3_0(3),
+      D => slv_wire3(3),
       Q => slv_reg3(3),
       R => '0'
     );
@@ -7559,7 +7614,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => slv_wire3_0(4),
+      D => slv_wire3(4),
       Q => slv_reg3(4),
       R => '0'
     );
@@ -7567,7 +7622,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => slv_wire3_0(5),
+      D => slv_wire3(5),
       Q => slv_reg3(5),
       R => '0'
     );
@@ -7575,7 +7630,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => slv_wire3_0(6),
+      D => slv_wire3(6),
       Q => slv_reg3(6),
       R => '0'
     );
@@ -7583,7 +7638,7 @@ bwt_top_inst: entity work.bwt_bwt_ip_0_0_bwt_top
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => slv_wire3_0(7),
+      D => slv_wire3(7),
       Q => slv_reg3(7),
       R => '0'
     );
@@ -7620,8 +7675,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity bwt_bwt_ip_0_0_bwt_ip_v1_0 is
   port (
-    S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_WREADY : out STD_LOGIC;
+    S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
@@ -7633,8 +7688,8 @@ entity bwt_bwt_ip_0_0_bwt_ip_v1_0 is
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
-    s00_axi_aresetn : in STD_LOGIC;
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_aresetn : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );

@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Sep  2 18:57:02 2020
+// Date        : Thu Sep  3 01:17:59 2020
 // Host        : DESKTOP-64JSPKI running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ip/bwt_bwt_ip_0_0/bwt_bwt_ip_0_0_sim_netlist.v
@@ -105,8 +105,8 @@ endmodule
 
 (* ORIG_REF_NAME = "bwt_ip_v1_0" *) 
 module bwt_bwt_ip_0_0_bwt_ip_v1_0
-   (S_AXI_AWREADY,
-    S_AXI_WREADY,
+   (S_AXI_WREADY,
+    S_AXI_AWREADY,
     S_AXI_ARREADY,
     s00_axi_rdata,
     s00_axi_rvalid,
@@ -118,12 +118,12 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0
     s00_axi_wdata,
     s00_axi_araddr,
     s00_axi_arvalid,
-    s00_axi_aresetn,
     s00_axi_wstrb,
+    s00_axi_aresetn,
     s00_axi_bready,
     s00_axi_rready);
-  output S_AXI_AWREADY;
   output S_AXI_WREADY;
+  output S_AXI_AWREADY;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output s00_axi_rvalid;
@@ -135,8 +135,8 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0
   input [31:0]s00_axi_wdata;
   input [1:0]s00_axi_araddr;
   input s00_axi_arvalid;
-  input s00_axi_aresetn;
   input [3:0]s00_axi_wstrb;
+  input s00_axi_aresetn;
   input s00_axi_bready;
   input s00_axi_rready;
 
@@ -180,8 +180,8 @@ endmodule
 
 (* ORIG_REF_NAME = "bwt_ip_v1_0_S00_AXI" *) 
 module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
-   (S_AXI_AWREADY,
-    S_AXI_WREADY,
+   (S_AXI_WREADY,
+    S_AXI_AWREADY,
     S_AXI_ARREADY,
     s00_axi_rdata,
     s00_axi_rvalid,
@@ -193,12 +193,12 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
     s00_axi_wdata,
     s00_axi_araddr,
     s00_axi_arvalid,
-    s00_axi_aresetn,
     s00_axi_wstrb,
+    s00_axi_aresetn,
     s00_axi_bready,
     s00_axi_rready);
-  output S_AXI_AWREADY;
   output S_AXI_WREADY;
+  output S_AXI_AWREADY;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output s00_axi_rvalid;
@@ -210,8 +210,8 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
   input [31:0]s00_axi_wdata;
   input [1:0]s00_axi_araddr;
   input s00_axi_arvalid;
-  input s00_axi_aresetn;
   input [3:0]s00_axi_wstrb;
+  input s00_axi_aresetn;
   input s00_axi_bready;
   input s00_axi_rready;
 
@@ -231,7 +231,6 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
   wire axi_bvalid_i_1_n_0;
   wire axi_rvalid_i_1_n_0;
   wire axi_wready0;
-  wire [7:0]input_check;
   wire [1:0]p_0_in;
   wire [31:0]reg_data_out;
   wire s00_axi_aclk;
@@ -283,34 +282,18 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
   wire \slv_reg0_reg_n_0_[7] ;
   wire \slv_reg0_reg_n_0_[8] ;
   wire \slv_reg0_reg_n_0_[9] ;
-  wire [7:0]slv_reg1;
+  wire [31:8]slv_reg1;
   wire \slv_reg1[15]_i_1_n_0 ;
   wire \slv_reg1[23]_i_1_n_0 ;
   wire \slv_reg1[31]_i_1_n_0 ;
   wire \slv_reg1[7]_i_1_n_0 ;
-  wire \slv_reg1_reg_n_0_[16] ;
-  wire \slv_reg1_reg_n_0_[17] ;
-  wire \slv_reg1_reg_n_0_[18] ;
-  wire \slv_reg1_reg_n_0_[19] ;
-  wire \slv_reg1_reg_n_0_[20] ;
-  wire \slv_reg1_reg_n_0_[21] ;
-  wire \slv_reg1_reg_n_0_[22] ;
-  wire \slv_reg1_reg_n_0_[23] ;
-  wire \slv_reg1_reg_n_0_[24] ;
-  wire \slv_reg1_reg_n_0_[25] ;
-  wire \slv_reg1_reg_n_0_[26] ;
-  wire \slv_reg1_reg_n_0_[27] ;
-  wire \slv_reg1_reg_n_0_[28] ;
-  wire \slv_reg1_reg_n_0_[29] ;
-  wire \slv_reg1_reg_n_0_[30] ;
-  wire \slv_reg1_reg_n_0_[31] ;
+  wire [7:0]slv_reg1_0;
   wire slv_reg2;
-  wire [15:0]slv_reg3;
+  wire [14:0]slv_reg3;
   wire slv_reg_rden__0;
   wire slv_reg_wren__0;
   wire slv_wire2;
-  wire [15:8]slv_wire3;
-  wire [7:0]slv_wire3_0;
+  wire [14:0]slv_wire3;
 
   LUT6 #(
     .INIT(64'hF7FFC4CCC4CCC4CC)) 
@@ -328,7 +311,7 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
         .D(aw_en_i_1_n_0),
         .Q(aw_en_reg_n_0),
         .S(ARESET));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \axi_araddr[2]_i_1 
@@ -357,7 +340,7 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
         .D(\axi_araddr[3]_i_1_n_0 ),
         .Q(axi_araddr[3]),
         .R(ARESET));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -436,274 +419,272 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \axi_rdata[0]_i_1 
        (.I0(slv_reg3[0]),
-        .I1(slv_reg1[0]),
-        .I2(axi_araddr[2]),
-        .I3(slv_reg2),
-        .I4(axi_araddr[3]),
+        .I1(slv_reg2),
+        .I2(axi_araddr[3]),
+        .I3(slv_reg1_0[0]),
+        .I4(axi_araddr[2]),
         .I5(slv_reg0[0]),
         .O(reg_data_out[0]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[10]_i_1 
        (.I0(slv_reg3[10]),
-        .I1(input_check[2]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[10] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1[10]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[10] ),
         .O(reg_data_out[10]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[11]_i_1 
        (.I0(slv_reg3[11]),
-        .I1(input_check[3]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[11] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1[11]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[11] ),
         .O(reg_data_out[11]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[12]_i_1 
        (.I0(slv_reg3[12]),
-        .I1(input_check[4]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[12] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1[12]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[12] ),
         .O(reg_data_out[12]));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+  LUT4 #(
+    .INIT(16'hE5E0)) 
     \axi_rdata[13]_i_1 
-       (.I0(slv_reg3[13]),
-        .I1(input_check[5]),
+       (.I0(axi_araddr[3]),
+        .I1(slv_reg1[13]),
         .I2(axi_araddr[2]),
         .I3(\slv_reg0_reg_n_0_[13] ),
-        .I4(axi_araddr[3]),
         .O(reg_data_out[13]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[14]_i_1 
        (.I0(slv_reg3[14]),
-        .I1(input_check[6]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[14] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1[14]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[14] ),
         .O(reg_data_out[14]));
-  LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+  LUT4 #(
+    .INIT(16'h00E2)) 
     \axi_rdata[15]_i_1 
-       (.I0(slv_reg3[15]),
-        .I1(input_check[7]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[15] ),
-        .I4(axi_araddr[3]),
+       (.I0(\slv_reg0_reg_n_0_[15] ),
+        .I1(axi_araddr[2]),
+        .I2(slv_reg1[15]),
+        .I3(axi_araddr[3]),
         .O(reg_data_out[15]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[16]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[16] ),
+       (.I0(\slv_reg0_reg_n_0_[16] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[16] ),
+        .I2(slv_reg1[16]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[16]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[17]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[17] ),
+       (.I0(\slv_reg0_reg_n_0_[17] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[17] ),
+        .I2(slv_reg1[17]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[17]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[18]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[18] ),
+       (.I0(\slv_reg0_reg_n_0_[18] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[18] ),
+        .I2(slv_reg1[18]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[18]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[19]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[19] ),
+       (.I0(\slv_reg0_reg_n_0_[19] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[19] ),
+        .I2(slv_reg1[19]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[19]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[1]_i_1 
        (.I0(slv_reg3[1]),
-        .I1(slv_reg1[1]),
-        .I2(axi_araddr[2]),
-        .I3(slv_reg0[1]),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1_0[1]),
+        .I3(axi_araddr[2]),
+        .I4(slv_reg0[1]),
         .O(reg_data_out[1]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[20]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[20] ),
+       (.I0(\slv_reg0_reg_n_0_[20] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[20] ),
+        .I2(slv_reg1[20]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[20]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[21]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[21] ),
+       (.I0(\slv_reg0_reg_n_0_[21] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[21] ),
+        .I2(slv_reg1[21]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[21]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[22]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[22] ),
+       (.I0(\slv_reg0_reg_n_0_[22] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[22] ),
+        .I2(slv_reg1[22]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[22]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[23]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[23] ),
+       (.I0(\slv_reg0_reg_n_0_[23] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[23] ),
+        .I2(slv_reg1[23]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[23]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[24]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[24] ),
+       (.I0(\slv_reg0_reg_n_0_[24] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[24] ),
+        .I2(slv_reg1[24]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[24]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[25]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[25] ),
+       (.I0(\slv_reg0_reg_n_0_[25] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[25] ),
+        .I2(slv_reg1[25]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[25]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[26]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[26] ),
+       (.I0(\slv_reg0_reg_n_0_[26] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[26] ),
+        .I2(slv_reg1[26]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[26]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[27]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[27] ),
+       (.I0(\slv_reg0_reg_n_0_[27] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[27] ),
+        .I2(slv_reg1[27]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[27]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[28]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[28] ),
+       (.I0(\slv_reg0_reg_n_0_[28] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[28] ),
+        .I2(slv_reg1[28]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[28]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[29]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[29] ),
+       (.I0(\slv_reg0_reg_n_0_[29] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[29] ),
+        .I2(slv_reg1[29]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[29]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[2]_i_1 
        (.I0(slv_reg3[2]),
-        .I1(slv_reg1[2]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[2] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1_0[2]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[2] ),
         .O(reg_data_out[2]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[30]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[30] ),
+       (.I0(\slv_reg0_reg_n_0_[30] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[30] ),
+        .I2(slv_reg1[30]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[30]));
   LUT4 #(
-    .INIT(16'h00B8)) 
+    .INIT(16'h00E2)) 
     \axi_rdata[31]_i_1 
-       (.I0(\slv_reg1_reg_n_0_[31] ),
+       (.I0(\slv_reg0_reg_n_0_[31] ),
         .I1(axi_araddr[2]),
-        .I2(\slv_reg0_reg_n_0_[31] ),
+        .I2(slv_reg1[31]),
         .I3(axi_araddr[3]),
         .O(reg_data_out[31]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[3]_i_1 
        (.I0(slv_reg3[3]),
-        .I1(slv_reg1[3]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[3] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1_0[3]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[3] ),
         .O(reg_data_out[3]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[4]_i_1 
        (.I0(slv_reg3[4]),
-        .I1(slv_reg1[4]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[4] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1_0[4]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[4] ),
         .O(reg_data_out[4]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[5]_i_1 
        (.I0(slv_reg3[5]),
-        .I1(slv_reg1[5]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[5] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1_0[5]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[5] ),
         .O(reg_data_out[5]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[6]_i_1 
        (.I0(slv_reg3[6]),
-        .I1(slv_reg1[6]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[6] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1_0[6]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[6] ),
         .O(reg_data_out[6]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[7]_i_1 
        (.I0(slv_reg3[7]),
-        .I1(slv_reg1[7]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[7] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1_0[7]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[7] ),
         .O(reg_data_out[7]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[8]_i_1 
        (.I0(slv_reg3[8]),
-        .I1(input_check[0]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[8] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1[8]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[8] ),
         .O(reg_data_out[8]));
   LUT5 #(
-    .INIT(32'hA0A0CFC0)) 
+    .INIT(32'hB833B800)) 
     \axi_rdata[9]_i_1 
        (.I0(slv_reg3[9]),
-        .I1(input_check[1]),
-        .I2(axi_araddr[2]),
-        .I3(\slv_reg0_reg_n_0_[9] ),
-        .I4(axi_araddr[3]),
+        .I1(axi_araddr[3]),
+        .I2(slv_reg1[9]),
+        .I3(axi_araddr[2]),
+        .I4(\slv_reg0_reg_n_0_[9] ),
         .O(reg_data_out[9]));
   FDRE \axi_rdata_reg[0] 
        (.C(s00_axi_aclk),
@@ -911,7 +892,7 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
         .R(ARESET));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     axi_wready_i_1
@@ -927,10 +908,10 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
         .Q(S_AXI_WREADY),
         .R(ARESET));
   bwt_bwt_ip_0_0_bwt_top bwt_top_inst
-       (.D({slv_wire3,slv_wire3_0}),
+       (.D({slv_wire3[14],slv_wire3[12:0]}),
         .Q(slv_reg0),
         .SR(ARESET),
-        .\output_check_reg[7]_0 ({input_check,slv_reg1}),
+        .\output_string_char_reg[7]_i_8_0 (slv_reg1_0),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_aresetn(s00_axi_aresetn),
         .slv_wire2(slv_wire2));
@@ -1182,7 +1163,7 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
         .I2(p_0_in[0]),
         .I3(p_0_in[1]),
         .O(\slv_reg1[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg1[31]_i_2 
@@ -1203,193 +1184,193 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
-        .Q(slv_reg1[0]),
+        .Q(slv_reg1_0[0]),
         .R(ARESET));
   FDRE \slv_reg1_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
-        .Q(input_check[2]),
+        .Q(slv_reg1[10]),
         .R(ARESET));
   FDRE \slv_reg1_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
-        .Q(input_check[3]),
+        .Q(slv_reg1[11]),
         .R(ARESET));
   FDRE \slv_reg1_reg[12] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[12]),
-        .Q(input_check[4]),
+        .Q(slv_reg1[12]),
         .R(ARESET));
   FDRE \slv_reg1_reg[13] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[13]),
-        .Q(input_check[5]),
+        .Q(slv_reg1[13]),
         .R(ARESET));
   FDRE \slv_reg1_reg[14] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[14]),
-        .Q(input_check[6]),
+        .Q(slv_reg1[14]),
         .R(ARESET));
   FDRE \slv_reg1_reg[15] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[15]),
-        .Q(input_check[7]),
+        .Q(slv_reg1[15]),
         .R(ARESET));
   FDRE \slv_reg1_reg[16] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[23]_i_1_n_0 ),
         .D(s00_axi_wdata[16]),
-        .Q(\slv_reg1_reg_n_0_[16] ),
+        .Q(slv_reg1[16]),
         .R(ARESET));
   FDRE \slv_reg1_reg[17] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[23]_i_1_n_0 ),
         .D(s00_axi_wdata[17]),
-        .Q(\slv_reg1_reg_n_0_[17] ),
+        .Q(slv_reg1[17]),
         .R(ARESET));
   FDRE \slv_reg1_reg[18] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[23]_i_1_n_0 ),
         .D(s00_axi_wdata[18]),
-        .Q(\slv_reg1_reg_n_0_[18] ),
+        .Q(slv_reg1[18]),
         .R(ARESET));
   FDRE \slv_reg1_reg[19] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[23]_i_1_n_0 ),
         .D(s00_axi_wdata[19]),
-        .Q(\slv_reg1_reg_n_0_[19] ),
+        .Q(slv_reg1[19]),
         .R(ARESET));
   FDRE \slv_reg1_reg[1] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
-        .Q(slv_reg1[1]),
+        .Q(slv_reg1_0[1]),
         .R(ARESET));
   FDRE \slv_reg1_reg[20] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[23]_i_1_n_0 ),
         .D(s00_axi_wdata[20]),
-        .Q(\slv_reg1_reg_n_0_[20] ),
+        .Q(slv_reg1[20]),
         .R(ARESET));
   FDRE \slv_reg1_reg[21] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[23]_i_1_n_0 ),
         .D(s00_axi_wdata[21]),
-        .Q(\slv_reg1_reg_n_0_[21] ),
+        .Q(slv_reg1[21]),
         .R(ARESET));
   FDRE \slv_reg1_reg[22] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[23]_i_1_n_0 ),
         .D(s00_axi_wdata[22]),
-        .Q(\slv_reg1_reg_n_0_[22] ),
+        .Q(slv_reg1[22]),
         .R(ARESET));
   FDRE \slv_reg1_reg[23] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[23]_i_1_n_0 ),
         .D(s00_axi_wdata[23]),
-        .Q(\slv_reg1_reg_n_0_[23] ),
+        .Q(slv_reg1[23]),
         .R(ARESET));
   FDRE \slv_reg1_reg[24] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[31]_i_1_n_0 ),
         .D(s00_axi_wdata[24]),
-        .Q(\slv_reg1_reg_n_0_[24] ),
+        .Q(slv_reg1[24]),
         .R(ARESET));
   FDRE \slv_reg1_reg[25] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[31]_i_1_n_0 ),
         .D(s00_axi_wdata[25]),
-        .Q(\slv_reg1_reg_n_0_[25] ),
+        .Q(slv_reg1[25]),
         .R(ARESET));
   FDRE \slv_reg1_reg[26] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[31]_i_1_n_0 ),
         .D(s00_axi_wdata[26]),
-        .Q(\slv_reg1_reg_n_0_[26] ),
+        .Q(slv_reg1[26]),
         .R(ARESET));
   FDRE \slv_reg1_reg[27] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[31]_i_1_n_0 ),
         .D(s00_axi_wdata[27]),
-        .Q(\slv_reg1_reg_n_0_[27] ),
+        .Q(slv_reg1[27]),
         .R(ARESET));
   FDRE \slv_reg1_reg[28] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[31]_i_1_n_0 ),
         .D(s00_axi_wdata[28]),
-        .Q(\slv_reg1_reg_n_0_[28] ),
+        .Q(slv_reg1[28]),
         .R(ARESET));
   FDRE \slv_reg1_reg[29] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[31]_i_1_n_0 ),
         .D(s00_axi_wdata[29]),
-        .Q(\slv_reg1_reg_n_0_[29] ),
+        .Q(slv_reg1[29]),
         .R(ARESET));
   FDRE \slv_reg1_reg[2] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
-        .Q(slv_reg1[2]),
+        .Q(slv_reg1_0[2]),
         .R(ARESET));
   FDRE \slv_reg1_reg[30] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[31]_i_1_n_0 ),
         .D(s00_axi_wdata[30]),
-        .Q(\slv_reg1_reg_n_0_[30] ),
+        .Q(slv_reg1[30]),
         .R(ARESET));
   FDRE \slv_reg1_reg[31] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[31]_i_1_n_0 ),
         .D(s00_axi_wdata[31]),
-        .Q(\slv_reg1_reg_n_0_[31] ),
+        .Q(slv_reg1[31]),
         .R(ARESET));
   FDRE \slv_reg1_reg[3] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
-        .Q(slv_reg1[3]),
+        .Q(slv_reg1_0[3]),
         .R(ARESET));
   FDRE \slv_reg1_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
-        .Q(slv_reg1[4]),
+        .Q(slv_reg1_0[4]),
         .R(ARESET));
   FDRE \slv_reg1_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
-        .Q(slv_reg1[5]),
+        .Q(slv_reg1_0[5]),
         .R(ARESET));
   FDRE \slv_reg1_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
-        .Q(slv_reg1[6]),
+        .Q(slv_reg1_0[6]),
         .R(ARESET));
   FDRE \slv_reg1_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
-        .Q(slv_reg1[7]),
+        .Q(slv_reg1_0[7]),
         .R(ARESET));
   FDRE \slv_reg1_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
-        .Q(input_check[0]),
+        .Q(slv_reg1[8]),
         .R(ARESET));
   FDRE \slv_reg1_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg1[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
-        .Q(input_check[1]),
+        .Q(slv_reg1[9]),
         .R(ARESET));
   FDRE \slv_reg2_reg[0] 
        (.C(s00_axi_aclk),
@@ -1400,7 +1381,7 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
   FDRE \slv_reg3_reg[0] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(slv_wire3_0[0]),
+        .D(slv_wire3[0]),
         .Q(slv_reg3[0]),
         .R(1'b0));
   FDRE \slv_reg3_reg[10] 
@@ -1421,64 +1402,52 @@ module bwt_bwt_ip_0_0_bwt_ip_v1_0_S00_AXI
         .D(slv_wire3[12]),
         .Q(slv_reg3[12]),
         .R(1'b0));
-  FDRE \slv_reg3_reg[13] 
-       (.C(s00_axi_aclk),
-        .CE(1'b1),
-        .D(slv_wire3[13]),
-        .Q(slv_reg3[13]),
-        .R(1'b0));
   FDRE \slv_reg3_reg[14] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(slv_wire3[14]),
         .Q(slv_reg3[14]),
         .R(1'b0));
-  FDRE \slv_reg3_reg[15] 
-       (.C(s00_axi_aclk),
-        .CE(1'b1),
-        .D(slv_wire3[15]),
-        .Q(slv_reg3[15]),
-        .R(1'b0));
   FDRE \slv_reg3_reg[1] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(slv_wire3_0[1]),
+        .D(slv_wire3[1]),
         .Q(slv_reg3[1]),
         .R(1'b0));
   FDRE \slv_reg3_reg[2] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(slv_wire3_0[2]),
+        .D(slv_wire3[2]),
         .Q(slv_reg3[2]),
         .R(1'b0));
   FDRE \slv_reg3_reg[3] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(slv_wire3_0[3]),
+        .D(slv_wire3[3]),
         .Q(slv_reg3[3]),
         .R(1'b0));
   FDRE \slv_reg3_reg[4] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(slv_wire3_0[4]),
+        .D(slv_wire3[4]),
         .Q(slv_reg3[4]),
         .R(1'b0));
   FDRE \slv_reg3_reg[5] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(slv_wire3_0[5]),
+        .D(slv_wire3[5]),
         .Q(slv_reg3[5]),
         .R(1'b0));
   FDRE \slv_reg3_reg[6] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(slv_wire3_0[6]),
+        .D(slv_wire3[6]),
         .Q(slv_reg3[6]),
         .R(1'b0));
   FDRE \slv_reg3_reg[7] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(slv_wire3_0[7]),
+        .D(slv_wire3[7]),
         .Q(slv_reg3[7]),
         .R(1'b0));
   FDRE \slv_reg3_reg[8] 
@@ -1510,36 +1479,37 @@ module bwt_bwt_ip_0_0_bwt_top
     s00_axi_aclk,
     Q,
     s00_axi_aresetn,
-    \output_check_reg[7]_0 );
+    \output_string_char_reg[7]_i_8_0 );
   output slv_wire2;
   output [0:0]SR;
-  output [15:0]D;
+  output [13:0]D;
   input s00_axi_aclk;
   input [1:0]Q;
   input s00_axi_aresetn;
-  input [15:0]\output_check_reg[7]_0 ;
+  input [7:0]\output_string_char_reg[7]_i_8_0 ;
 
-  wire [15:0]D;
+  wire [13:0]D;
   wire [1:0]Q;
   wire [0:0]SR;
   wire [7:0]ctr;
   wire \ctr[0]_i_1_n_0 ;
   wire \ctr[5]_i_2_n_0 ;
   wire \ctr[6]_i_2_n_0 ;
+  wire \ctr[7]_i_1_n_0 ;
   wire \ctr[7]_i_3_n_0 ;
   wire [7:1]ctr_nxt;
-  wire ctr_nxt_0;
   wire [7:0]ctr_send;
   wire \ctr_send[0]_i_1_n_0 ;
   wire \ctr_send[5]_i_2_n_0 ;
+  wire \ctr_send[7]_i_1_n_0 ;
   wire \ctr_send[7]_i_3_n_0 ;
   wire \ctr_send[7]_i_4_n_0 ;
-  wire ctr_send_nxt;
   wire [7:1]ctr_send_nxt0_in;
   wire done_bwt;
   wire done_bwt_reg_i_1_n_0;
   wire done_bwt_reg_i_2_n_0;
   wire input_string;
+  wire \input_string_reg[0][7]_i_1_n_0 ;
   wire \input_string_reg[10][7]_i_1_n_0 ;
   wire \input_string_reg[11][7]_i_1_n_0 ;
   wire \input_string_reg[12][7]_i_1_n_0 ;
@@ -1570,7 +1540,6 @@ module bwt_bwt_ip_0_0_bwt_top
   wire \input_string_reg[2][7]_i_1_n_0 ;
   wire \input_string_reg[30][7]_i_1_n_0 ;
   wire \input_string_reg[30][7]_i_2_n_0 ;
-  wire \input_string_reg[31][7]_i_1_n_0 ;
   wire \input_string_reg[31][7]_i_2_n_0 ;
   wire \input_string_reg[3][7]_i_1_n_0 ;
   wire \input_string_reg[4][7]_i_1_n_0 ;
@@ -1835,7 +1804,12 @@ module bwt_bwt_ip_0_0_bwt_top
   wire \input_string_reg_n_0_[9][5] ;
   wire \input_string_reg_n_0_[9][6] ;
   wire \input_string_reg_n_0_[9][7] ;
-  wire [15:0]\output_check_reg[7]_0 ;
+  wire \output_check_reg[0]_i_1_n_0 ;
+  wire \output_check_reg[1]_i_1_n_0 ;
+  wire \output_check_reg[2]_i_1_n_0 ;
+  wire \output_check_reg[3]_i_1_n_0 ;
+  wire \output_check_reg[4]_i_1_n_0 ;
+  wire \output_check_reg[6]_i_1_n_0 ;
   wire \output_string_char_reg[0]_i_10_n_0 ;
   wire \output_string_char_reg[0]_i_11_n_0 ;
   wire \output_string_char_reg[0]_i_12_n_0 ;
@@ -1939,6 +1913,7 @@ module bwt_bwt_ip_0_0_bwt_top
   wire \output_string_char_reg[7]_i_5_n_0 ;
   wire \output_string_char_reg[7]_i_6_n_0 ;
   wire \output_string_char_reg[7]_i_7_n_0 ;
+  wire [7:0]\output_string_char_reg[7]_i_8_0 ;
   wire \output_string_char_reg[7]_i_8_n_0 ;
   wire \output_string_char_reg[7]_i_9_n_0 ;
   wire s00_axi_aclk;
@@ -1948,7 +1923,7 @@ module bwt_bwt_ip_0_0_bwt_top
   wire [1:0]state_nxt;
   wire valid_out_nxt;
 
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT4 #(
     .INIT(16'hFBFC)) 
     \FSM_sequential_state[0]_i_1 
@@ -1957,7 +1932,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I2(Q[0]),
         .I3(state[0]),
         .O(state_nxt[0]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT4 #(
     .INIT(16'hFDBA)) 
     \FSM_sequential_state[1]_i_1 
@@ -1985,14 +1960,14 @@ module bwt_bwt_ip_0_0_bwt_top
     axi_awready_i_1
        (.I0(s00_axi_aresetn),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \ctr[0]_i_1 
        (.I0(state[0]),
         .I1(ctr[0]),
         .O(\ctr[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'h60)) 
     \ctr[1]_i_1 
@@ -2000,7 +1975,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I1(ctr[1]),
         .I2(state[0]),
         .O(ctr_nxt[1]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'h7800)) 
     \ctr[2]_i_1 
@@ -2009,7 +1984,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I2(ctr[2]),
         .I3(state[0]),
         .O(ctr_nxt[2]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'h7F800000)) 
     \ctr[3]_i_1 
@@ -2029,7 +2004,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I4(ctr[1]),
         .I5(state[0]),
         .O(ctr_nxt[4]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \ctr[5]_i_1 
@@ -2046,7 +2021,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I4(ctr[3]),
         .I5(ctr[5]),
         .O(\ctr[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT4 #(
     .INIT(16'hE200)) 
     \ctr[6]_i_1 
@@ -2073,7 +2048,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I2(ctr[5]),
         .I3(ctr[7]),
         .I4(state[1]),
-        .O(ctr_nxt_0));
+        .O(\ctr[7]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hEA2A0000)) 
     \ctr[7]_i_2 
@@ -2095,49 +2070,49 @@ module bwt_bwt_ip_0_0_bwt_top
         .O(\ctr[7]_i_3_n_0 ));
   FDRE \ctr_reg[0] 
        (.C(s00_axi_aclk),
-        .CE(ctr_nxt_0),
+        .CE(\ctr[7]_i_1_n_0 ),
         .D(\ctr[0]_i_1_n_0 ),
         .Q(ctr[0]),
         .R(SR));
   FDRE \ctr_reg[1] 
        (.C(s00_axi_aclk),
-        .CE(ctr_nxt_0),
+        .CE(\ctr[7]_i_1_n_0 ),
         .D(ctr_nxt[1]),
         .Q(ctr[1]),
         .R(SR));
   FDRE \ctr_reg[2] 
        (.C(s00_axi_aclk),
-        .CE(ctr_nxt_0),
+        .CE(\ctr[7]_i_1_n_0 ),
         .D(ctr_nxt[2]),
         .Q(ctr[2]),
         .R(SR));
   FDRE \ctr_reg[3] 
        (.C(s00_axi_aclk),
-        .CE(ctr_nxt_0),
+        .CE(\ctr[7]_i_1_n_0 ),
         .D(ctr_nxt[3]),
         .Q(ctr[3]),
         .R(SR));
   FDRE \ctr_reg[4] 
        (.C(s00_axi_aclk),
-        .CE(ctr_nxt_0),
+        .CE(\ctr[7]_i_1_n_0 ),
         .D(ctr_nxt[4]),
         .Q(ctr[4]),
         .R(SR));
   FDRE \ctr_reg[5] 
        (.C(s00_axi_aclk),
-        .CE(ctr_nxt_0),
+        .CE(\ctr[7]_i_1_n_0 ),
         .D(ctr_nxt[5]),
         .Q(ctr[5]),
         .R(SR));
   FDRE \ctr_reg[6] 
        (.C(s00_axi_aclk),
-        .CE(ctr_nxt_0),
+        .CE(\ctr[7]_i_1_n_0 ),
         .D(ctr_nxt[6]),
         .Q(ctr[6]),
         .R(SR));
   FDRE \ctr_reg[7] 
        (.C(s00_axi_aclk),
-        .CE(ctr_nxt_0),
+        .CE(\ctr[7]_i_1_n_0 ),
         .D(ctr_nxt[7]),
         .Q(ctr[7]),
         .R(SR));
@@ -2147,7 +2122,7 @@ module bwt_bwt_ip_0_0_bwt_top
        (.I0(state[1]),
         .I1(ctr_send[0]),
         .O(\ctr_send[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'h60)) 
     \ctr_send[1]_i_1 
@@ -2155,7 +2130,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I1(ctr_send[1]),
         .I2(state[1]),
         .O(ctr_send_nxt0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'h7800)) 
     \ctr_send[2]_i_1 
@@ -2164,7 +2139,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I2(ctr_send[2]),
         .I3(state[1]),
         .O(ctr_send_nxt0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'h7F800000)) 
     \ctr_send[3]_i_1 
@@ -2194,14 +2169,14 @@ module bwt_bwt_ip_0_0_bwt_top
         .I4(ctr_send[5]),
         .I5(state[1]),
         .O(ctr_send_nxt0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \ctr_send[5]_i_2 
        (.I0(ctr_send[0]),
         .I1(ctr_send[1]),
         .O(\ctr_send[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT4 #(
     .INIT(16'hE200)) 
     \ctr_send[6]_i_1 
@@ -2218,8 +2193,8 @@ module bwt_bwt_ip_0_0_bwt_top
         .I2(ctr_send[6]),
         .I3(ctr_send[5]),
         .I4(state[0]),
-        .O(ctr_send_nxt));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+        .O(\ctr_send[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT5 #(
     .INIT(32'hF8580000)) 
     \ctr_send[7]_i_2 
@@ -2251,49 +2226,49 @@ module bwt_bwt_ip_0_0_bwt_top
         .O(\ctr_send[7]_i_4_n_0 ));
   FDRE \ctr_send_reg[0] 
        (.C(s00_axi_aclk),
-        .CE(ctr_send_nxt),
+        .CE(\ctr_send[7]_i_1_n_0 ),
         .D(\ctr_send[0]_i_1_n_0 ),
         .Q(ctr_send[0]),
         .R(SR));
   FDRE \ctr_send_reg[1] 
        (.C(s00_axi_aclk),
-        .CE(ctr_send_nxt),
+        .CE(\ctr_send[7]_i_1_n_0 ),
         .D(ctr_send_nxt0_in[1]),
         .Q(ctr_send[1]),
         .R(SR));
   FDRE \ctr_send_reg[2] 
        (.C(s00_axi_aclk),
-        .CE(ctr_send_nxt),
+        .CE(\ctr_send[7]_i_1_n_0 ),
         .D(ctr_send_nxt0_in[2]),
         .Q(ctr_send[2]),
         .R(SR));
   FDRE \ctr_send_reg[3] 
        (.C(s00_axi_aclk),
-        .CE(ctr_send_nxt),
+        .CE(\ctr_send[7]_i_1_n_0 ),
         .D(ctr_send_nxt0_in[3]),
         .Q(ctr_send[3]),
         .R(SR));
   FDRE \ctr_send_reg[4] 
        (.C(s00_axi_aclk),
-        .CE(ctr_send_nxt),
+        .CE(\ctr_send[7]_i_1_n_0 ),
         .D(ctr_send_nxt0_in[4]),
         .Q(ctr_send[4]),
         .R(SR));
   FDRE \ctr_send_reg[5] 
        (.C(s00_axi_aclk),
-        .CE(ctr_send_nxt),
+        .CE(\ctr_send[7]_i_1_n_0 ),
         .D(ctr_send_nxt0_in[5]),
         .Q(ctr_send[5]),
         .R(SR));
   FDRE \ctr_send_reg[6] 
        (.C(s00_axi_aclk),
-        .CE(ctr_send_nxt),
+        .CE(\ctr_send[7]_i_1_n_0 ),
         .D(ctr_send_nxt0_in[6]),
         .Q(ctr_send[6]),
         .R(SR));
   FDRE \ctr_send_reg[7] 
        (.C(s00_axi_aclk),
-        .CE(ctr_send_nxt),
+        .CE(\ctr_send[7]_i_1_n_0 ),
         .D(ctr_send_nxt0_in[7]),
         .Q(ctr_send[7]),
         .R(SR));
@@ -2313,7 +2288,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I1(ctr[5]),
         .I2(ctr[7]),
         .O(done_bwt_reg_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h1)) 
     done_bwt_reg_i_2
@@ -2325,8 +2300,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[0][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
-        .G(input_string),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
+        .G(\input_string_reg[0][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[0][0] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2334,8 +2309,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[0][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
-        .G(input_string),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
+        .G(\input_string_reg[0][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[0][1] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2343,8 +2318,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[0][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
-        .G(input_string),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
+        .G(\input_string_reg[0][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[0][2] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2352,8 +2327,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[0][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
-        .G(input_string),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
+        .G(\input_string_reg[0][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[0][3] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2361,8 +2336,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[0][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
-        .G(input_string),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
+        .G(\input_string_reg[0][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[0][4] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2370,8 +2345,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[0][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
-        .G(input_string),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
+        .G(\input_string_reg[0][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[0][5] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2379,8 +2354,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[0][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
-        .G(input_string),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
+        .G(\input_string_reg[0][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[0][6] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -2388,11 +2363,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[0][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
-        .G(input_string),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
+        .G(\input_string_reg[0][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[0][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h00000020)) 
     \input_string_reg[0][7]_i_1 
@@ -2401,13 +2376,13 @@ module bwt_bwt_ip_0_0_bwt_top
         .I2(\input_string_reg[12][7]_i_2_n_0 ),
         .I3(ctr[3]),
         .I4(state[1]),
-        .O(input_string));
+        .O(\input_string_reg[0][7]_i_1_n_0 ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
     \input_string_reg[10][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[10][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[10][0] ));
@@ -2416,7 +2391,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[10][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[10][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[10][1] ));
@@ -2425,7 +2400,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[10][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[10][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[10][2] ));
@@ -2434,7 +2409,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[10][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[10][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[10][3] ));
@@ -2443,7 +2418,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[10][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[10][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[10][4] ));
@@ -2452,7 +2427,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[10][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[10][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[10][5] ));
@@ -2461,7 +2436,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[10][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[10][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[10][6] ));
@@ -2470,11 +2445,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[10][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[10][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[10][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h00002000)) 
     \input_string_reg[10][7]_i_1 
@@ -2489,7 +2464,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[11][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[11][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[11][0] ));
@@ -2498,7 +2473,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[11][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[11][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[11][1] ));
@@ -2507,7 +2482,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[11][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[11][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[11][2] ));
@@ -2516,7 +2491,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[11][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[11][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[11][3] ));
@@ -2525,7 +2500,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[11][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[11][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[11][4] ));
@@ -2534,7 +2509,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[11][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[11][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[11][5] ));
@@ -2543,7 +2518,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[11][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[11][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[11][6] ));
@@ -2552,11 +2527,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[11][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[11][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[11][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h00002000)) 
     \input_string_reg[11][7]_i_1 
@@ -2571,7 +2546,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[12][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[12][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[12][0] ));
@@ -2580,7 +2555,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[12][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[12][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[12][1] ));
@@ -2589,7 +2564,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[12][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[12][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[12][2] ));
@@ -2598,7 +2573,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[12][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[12][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[12][3] ));
@@ -2607,7 +2582,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[12][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[12][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[12][4] ));
@@ -2616,7 +2591,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[12][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[12][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[12][5] ));
@@ -2625,7 +2600,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[12][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[12][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[12][6] ));
@@ -2634,11 +2609,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[12][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[12][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[12][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \input_string_reg[12][7]_i_1 
@@ -2663,7 +2638,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[13][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[13][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[13][0] ));
@@ -2672,7 +2647,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[13][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[13][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[13][1] ));
@@ -2681,7 +2656,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[13][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[13][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[13][2] ));
@@ -2690,7 +2665,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[13][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[13][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[13][3] ));
@@ -2699,7 +2674,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[13][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[13][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[13][4] ));
@@ -2708,7 +2683,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[13][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[13][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[13][5] ));
@@ -2717,7 +2692,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[13][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[13][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[13][6] ));
@@ -2726,11 +2701,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[13][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[13][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[13][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \input_string_reg[13][7]_i_1 
@@ -2755,7 +2730,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[14][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[14][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[14][0] ));
@@ -2764,7 +2739,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[14][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[14][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[14][1] ));
@@ -2773,7 +2748,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[14][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[14][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[14][2] ));
@@ -2782,7 +2757,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[14][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[14][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[14][3] ));
@@ -2791,7 +2766,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[14][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[14][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[14][4] ));
@@ -2800,7 +2775,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[14][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[14][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[14][5] ));
@@ -2809,7 +2784,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[14][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[14][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[14][6] ));
@@ -2818,11 +2793,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[14][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[14][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[14][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \input_string_reg[14][7]_i_1 
@@ -2847,7 +2822,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[15][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[15][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[15][0] ));
@@ -2856,7 +2831,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[15][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[15][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[15][1] ));
@@ -2865,7 +2840,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[15][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[15][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[15][2] ));
@@ -2874,7 +2849,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[15][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[15][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[15][3] ));
@@ -2883,7 +2858,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[15][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[15][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[15][4] ));
@@ -2892,7 +2867,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[15][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[15][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[15][5] ));
@@ -2901,7 +2876,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[15][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[15][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[15][6] ));
@@ -2910,11 +2885,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[15][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[15][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[15][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \input_string_reg[15][7]_i_1 
@@ -2939,7 +2914,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[16][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[16][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[16][0] ));
@@ -2948,7 +2923,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[16][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[16][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[16][1] ));
@@ -2957,7 +2932,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[16][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[16][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[16][2] ));
@@ -2966,7 +2941,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[16][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[16][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[16][3] ));
@@ -2975,7 +2950,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[16][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[16][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[16][4] ));
@@ -2984,7 +2959,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[16][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[16][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[16][5] ));
@@ -2993,7 +2968,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[16][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[16][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[16][6] ));
@@ -3002,11 +2977,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[16][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[16][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[16][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'h00000020)) 
     \input_string_reg[16][7]_i_1 
@@ -3021,7 +2996,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[17][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[17][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[17][0] ));
@@ -3030,7 +3005,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[17][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[17][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[17][1] ));
@@ -3039,7 +3014,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[17][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[17][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[17][2] ));
@@ -3048,7 +3023,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[17][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[17][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[17][3] ));
@@ -3057,7 +3032,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[17][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[17][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[17][4] ));
@@ -3066,7 +3041,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[17][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[17][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[17][5] ));
@@ -3075,7 +3050,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[17][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[17][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[17][6] ));
@@ -3084,11 +3059,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[17][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[17][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[17][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'h00000020)) 
     \input_string_reg[17][7]_i_1 
@@ -3103,7 +3078,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[18][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[18][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[18][0] ));
@@ -3112,7 +3087,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[18][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[18][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[18][1] ));
@@ -3121,7 +3096,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[18][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[18][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[18][2] ));
@@ -3130,7 +3105,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[18][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[18][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[18][3] ));
@@ -3139,7 +3114,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[18][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[18][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[18][4] ));
@@ -3148,7 +3123,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[18][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[18][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[18][5] ));
@@ -3157,7 +3132,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[18][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[18][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[18][6] ));
@@ -3166,11 +3141,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[18][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[18][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[18][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'h00000020)) 
     \input_string_reg[18][7]_i_1 
@@ -3185,7 +3160,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[19][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[19][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[19][0] ));
@@ -3194,7 +3169,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[19][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[19][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[19][1] ));
@@ -3203,7 +3178,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[19][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[19][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[19][2] ));
@@ -3212,7 +3187,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[19][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[19][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[19][3] ));
@@ -3221,7 +3196,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[19][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[19][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[19][4] ));
@@ -3230,7 +3205,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[19][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[19][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[19][5] ));
@@ -3239,7 +3214,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[19][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[19][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[19][6] ));
@@ -3248,11 +3223,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[19][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[19][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[19][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h00000020)) 
     \input_string_reg[19][7]_i_1 
@@ -3267,7 +3242,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[1][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[1][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[1][0] ));
@@ -3276,7 +3251,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[1][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[1][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[1][1] ));
@@ -3285,7 +3260,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[1][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[1][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[1][2] ));
@@ -3294,7 +3269,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[1][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[1][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[1][3] ));
@@ -3303,7 +3278,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[1][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[1][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[1][4] ));
@@ -3312,7 +3287,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[1][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[1][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[1][5] ));
@@ -3321,7 +3296,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[1][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[1][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[1][6] ));
@@ -3330,11 +3305,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[1][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[1][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[1][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'h00000020)) 
     \input_string_reg[1][7]_i_1 
@@ -3349,7 +3324,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[20][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[20][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[20][0] ));
@@ -3358,7 +3333,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[20][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[20][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[20][1] ));
@@ -3367,7 +3342,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[20][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[20][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[20][2] ));
@@ -3376,7 +3351,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[20][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[20][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[20][3] ));
@@ -3385,7 +3360,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[20][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[20][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[20][4] ));
@@ -3394,7 +3369,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[20][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[20][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[20][5] ));
@@ -3403,7 +3378,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[20][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[20][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[20][6] ));
@@ -3412,11 +3387,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[20][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[20][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[20][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \input_string_reg[20][7]_i_1 
@@ -3431,7 +3406,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[21][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[21][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[21][0] ));
@@ -3440,7 +3415,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[21][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[21][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[21][1] ));
@@ -3449,7 +3424,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[21][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[21][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[21][2] ));
@@ -3458,7 +3433,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[21][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[21][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[21][3] ));
@@ -3467,7 +3442,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[21][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[21][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[21][4] ));
@@ -3476,7 +3451,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[21][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[21][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[21][5] ));
@@ -3485,7 +3460,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[21][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[21][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[21][6] ));
@@ -3494,11 +3469,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[21][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[21][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[21][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \input_string_reg[21][7]_i_1 
@@ -3513,7 +3488,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[22][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[22][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[22][0] ));
@@ -3522,7 +3497,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[22][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[22][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[22][1] ));
@@ -3531,7 +3506,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[22][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[22][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[22][2] ));
@@ -3540,7 +3515,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[22][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[22][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[22][3] ));
@@ -3549,7 +3524,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[22][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[22][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[22][4] ));
@@ -3558,7 +3533,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[22][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[22][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[22][5] ));
@@ -3567,7 +3542,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[22][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[22][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[22][6] ));
@@ -3576,11 +3551,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[22][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[22][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[22][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \input_string_reg[22][7]_i_1 
@@ -3595,7 +3570,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[23][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[23][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[23][0] ));
@@ -3604,7 +3579,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[23][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[23][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[23][1] ));
@@ -3613,7 +3588,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[23][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[23][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[23][2] ));
@@ -3622,7 +3597,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[23][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[23][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[23][3] ));
@@ -3631,7 +3606,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[23][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[23][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[23][4] ));
@@ -3640,7 +3615,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[23][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[23][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[23][5] ));
@@ -3649,7 +3624,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[23][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[23][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[23][6] ));
@@ -3658,11 +3633,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[23][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[23][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[23][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \input_string_reg[23][7]_i_1 
@@ -3677,7 +3652,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[24][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[24][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[24][0] ));
@@ -3686,7 +3661,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[24][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[24][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[24][1] ));
@@ -3695,7 +3670,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[24][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[24][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[24][2] ));
@@ -3704,7 +3679,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[24][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[24][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[24][3] ));
@@ -3713,7 +3688,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[24][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[24][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[24][4] ));
@@ -3722,7 +3697,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[24][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[24][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[24][5] ));
@@ -3731,7 +3706,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[24][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[24][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[24][6] ));
@@ -3740,7 +3715,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[24][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[24][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[24][7] ));
@@ -3759,7 +3734,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[25][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[25][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[25][0] ));
@@ -3768,7 +3743,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[25][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[25][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[25][1] ));
@@ -3777,7 +3752,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[25][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[25][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[25][2] ));
@@ -3786,7 +3761,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[25][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[25][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[25][3] ));
@@ -3795,7 +3770,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[25][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[25][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[25][4] ));
@@ -3804,7 +3779,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[25][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[25][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[25][5] ));
@@ -3813,7 +3788,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[25][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[25][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[25][6] ));
@@ -3822,11 +3797,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[25][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[25][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[25][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
     .INIT(32'h00002000)) 
     \input_string_reg[25][7]_i_1 
@@ -3841,7 +3816,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[26][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[26][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[26][0] ));
@@ -3850,7 +3825,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[26][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[26][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[26][1] ));
@@ -3859,7 +3834,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[26][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[26][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[26][2] ));
@@ -3868,7 +3843,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[26][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[26][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[26][3] ));
@@ -3877,7 +3852,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[26][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[26][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[26][4] ));
@@ -3886,7 +3861,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[26][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[26][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[26][5] ));
@@ -3895,7 +3870,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[26][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[26][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[26][6] ));
@@ -3904,11 +3879,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[26][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[26][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[26][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'h00002000)) 
     \input_string_reg[26][7]_i_1 
@@ -3923,7 +3898,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[27][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[27][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[27][0] ));
@@ -3932,7 +3907,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[27][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[27][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[27][1] ));
@@ -3941,7 +3916,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[27][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[27][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[27][2] ));
@@ -3950,7 +3925,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[27][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[27][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[27][3] ));
@@ -3959,7 +3934,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[27][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[27][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[27][4] ));
@@ -3968,7 +3943,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[27][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[27][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[27][5] ));
@@ -3977,7 +3952,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[27][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[27][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[27][6] ));
@@ -3986,11 +3961,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[27][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[27][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[27][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h00002000)) 
     \input_string_reg[27][7]_i_1 
@@ -4005,7 +3980,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[28][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[28][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[28][0] ));
@@ -4014,7 +3989,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[28][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[28][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[28][1] ));
@@ -4023,7 +3998,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[28][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[28][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[28][2] ));
@@ -4032,7 +4007,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[28][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[28][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[28][3] ));
@@ -4041,7 +4016,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[28][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[28][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[28][4] ));
@@ -4050,7 +4025,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[28][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[28][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[28][5] ));
@@ -4059,7 +4034,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[28][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[28][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[28][6] ));
@@ -4068,11 +4043,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[28][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[28][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[28][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \input_string_reg[28][7]_i_1 
@@ -4097,7 +4072,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[29][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[29][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[29][0] ));
@@ -4106,7 +4081,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[29][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[29][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[29][1] ));
@@ -4115,7 +4090,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[29][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[29][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[29][2] ));
@@ -4124,7 +4099,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[29][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[29][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[29][3] ));
@@ -4133,7 +4108,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[29][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[29][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[29][4] ));
@@ -4142,7 +4117,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[29][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[29][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[29][5] ));
@@ -4151,7 +4126,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[29][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[29][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[29][6] ));
@@ -4160,11 +4135,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[29][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[29][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[29][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \input_string_reg[29][7]_i_1 
@@ -4189,7 +4164,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[2][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[2][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[2][0] ));
@@ -4198,7 +4173,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[2][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[2][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[2][1] ));
@@ -4207,7 +4182,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[2][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[2][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[2][2] ));
@@ -4216,7 +4191,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[2][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[2][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[2][3] ));
@@ -4225,7 +4200,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[2][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[2][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[2][4] ));
@@ -4234,7 +4209,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[2][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[2][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[2][5] ));
@@ -4243,7 +4218,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[2][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[2][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[2][6] ));
@@ -4252,11 +4227,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[2][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[2][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[2][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h00000020)) 
     \input_string_reg[2][7]_i_1 
@@ -4271,7 +4246,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[30][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[30][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[30][0] ));
@@ -4280,7 +4255,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[30][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[30][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[30][1] ));
@@ -4289,7 +4264,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[30][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[30][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[30][2] ));
@@ -4298,7 +4273,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[30][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[30][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[30][3] ));
@@ -4307,7 +4282,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[30][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[30][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[30][4] ));
@@ -4316,7 +4291,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[30][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[30][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[30][5] ));
@@ -4325,7 +4300,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[30][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[30][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[30][6] ));
@@ -4334,11 +4309,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[30][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[30][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[30][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \input_string_reg[30][7]_i_1 
@@ -4363,8 +4338,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[31][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
-        .G(\input_string_reg[31][7]_i_1_n_0 ),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
+        .G(input_string),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[31][0] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -4372,8 +4347,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[31][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
-        .G(\input_string_reg[31][7]_i_1_n_0 ),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
+        .G(input_string),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[31][1] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -4381,8 +4356,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[31][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
-        .G(\input_string_reg[31][7]_i_1_n_0 ),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
+        .G(input_string),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[31][2] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -4390,8 +4365,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[31][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
-        .G(\input_string_reg[31][7]_i_1_n_0 ),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
+        .G(input_string),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[31][3] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -4399,8 +4374,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[31][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
-        .G(\input_string_reg[31][7]_i_1_n_0 ),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
+        .G(input_string),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[31][4] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -4408,8 +4383,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[31][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
-        .G(\input_string_reg[31][7]_i_1_n_0 ),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
+        .G(input_string),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[31][5] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -4417,8 +4392,8 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[31][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
-        .G(\input_string_reg[31][7]_i_1_n_0 ),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
+        .G(input_string),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[31][6] ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -4426,11 +4401,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[31][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
-        .G(\input_string_reg[31][7]_i_1_n_0 ),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
+        .G(input_string),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[31][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \input_string_reg[31][7]_i_1 
@@ -4439,7 +4414,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I2(\input_string_reg[31][7]_i_2_n_0 ),
         .I3(ctr[3]),
         .I4(state[1]),
-        .O(\input_string_reg[31][7]_i_1_n_0 ));
+        .O(input_string));
   LUT6 #(
     .INIT(64'h0000002000000000)) 
     \input_string_reg[31][7]_i_2 
@@ -4455,7 +4430,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[3][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[3][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[3][0] ));
@@ -4464,7 +4439,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[3][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[3][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[3][1] ));
@@ -4473,7 +4448,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[3][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[3][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[3][2] ));
@@ -4482,7 +4457,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[3][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[3][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[3][3] ));
@@ -4491,7 +4466,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[3][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[3][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[3][4] ));
@@ -4500,7 +4475,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[3][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[3][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[3][5] ));
@@ -4509,7 +4484,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[3][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[3][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[3][6] ));
@@ -4518,11 +4493,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[3][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[3][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[3][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h00000020)) 
     \input_string_reg[3][7]_i_1 
@@ -4537,7 +4512,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[4][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[4][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[4][0] ));
@@ -4546,7 +4521,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[4][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[4][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[4][1] ));
@@ -4555,7 +4530,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[4][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[4][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[4][2] ));
@@ -4564,7 +4539,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[4][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[4][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[4][3] ));
@@ -4573,7 +4548,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[4][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[4][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[4][4] ));
@@ -4582,7 +4557,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[4][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[4][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[4][5] ));
@@ -4591,7 +4566,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[4][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[4][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[4][6] ));
@@ -4600,11 +4575,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[4][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[4][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[4][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \input_string_reg[4][7]_i_1 
@@ -4619,7 +4594,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[5][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[5][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[5][0] ));
@@ -4628,7 +4603,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[5][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[5][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[5][1] ));
@@ -4637,7 +4612,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[5][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[5][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[5][2] ));
@@ -4646,7 +4621,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[5][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[5][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[5][3] ));
@@ -4655,7 +4630,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[5][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[5][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[5][4] ));
@@ -4664,7 +4639,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[5][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[5][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[5][5] ));
@@ -4673,7 +4648,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[5][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[5][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[5][6] ));
@@ -4682,11 +4657,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[5][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[5][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[5][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \input_string_reg[5][7]_i_1 
@@ -4701,7 +4676,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[6][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[6][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[6][0] ));
@@ -4710,7 +4685,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[6][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[6][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[6][1] ));
@@ -4719,7 +4694,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[6][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[6][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[6][2] ));
@@ -4728,7 +4703,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[6][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[6][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[6][3] ));
@@ -4737,7 +4712,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[6][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[6][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[6][4] ));
@@ -4746,7 +4721,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[6][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[6][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[6][5] ));
@@ -4755,7 +4730,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[6][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[6][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[6][6] ));
@@ -4764,11 +4739,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[6][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[6][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[6][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \input_string_reg[6][7]_i_1 
@@ -4783,7 +4758,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[7][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[7][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[7][0] ));
@@ -4792,7 +4767,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[7][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[7][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[7][1] ));
@@ -4801,7 +4776,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[7][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[7][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[7][2] ));
@@ -4810,7 +4785,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[7][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[7][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[7][3] ));
@@ -4819,7 +4794,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[7][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[7][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[7][4] ));
@@ -4828,7 +4803,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[7][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[7][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[7][5] ));
@@ -4837,7 +4812,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[7][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[7][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[7][6] ));
@@ -4846,11 +4821,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[7][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[7][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[7][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \input_string_reg[7][7]_i_1 
@@ -4865,7 +4840,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[8][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[8][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[8][0] ));
@@ -4874,7 +4849,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[8][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[8][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[8][1] ));
@@ -4883,7 +4858,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[8][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[8][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[8][2] ));
@@ -4892,7 +4867,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[8][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[8][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[8][3] ));
@@ -4901,7 +4876,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[8][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[8][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[8][4] ));
@@ -4910,7 +4885,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[8][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[8][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[8][5] ));
@@ -4919,7 +4894,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[8][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[8][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[8][6] ));
@@ -4928,7 +4903,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[8][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[8][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[8][7] ));
@@ -4947,7 +4922,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[9][0] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [0]),
+        .D(\output_string_char_reg[7]_i_8_0 [0]),
         .G(\input_string_reg[9][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[9][0] ));
@@ -4956,7 +4931,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[9][1] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [1]),
+        .D(\output_string_char_reg[7]_i_8_0 [1]),
         .G(\input_string_reg[9][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[9][1] ));
@@ -4965,7 +4940,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[9][2] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [2]),
+        .D(\output_string_char_reg[7]_i_8_0 [2]),
         .G(\input_string_reg[9][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[9][2] ));
@@ -4974,7 +4949,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[9][3] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [3]),
+        .D(\output_string_char_reg[7]_i_8_0 [3]),
         .G(\input_string_reg[9][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[9][3] ));
@@ -4983,7 +4958,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[9][4] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [4]),
+        .D(\output_string_char_reg[7]_i_8_0 [4]),
         .G(\input_string_reg[9][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[9][4] ));
@@ -4992,7 +4967,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[9][5] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [5]),
+        .D(\output_string_char_reg[7]_i_8_0 [5]),
         .G(\input_string_reg[9][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[9][5] ));
@@ -5001,7 +4976,7 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[9][6] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [6]),
+        .D(\output_string_char_reg[7]_i_8_0 [6]),
         .G(\input_string_reg[9][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[9][6] ));
@@ -5010,11 +4985,11 @@ module bwt_bwt_ip_0_0_bwt_top
     .INIT(1'b0)) 
     \input_string_reg[9][7] 
        (.CLR(1'b0),
-        .D(\output_check_reg[7]_0 [7]),
+        .D(\output_string_char_reg[7]_i_8_0 [7]),
         .G(\input_string_reg[9][7]_i_1_n_0 ),
         .GE(1'b1),
         .Q(\input_string_reg_n_0_[9][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'h00002000)) 
     \input_string_reg[9][7]_i_1 
@@ -5024,54 +4999,119 @@ module bwt_bwt_ip_0_0_bwt_top
         .I3(ctr[3]),
         .I4(state[1]),
         .O(\input_string_reg[9][7]_i_1_n_0 ));
-  FDRE \output_check_reg[0] 
-       (.C(s00_axi_aclk),
-        .CE(s00_axi_aresetn),
-        .D(\output_check_reg[7]_0 [8]),
-        .Q(D[8]),
-        .R(1'b0));
-  FDRE \output_check_reg[1] 
-       (.C(s00_axi_aclk),
-        .CE(s00_axi_aresetn),
-        .D(\output_check_reg[7]_0 [9]),
-        .Q(D[9]),
-        .R(1'b0));
-  FDRE \output_check_reg[2] 
-       (.C(s00_axi_aclk),
-        .CE(s00_axi_aresetn),
-        .D(\output_check_reg[7]_0 [10]),
-        .Q(D[10]),
-        .R(1'b0));
-  FDRE \output_check_reg[3] 
-       (.C(s00_axi_aclk),
-        .CE(s00_axi_aresetn),
-        .D(\output_check_reg[7]_0 [11]),
-        .Q(D[11]),
-        .R(1'b0));
-  FDRE \output_check_reg[4] 
-       (.C(s00_axi_aclk),
-        .CE(s00_axi_aresetn),
-        .D(\output_check_reg[7]_0 [12]),
-        .Q(D[12]),
-        .R(1'b0));
-  FDRE \output_check_reg[5] 
-       (.C(s00_axi_aclk),
-        .CE(s00_axi_aresetn),
-        .D(\output_check_reg[7]_0 [13]),
-        .Q(D[13]),
-        .R(1'b0));
-  FDRE \output_check_reg[6] 
-       (.C(s00_axi_aclk),
-        .CE(s00_axi_aresetn),
-        .D(\output_check_reg[7]_0 [14]),
-        .Q(D[14]),
-        .R(1'b0));
-  FDRE \output_check_reg[7] 
-       (.C(s00_axi_aclk),
-        .CE(s00_axi_aresetn),
-        .D(\output_check_reg[7]_0 [15]),
-        .Q(D[15]),
-        .R(1'b0));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \output_check_reg[0] 
+       (.CLR(1'b0),
+        .D(\output_check_reg[0]_i_1_n_0 ),
+        .G(\output_string_char_reg[7]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(D[8]));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT4 #(
+    .INIT(16'h10EF)) 
+    \output_check_reg[0]_i_1 
+       (.I0(ctr_send[2]),
+        .I1(ctr_send[3]),
+        .I2(ctr_send[4]),
+        .I3(ctr_send[0]),
+        .O(\output_check_reg[0]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \output_check_reg[1] 
+       (.CLR(1'b0),
+        .D(\output_check_reg[1]_i_1_n_0 ),
+        .G(\output_string_char_reg[7]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(D[9]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT5 #(
+    .INIT(32'h295555AA)) 
+    \output_check_reg[1]_i_1 
+       (.I0(ctr_send[1]),
+        .I1(ctr_send[2]),
+        .I2(ctr_send[3]),
+        .I3(ctr_send[4]),
+        .I4(ctr_send[0]),
+        .O(\output_check_reg[1]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \output_check_reg[2] 
+       (.CLR(1'b0),
+        .D(\output_check_reg[2]_i_1_n_0 ),
+        .G(\output_string_char_reg[7]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(D[10]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT5 #(
+    .INIT(32'h855FEAA0)) 
+    \output_check_reg[2]_i_1 
+       (.I0(ctr_send[1]),
+        .I1(ctr_send[3]),
+        .I2(ctr_send[0]),
+        .I3(ctr_send[4]),
+        .I4(ctr_send[2]),
+        .O(\output_check_reg[2]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \output_check_reg[3] 
+       (.CLR(1'b0),
+        .D(\output_check_reg[3]_i_1_n_0 ),
+        .G(\output_string_char_reg[7]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(D[11]));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT5 #(
+    .INIT(32'h607F0080)) 
+    \output_check_reg[3]_i_1 
+       (.I0(ctr_send[1]),
+        .I1(ctr_send[0]),
+        .I2(ctr_send[2]),
+        .I3(ctr_send[4]),
+        .I4(ctr_send[3]),
+        .O(\output_check_reg[3]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \output_check_reg[4] 
+       (.CLR(1'b0),
+        .D(\output_check_reg[4]_i_1_n_0 ),
+        .G(\output_string_char_reg[7]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(D[12]));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \output_check_reg[4]_i_1 
+       (.I0(ctr_send[0]),
+        .I1(ctr_send[3]),
+        .I2(ctr_send[2]),
+        .I3(ctr_send[1]),
+        .I4(ctr_send[4]),
+        .O(\output_check_reg[4]_i_1_n_0 ));
+  (* XILINX_LEGACY_PRIM = "LD" *) 
+  LDCE #(
+    .INIT(1'b0)) 
+    \output_check_reg[6] 
+       (.CLR(1'b0),
+        .D(\output_check_reg[6]_i_1_n_0 ),
+        .G(\output_string_char_reg[7]_i_2_n_0 ),
+        .GE(1'b1),
+        .Q(D[13]));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT5 #(
+    .INIT(32'h0313FFFF)) 
+    \output_check_reg[6]_i_1 
+       (.I0(ctr_send[1]),
+        .I1(ctr_send[3]),
+        .I2(ctr_send[2]),
+        .I3(ctr_send[0]),
+        .I4(ctr_send[4]),
+        .O(\output_check_reg[6]_i_1_n_0 ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
     .INIT(1'b0)) 
@@ -5974,7 +6014,7 @@ module bwt_bwt_ip_0_0_bwt_top
         .I4(ctr_send[0]),
         .I5(\input_string_reg_n_0_[4][7] ),
         .O(\output_string_char_reg[7]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \output_string_char_reg[7]_i_2 
