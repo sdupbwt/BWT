@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Sep  2 01:26:56 2020
+# Process ID: 2784
+# Current directory: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11156 D:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.xpr
+# Log file: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/vivado.log
+# Journal file: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.xpr
+update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name bwt_ip_v1_0_project -directory D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.tmp/bwt_ip_v1_0_project d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip/bwt_ip_1.0/component.xml
+update_compile_order -fileset sources_1
+close_project
+set_property  ip_repo_paths  d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0 [current_project]
+update_ip_catalog
+ipx::edit_ip_in_project -upgrade true -name bwt_ip_v1_0_project -directory D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.tmp/bwt_ip_v1_0_project d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 10 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:bwt_ip:1.0 [get_ips  bwt_bwt_ip_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips bwt_bwt_ip_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd]
+catch { config_ip_cache -export [get_ips -all bwt_bwt_ip_0_0] }
+catch { config_ip_cache -export [get_ips -all bwt_auto_pc_0] }
+export_ip_user_files -of_objects [get_files D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd]
+launch_runs -jobs 4 bwt_bwt_ip_0_0_synth_1
+export_simulation -of_objects [get_files D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd] -directory D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.ip_user_files/sim_scripts -ip_user_files_dir D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.ip_user_files -ipstatic_source_dir D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.cache/compile_simlib/modelsim} {questa=D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.cache/compile_simlib/questa} {riviera=D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.cache/compile_simlib/riviera} {activehdl=D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.runs/impl_1/bwt_wrapper.sysdef D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.sdk/bwt_wrapper.hdf
+
+launch_sdk -workspace D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.sdk -hwspec D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.sdk/bwt_wrapper.hdf
+ipx::edit_ip_in_project -upgrade true -name bwt_ip_v1_0_project -directory D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.tmp/bwt_ip_v1_0_project d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0/component.xml
+update_compile_order -fileset sources_1
+close_project

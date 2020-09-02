@@ -1,0 +1,549 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 17804
+License: Customer
+
+Current time: 	Tue Sep 01 23:11:47 CEST 2020
+Time zone: 	Central European Standard Time (Europe/Belgrade)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 15 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Programy/Vivado2019_1/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Programy/Vivado2019_1/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Angelina
+User home directory: C:/Users/Angelina
+User working directory: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt
+User country: 	PL
+User language: 	pl
+User locale: 	pl_PL
+
+RDI_BASEROOT: D:/Programy/Vivado2019_1/Vivado
+HDI_APPROOT: D:/Programy/Vivado2019_1/Vivado/2019.1
+RDI_DATADIR: D:/Programy/Vivado2019_1/Vivado/2019.1/data
+RDI_BINDIR: D:/Programy/Vivado2019_1/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Angelina/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Angelina/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Angelina/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Programy/Vivado2019_1/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/vivado.log
+Vivado journal file location: 	D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/vivado.jou
+Engine tmp dir: 	D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/.Xil/Vivado-17804-DESKTOP-64JSPKI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Programy/Vivado2019_1/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Programy/Vivado2019_1/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Programy/Vivado2019_1/Vivado/2019.1
+XILINX_SDK: D:/Programy/Vivado2019_1/SDK/2019.1
+XILINX_VIVADO: D:/Programy/Vivado2019_1/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Programy/Vivado2019_1/Vivado/2019.1
+
+
+GUI allocated memory:	128 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 542 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1245 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: D:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 560 MB. GUI used memory: 47 MB. Current time: 9/1/20, 11:11:50 PM CEST
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 108 MB (+110898kb) [00:00:39]
+// [Engine Memory]: 612 MB (+490641kb) [00:00:39]
+// WARNING: HEventQueue.dispatchEvent() is taking  7638 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1172 ms.
+// Tcl Message: open_project D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/toshiba/Desktop/IV/sdup/bwt_test' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 636 MB. GUI used memory: 51 MB. Current time: 9/1/20, 11:12:06 PM CEST
+// Tcl Message: open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 660.691 ; gain = 80.590 
+// Project name: bwt_test; location: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt; part: xc7z020clg484-1
+dismissDialog("Open Project"); // by (cl)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 457ms to process. Increasing delay to 3000 ms.
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 644 MB (+1090kb) [00:01:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 674 MB. GUI used memory: 51 MB. Current time: 9/1/20, 11:12:35 PM CEST
+// Elapsed time: 62 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v)]", 1); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v)]", 3); // B (F, cl)
+// [Engine Memory]: 680 MB (+4234kb) [00:01:52]
+// PAPropertyPanels.initPanels (bwt_bwt_ip_0_0.xci) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5); // B (F, cl)
+// A (cl): Show IP Hierarchy: addNotify
+dismissDialog("Show IP Hierarchy"); // A (cl)
+// Elapsed time: 683 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // Z (q, cl)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1693 ms.
+// by (SwingUtilities.SharedOwnerFrame):  Open IP Catalog : addNotify
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (by)
+dismissDialog("Open IP Catalog"); // by (SwingUtilities.SharedOwnerFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (O, cl)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// D (cl): Settings: addNotify
+// 'dz' command handler elapsed time: 3 seconds
+// [Engine Memory]: 715 MB (+1173kb) [00:13:49]
+// WARNING: HEventQueue.dispatchEvent() is taking  3911 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 715 MB. GUI used memory: 70 MB. Current time: 9/1/20, 11:25:11 PM CEST
+expandTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6); // L (E, D)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP, Repository]", 7, false); // L (E, D)
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_REFRESH_ALL, "Refresh All"); // a (E, D)
+// TclEventType: CREATE_IP_CATALOG
+// by (cl):  Refresh All IP Repositories : addNotify
+// Tcl Message: update_ip_catalog -rebuild 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// TclEventType: CREATE_IP_CATALOG
+// [GUI Memory]: 115 MB (+1659kb) [00:13:58]
+dismissDialog("Refresh All IP Repositories"); // by (cl)
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_ADD_REPOSITORY, "Add Repository"); // B (f, D)
+// Elapsed time: 13 seconds
+setFolderChooser("D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip");
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/projekt/BWT/BWT_TEST/ip D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// by (cl):  Refresh All IP Repositories : addNotify
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip'. 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// c (D): Add Repository: addNotify
+expandTree(RDIResource.AddRepositoryInfoDialog_REPOSITORY_TREE, "[root, d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip, <html>IPs<span style='color: rgb(128, 128, 128)'>&nbsp;(1)</span></html>]", 1); // i (O, c)
+selectButton(RDIResource.AddRepositoryInfoDialog_OK, "OK"); // a (c)
+dismissDialog("Add Repository"); // c (D)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (D)
+// WARNING: HEventQueue.dispatchEvent() is taking  1131 ms.
+dismissDialog("Settings"); // D (cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ae (an, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (cl): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// by (cl):  Edit in IP Packager : addNotify
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name bwt_ip_v1_0_project -directory D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.tmp/bwt_ip_v1_0_project d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip/bwt_ip_1.0/component.xml 
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 73 MB. Current time: 9/1/20, 11:25:50 PM CEST
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 131 MB (+10482kb) [00:14:33]
+// WARNING: HEventQueue.dispatchEvent() is taking  4411 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip'. 
+// [Engine Memory]: 765 MB (+14059kb) [00:14:34]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 766.879 ; gain = 9.262 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// 'm' command handler elapsed time: 3 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  3423 ms.
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::edit_ip_in_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 788.797 ; gain = 31.180 
+// 'i' command handler elapsed time: 16 seconds
+// [Engine Memory]: 804 MB (+1067kb) [00:14:43]
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 473ms to process. Increasing delay to 3000 ms.
+// Elapsed time: 16 seconds
+dismissDialog("Edit in IP Packager"); // by (cl)
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 141 MB (+3463kb) [00:14:55]
+// Elapsed time: 318 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v)]", 1); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3); // B (F, cl)
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v)]", 2, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v)]", 2, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v)]", 2, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1832 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2103 ms. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 2483 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1744 ms. Increasing delay to 5232 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1701 ms. Increasing delay to 5103 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 1298ms to process. Increasing delay to 4000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1298 ms.
+// Elapsed time: 841 seconds
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 172, 246); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 172, 246, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 172, 246); // cl (w, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v)]", 2); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "bwt_ip_v1_0_S00_AXI.v", 3); // k (j, cl)
+// [GUI Memory]: 152 MB (+4159kb) [00:36:48]
+// Elapsed time: 135 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "bwt_ip_v1_0_S00_AXI.v", 3); // k (j, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 607, 282); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 95, 317); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_ip_v1_0_S00_AXI.v", 'c'); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 607, 280); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 611, 273); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 608, 277); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_ip_v1_0_S00_AXI.v", 'v'); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 607, 297); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_ip_v1_0_S00_AXI.v", 'v'); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 149, 282); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 148, 294); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 199, 297); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 155, 282); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 149, 290); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 157, 298); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 153, 298, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 346, 284); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 199, 216); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 333, 228); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 302, 284); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 666, 344); // cl (w, cl)
+selectCodeEditor("bwt_ip_v1_0_S00_AXI.v", 271, 361); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "bwt_top.sv", 2); // k (j, cl)
+selectCodeEditor("bwt_top.sv", 119, 116); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 119, 116, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+// Elapsed time: 27 seconds
+selectCodeEditor("bwt_top.sv", 108, 78); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 108, 78, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 85, 365); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 95, 348); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 94, 361); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 96, 193); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_top.sv", 91, 181); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 91, 181, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 211, 210); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 45, 194); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 45, 194, false, false, false, false, true); // cl (w, cl) - Double Click
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_top.sv", 88, 196); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 88, 196, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 168, 130); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 52, 129); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 155, 129); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 156, 129); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+// Elapsed time: 74 seconds
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 411, 231); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+// HMemoryUtils.trashcanNow. Engine heap size: 804 MB. GUI used memory: 90 MB. Current time: 9/1/20, 11:55:50 PM CEST
+// Elapsed time: 268 seconds
+selectCodeEditor("bwt_top.sv", 182, 318); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 182, 318, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 164, 128); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+// Elapsed time: 28 seconds
+selectCodeEditor("bwt_top.sv", 207, 163); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 207, 163, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 240, 336); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_top.sv", 148, 331); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 148, 331, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 161, 331); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 161, 331, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 164, 325); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 164, 325, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 164, 325); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 164, 325); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 164, 325); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 164, 327); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 161, 330); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 161, 330, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 188, 328); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 414, 331); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 90, 351); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_top.sv", 234, 343); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 230, 328); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 230, 328, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("bwt_top.sv", 120, 211); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 120, 211, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("bwt_top.sv", 74, 244); // cl (w, cl)
+// Elapsed time: 37 seconds
+selectCodeEditor("bwt_top.sv", 159, 75); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 159, 75, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 165, 143); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 160, 383); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 160, 383, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 120, 218); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 205, 278); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 205, 278, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 57, 230); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+// Elapsed time: 11 seconds
+selectCodeEditor("bwt_top.sv", 219, 232); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 328, 235); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 45 seconds
+selectCodeEditor("bwt_top.sv", 322, 230); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectCodeEditor("bwt_top.sv", 343, 232); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 343, 232); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 338, 231); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 338, 231, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 416, 230); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_top.sv", 372, 227); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 337, 231); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 336, 237); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 344, 225); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 344, 225, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 37 seconds
+selectCodeEditor("bwt_top.sv", 109, 368); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 109, 368, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("bwt_top.sv", 82, 159); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 459, 338); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_top.sv", 125, 353); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: updateGUI() is taking  1506 ms.
+// Elapsed time: 25 seconds
+selectCodeEditor("bwt_top.sv", 371, 178); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 229, 196); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 127, 213); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 106, 110); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 106, 110, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 614, 147); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 98, 379); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 360, 103); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 363, 95); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 89, 249); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("bwt_top.sv", 130, 123); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 130, 123, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("bwt_top.sv", 147, 328); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 179, 342); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 179, 342, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 33 seconds
+selectCodeEditor("bwt_top.sv", 106, 127); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 106, 127, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 126, 140); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 126, 140, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 143, 210); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 143, 210, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 137, 230); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 137, 230, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 147, 244); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 147, 244, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 82, 416); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 407, 247); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 327, 282); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 262, 281); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 262, 281, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 242, 325); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 242, 325, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 320, 177); // cl (w, cl)
+// Elapsed time: 14 seconds
+selectCodeEditor("bwt_top.sv", 189, 181); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 189, 181, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("bwt_top.sv", 112, 96); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 112, 96, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 208, 126); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 208, 126, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 104, 113); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 120, 97); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 77, 96); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 111, 174); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 178, 78); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 111, 92); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 187, 165); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 144, 177); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 419, 182); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectCodeEditor("bwt_top.sv", 224, 179); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 224, 179, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("bwt_top.sv", 142, 81); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 142, 81, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 326, 137); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 326, 137, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 325, 127); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 325, 127, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 408, 182); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 591, 152); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 592, 165); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 478, 133); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 352, 143); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 103, 148); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 103, 148, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 161, 247); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 297, 244); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 301, 244, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 302, 244); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 238, 295); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("bwt_top.sv", 156, 162); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 156, 162, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "bwt_ip_v1_0_S00_AXI.v", 3); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "bwt_top.sv", 2); // k (j, cl)
+selectCodeEditor("bwt_top.sv", 419, 158); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 344, 123); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - bwt_ip", 1); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "bwt_top.sv", 2); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - bwt_ip", 1); // k (j, cl)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (O, cl)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cl)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// by (cl):  Package IP : addNotify
+// Tcl Message: set_property core_revision 8 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// by (cl):  Package IP : addNotify
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton("OptionPane.button", "Yes"); // JButton (A, G)

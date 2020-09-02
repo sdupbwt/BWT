@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Sep  1 19:26:24 2020
--- Host        : DESKTOP-O8F70A2 running 64-bit major release  (build 9200)
+-- Date        : Wed Sep  2 00:23:45 2020
+-- Host        : DESKTOP-64JSPKI running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/toshiba/Desktop/IV/sdup/bwt_test/bwt_test.srcs/sources_1/bd/bwt/ip/bwt_axi_gpio_0_0/bwt_axi_gpio_0_0_sim_netlist.vhdl
+--               D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ip/bwt_axi_gpio_0_0/bwt_axi_gpio_0_0_sim_netlist.vhdl
 -- Design      : bwt_axi_gpio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

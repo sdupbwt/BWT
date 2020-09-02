@@ -1,0 +1,827 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 12620
+License: Customer
+
+Current time: 	Wed Sep 02 12:11:12 CEST 2020
+Time zone: 	Central European Standard Time (Europe/Belgrade)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 15 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Programy/Vivado2019_1/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Programy/Vivado2019_1/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Angelina
+User home directory: C:/Users/Angelina
+User working directory: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt
+User country: 	PL
+User language: 	pl
+User locale: 	pl_PL
+
+RDI_BASEROOT: D:/Programy/Vivado2019_1/Vivado
+HDI_APPROOT: D:/Programy/Vivado2019_1/Vivado/2019.1
+RDI_DATADIR: D:/Programy/Vivado2019_1/Vivado/2019.1/data
+RDI_BINDIR: D:/Programy/Vivado2019_1/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/Angelina/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/Angelina/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/Angelina/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Programy/Vivado2019_1/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/vivado.log
+Vivado journal file location: 	D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/vivado.jou
+Engine tmp dir: 	D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/.Xil/Vivado-12620-DESKTOP-64JSPKI
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Programy/Vivado2019_1/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Programy/Vivado2019_1/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Programy/Vivado2019_1/Vivado/2019.1
+XILINX_SDK: D:/Programy/Vivado2019_1/SDK/2019.1
+XILINX_VIVADO: D:/Programy/Vivado2019_1/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Programy/Vivado2019_1/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 583 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: D:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 594 MB. GUI used memory: 46 MB. Current time: 9/2/20, 12:11:14 PM CEST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 67 MB (+67470kb) [00:00:34]
+// [Engine Memory]: 634 MB (+513710kb) [00:00:34]
+// [GUI Memory]: 73 MB (+2767kb) [00:00:34]
+// [GUI Memory]: 78 MB (+1772kb) [00:00:37]
+// [GUI Memory]: 83 MB (+1420kb) [00:00:38]
+// [Engine Memory]: 677 MB (+10947kb) [00:00:38]
+// [GUI Memory]: 91 MB (+3466kb) [00:00:39]
+// [GUI Memory]: 101 MB (+5697kb) [00:00:39]
+// WARNING: HEventQueue.dispatchEvent() is taking  9538 ms.
+// Tcl Message: open_project D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 700 MB. GUI used memory: 56 MB. Current time: 9/2/20, 12:11:30 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2232 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:18 . Memory (MB): peak = 722.957 ; gain = 116.098 
+// Project name: bwt_test; location: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt; part: xc7z020clg484-1
+// [GUI Memory]: 114 MB (+8851kb) [00:00:45]
+// [Engine Memory]: 791 MB (+84253kb) [00:00:45]
+dismissDialog("Open Project"); // by (cl)
+// [Engine Memory]: 858 MB (+28933kb) [00:00:46]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 55 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v)]", 1); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v)]", 3); // B (F, cl)
+// PAPropertyPanels.initPanels (bwt_bwt_ip_0_0.xci) elapsed time: 0.4s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ae (an, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (cl): Edit in IP Packager: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1976 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2675 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1284 ms.
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// by (cl):  Edit in IP Packager : addNotify
+selectButton("OptionPane.button", "OK"); // JButton (A, H)
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name bwt_ip_v1_0_project -directory D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.tmp/bwt_ip_v1_0_project d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0/component.xml 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  4594 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 883 MB. GUI used memory: 69 MB. Current time: 9/2/20, 12:13:00 PM CEST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 963.262 ; gain = 3.949 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// 'm' command handler elapsed time: 7 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  7736 ms.
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::edit_ip_in_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:19 . Memory (MB): peak = 963.262 ; gain = 3.949 
+// 'i' command handler elapsed time: 34 seconds
+// Elapsed time: 21 seconds
+dismissDialog("Edit in IP Packager"); // by (cl)
+// [GUI Memory]: 123 MB (+2823kb) [00:02:25]
+// [GUI Memory]: 134 MB (+5643kb) [00:02:30]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 622ms to process. Increasing delay to 3000 ms.
+// Elapsed time: 41 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v)]", 1); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true); // B (F, cl) - Node
+// Elapsed time: 75 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3); // B (F, cl)
+// Elapsed time: 41 seconds
+selectCodeEditor("bwt_top.sv", 253, 303); // cl (w, cl)
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 126 seconds
+selectCodeEditor("bwt_top.sv", 604, 51); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 596, 186); // cl (w, cl)
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - bwt_ip", 1); // k (j, cl)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (O, cl)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cl)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// by (cl):  Package IP : addNotify
+// Tcl Message: set_property core_revision 11 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// by (cl):  Package IP : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton (A, G)
+// Tcl Message: ipx::move_temp_component_back -component [ipx::current_core] 
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 883 MB. GUI used memory: 75 MB. Current time: 9/2/20, 12:18:36 PM CEST
+// Tcl Message: close_project -delete 
+dismissDialog("Package IP"); // by (cl)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1209 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// Tcl Message: update_ip_catalog -rebuild -repo_path d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0' 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// [Engine Memory]: 907 MB (+6366kb) [00:07:50]
+// HMemoryUtils.trashcanNow. Engine heap size: 933 MB. GUI used memory: 74 MB. Current time: 9/2/20, 12:19:35 PM CEST
+// Elapsed time: 58 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ae (an, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_REPORT_IP_STATUS, "Report IP Status"); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+// by (cl):  Report IP Status : addNotify
+dismissDialog("Report IP Status"); // by (cl)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (g, cl)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// by (cl):  Upgrade IP : addNotify
+// Tcl Message: upgrade_ip -vlnv xilinx.com:user:bwt_ip:1.0 [get_ips  bwt_bwt_ip_0_0] -log ip_upgrade.log 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M Adding component instance block -- xilinx.com:user:bwt_ip:1.0 - bwt_ip_0 Successfully read diagram <bwt> from BD file <D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 963 MB (+11117kb) [00:09:10]
+// WARNING: HEventQueue.dispatchEvent() is taking  4197 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+// Elapsed time: 19 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// HMemoryUtils.trashcanNow. Engine heap size: 966 MB. GUI used memory: 76 MB. Current time: 9/2/20, 12:20:02 PM CEST
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: Upgrading 'D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd' 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded bwt_bwt_ip_0_0 (bwt_ip_v1.0 1.0) from revision 10 to revision 11 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Wrote  : <D:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.srcs\sources_1\bd\bwt\bwt.bd>  Wrote  : <D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ui/bd_da75795f.ui>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/ip_upgrade.log'. 
+// Tcl Message: upgrade_ip: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 1099.082 ; gain = 0.000 
+// Tcl Message: export_ip_user_files -of_objects [get_ips bwt_bwt_ip_0_0] -no_script -sync -force -quiet 
+// aI (cl): Generate Output Products: addNotify
+// Elapsed time: 38 seconds
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// by (cl):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: generate_target all [get_files  D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : <D:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.srcs\sources_1\bd\bwt\bwt.bd>  
+// HMemoryUtils.trashcanNow. Engine heap size: 1,043 MB. GUI used memory: 75 MB. Current time: 9/2/20, 12:20:50 PM CEST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// [Engine Memory]: 1,090 MB (+82357kb) [00:10:02]
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: VHDL Output written to : D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/synth/bwt.v VHDL Output written to : D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/sim/bwt.v VHDL Output written to : D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/hdl/bwt_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block bwt_ip_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/hw_handoff/bwt.hwh Generated Block Design Tcl file D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/hw_handoff/bwt_bd.tcl Generated Hardware Definition File D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/synth/bwt.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1119.473 ; gain = 20.391 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all bwt_bwt_ip_0_0] } 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all bwt_auto_pc_0] } 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP bwt_auto_pc_0, cache-ID = c7981aa4510def98; cache size = 2.845 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1294 ms.
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: export_ip_user_files -of_objects [get_files D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs -jobs 4 bwt_bwt_ip_0_0_synth_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Sep  2 12:20:58 2020] Launched bwt_bwt_ip_0_0_synth_1... Run output will be captured here: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.runs/bwt_bwt_ip_0_0_synth_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Elapsed time: 49 seconds
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// [Engine Memory]: 1,152 MB (+8383kb) [00:11:23]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HTimer (StateMonitor Timer) is taking 606ms to process. Increasing delay to 4000 ms.
+// Elapsed time: 143 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// by (cl):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Sep  2 12:24:01 2020] Launched synth_1... Run output will be captured here: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.runs/synth_1/runme.log [Wed Sep  2 12:24:01 2020] Launched impl_1... Run output will be captured here: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // by (cl)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 156 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aK (aH, cl)
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aR, cl): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aR, cl): FALSE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, bwt, bwt_bwt_ip_0_0_synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/bwt_ip_v1_0_S00_AXI_inst/bwt_top_inst/output_string_char_reg[7]__0/Q' [d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ipshared/238c/src/bwt_top.sv:53]. ]", 4, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;d:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.srcs\sources_1\bd\bwt\ipshared\238c\src\bwt_top.sv;-;;-;16;-;line;-;53;-;;-;16;-;"); // ah (O, cl)
+// [GUI Memory]: 144 MB (+3040kb) [00:15:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,183 MB. GUI used memory: 81 MB. Current time: 9/2/20, 12:26:50 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2014 ms.
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, bwt, bwt_bwt_ip_0_0_synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/bwt_ip_v1_0_S00_AXI_inst/bwt_top_inst/output_string_char_reg[7]__0/Q' [d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ipshared/238c/src/bwt_top.sv:53]. ]", 4); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, bwt, bwt_bwt_ip_0_0_synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/bwt_ip_v1_0_S00_AXI_inst/bwt_top_inst/output_string_char_reg[7]__0/Q' [d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ipshared/238c/src/bwt_top.sv:53]. ]", 4); // ah (O, cl)
+selectCodeEditor("bwt_top.sv", 260, 24); // D (w, cl)
+selectCodeEditor("bwt_top.sv", 323, 207); // D (w, cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 50 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // az
+// [Engine Memory]: 1,219 MB (+9567kb) [00:17:09]
+// ah (cl): Implementation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,220 MB. GUI used memory: 79 MB. Current time: 9/2/20, 12:28:00 PM CEST
+selectRadioButton(PAResourceCommand.PACommandNames_REPORTS_WINDOW, "View Reports"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Implementation Completed"); // ah (cl)
+// Elapsed time: 10 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, bwt, bwt_bwt_ip_0_0_synth_1, [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ipshared/238c/src/bwt_top.sv:53]. ]", 5); // ah (O, cl)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, bwt, bwt_bwt_ip_0_0_synth_1, [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ipshared/238c/src/bwt_top.sv:53]. , [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ipshared/238c/src/bwt_top.sv:52]. ]", 100, false); // ah (O, cl)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;d:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.srcs\sources_1\bd\bwt\ipshared\238c\src\bwt_top.sv;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah (O, cl)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, bwt, bwt_bwt_ip_0_0_synth_1, [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ipshared/238c/src/bwt_top.sv:53]. ]", 5); // ah (O, cl)
+// Elapsed time: 138 seconds
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[bwt, bwt_ip_0]", 5, true); // i (O, cl) - Node
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[bwt, bwt_ip_0]", 5, true, false, false, false, true, false); // i (O, cl) - Popup Trigger - Node
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK (aH, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v)]", 3); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // ae (an, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (cl): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// by (cl):  Edit in IP Packager : addNotify
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name bwt_ip_v1_0_project -directory D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.tmp/bwt_ip_v1_0_project d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0/component.xml 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  2919 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1283 ms. Increasing delay to 3000 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// WARNING: HEventQueue.dispatchEvent() is taking  1696 ms.
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1232.051 ; gain = 0.000 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// Tcl Message: ipx::edit_ip_in_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1232.051 ; gain = 0.000 
+// [GUI Memory]: 157 MB (+5913kb) [00:20:18]
+// 'i' command handler elapsed time: 13 seconds
+// Elapsed time: 12 seconds
+dismissDialog("Edit in IP Packager"); // by (cl)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v)]", 1); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// Elapsed time: 12 seconds
+selectCodeEditor("bwt_top.sv", 369, 133); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 204, 147); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 242, 145); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 81 seconds
+selectCodeEditor("bwt_top.sv", 329, 93); // cl (w, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - bwt_ip", 1); // k (j, cl)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (O, cl)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cl)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 12 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// by (cl):  Package IP : addNotify
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// by (cl):  Package IP : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton (A, G)
+// Tcl Message: ipx::move_temp_component_back -component [ipx::current_core] 
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,220 MB. GUI used memory: 127 MB. Current time: 9/2/20, 12:33:10 PM CEST
+// Tcl Message: close_project -delete 
+dismissDialog("Package IP"); // by (cl)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -repo_path d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0' 
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // h (cS, cl)
+selectTreeTable(PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, "/bwt_ip_0 ; true ; bwt_bwt_ip_0_0 [bwt_ip_v1.0] (IP revision change. IP definition 'bwt_ip_v1.0 (1.0)' changed on disk) ; bwt_bwt_ip_0_0 [bwt_ip_v1.0] (IP revision change. IP definition 'bwt_ip_v1.0 (1.0)' changed on disk) ;  ; bwt_ip_v1.0 ; 1.0 (Rev. 10) ; 1.0 (Rev. 11) ; bwt_bwt_ip_0_0 [bwt_ip_v1.0] (IP revision change. IP definition 'bwt_ip_v1.0 (1.0)' changed on disk) ; xc7z020clg484-1", 1, "/bwt_ip_0", 0, false); // B (O, cl)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (g, cl)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// by (cl):  Upgrade IP : addNotify
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// Tcl Message: upgrade_ip -vlnv xilinx.com:user:bwt_ip:1.0 [get_ips  bwt_bwt_ip_0_0] -log ip_upgrade.log 
+// Tcl Message: Upgrading 'D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd' 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded bwt_bwt_ip_0_0 (bwt_ip_v1.0 1.0) from revision 11 to revision 12 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Wrote  : <D:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.srcs\sources_1\bd\bwt\bwt.bd>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips bwt_bwt_ip_0_0] -no_script -sync -force -quiet 
+// aI (cl): Generate Output Products: addNotify
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// by (cl):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Wrote  : <D:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.srcs\sources_1\bd\bwt\bwt.bd>  VHDL Output written to : D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/synth/bwt.v VHDL Output written to : D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/sim/bwt.v VHDL Output written to : D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/hdl/bwt_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block bwt_ip_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/hw_handoff/bwt.hwh Generated Block Design Tcl file D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/hw_handoff/bwt_bd.tcl Generated Hardware Definition File D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/synth/bwt.hwdef 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all bwt_bwt_ip_0_0] } 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all bwt_auto_pc_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP bwt_auto_pc_0, cache-ID = c7981aa4510def98; cache size = 2.983 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: export_ip_user_files -of_objects [get_files D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/bwt.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs -jobs 4 bwt_bwt_ip_0_0_synth_1 
+// Tcl Message: [Wed Sep  2 12:33:28 2020] Launched bwt_bwt_ip_0_0_synth_1... Run output will be captured here: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.runs/bwt_bwt_ip_0_0_synth_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Elapsed time: 56 seconds
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 40 seconds
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cS, cl)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cl)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cl): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cl)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // by (cl)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// by (cl):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 167 MB (+2588kb) [00:24:15]
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Wed Sep  2 12:35:04 2020] Launched synth_1... Run output will be captured here: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.runs/synth_1/runme.log [Wed Sep  2 12:35:04 2020] Launched impl_1... Run output will be captured here: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Generate Bitstream"); // by (cl)
+// Elapsed time: 29 seconds
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // B (f, cl)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 33 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, bwt, bwt_bwt_ip_0_0_synth_1, [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/bwt_ip_v1_0_S00_AXI_inst/bwt_top_inst/output_string_char_reg[7]__0/Q' [d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ipshared/f529/src/bwt_top.sv:52]. ]", 4, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;d:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.srcs\sources_1\bd\bwt\ipshared\f529\src\bwt_top.sv;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah (O, cl)
+// [GUI Memory]: 176 MB (+343kb) [00:25:19]
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, bwt, bwt_bwt_ip_0_0_synth_1, [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ipshared/f529/src/bwt_top.sv:52]. ]", 5, true); // ah (O, cl) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;d:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.srcs\sources_1\bd\bwt\ipshared\f529\src\bwt_top.sv;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah (O, cl)
+selectCodeEditor("bwt_top.sv (2)", 193, 29); // D (w, cl)
+selectCodeEditor("bwt_top.sv (2)", 193, 29, false, false, false, false, true); // D (w, cl) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,266 MB. GUI used memory: 91 MB. Current time: 9/2/20, 12:36:15 PM CEST
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 10 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, cl)
+// aT (cl): Cancel Implementation: addNotify
+selectButton(PAResourceQtoS.StateMonitor_RESET_RUN, "Reset Run"); // a (aT)
+// by (cl):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Cancel Implementation"); // aT (cl)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // by (cl)
+// Elapsed time: 33 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_wrapper (bwt_wrapper.v), bwt_i : bwt (bwt.bd), bwt (bwt.v), bwt_ip_0 : bwt_bwt_ip_0_0 (bwt_bwt_ip_0_0.xci)]", 5, false, false, false, false, true, false); // B (F, cl) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (cl): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// by (cl):  Edit in IP Packager : addNotify
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name bwt_ip_v1_0_project -directory D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.tmp/bwt_ip_v1_0_project d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0/component.xml 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  2541 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1265.926 ; gain = 4.734 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_ip_1.0'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1265.926 ; gain = 4.734 
+// 'i' command handler elapsed time: 8 seconds
+dismissDialog("Edit in IP Packager"); // by (cl)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v)]", 1); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv), build_sa : MM_top (MM_top.sv)]", 4, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bwt_ip_v1_0 (bwt_ip_v1_0.v), bwt_ip_v1_0_S00_AXI_inst : bwt_ip_v1_0_S00_AXI (bwt_ip_v1_0_S00_AXI.v), bwt_top_inst : bwt_top (bwt_top.sv)]", 3, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectCodeEditor("bwt_top.sv", 144, 226); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 144, 226, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'c'); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 147, 158); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 147, 158, false, false, false, false, true); // cl (w, cl) - Double Click
+typeControlKey((HResource) null, "bwt_top.sv", 'v'); // cl (w, cl)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("bwt_top.sv", 112, 228); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 112, 228, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 114, 147); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 114, 147, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("bwt_top.sv", 99, 93); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 99, 93, false, false, false, false, true); // cl (w, cl) - Double Click
+// Elapsed time: 24 seconds
+selectCodeEditor("bwt_top.sv", 77, 383); // cl (w, cl)
+// Elapsed time: 269 seconds
+selectCodeEditor("bwt_top.sv", 113, 133); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 113, 133, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("bwt_top.sv", 118, 132); // cl (w, cl)
+selectCodeEditor("bwt_top.sv", 118, 132, false, false, false, false, true); // cl (w, cl) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - bwt_ip", 1); // k (j, cl)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (O, cl)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "bwt_top.sv", 2); // k (j, cl)

@@ -7,3 +7,10 @@ BWT_TEST/bwt_test.runs/*
 BWT_TEST/vivado.jou
 
 !vivado/*.xpr
+
+Zynq_bwt/bwt_test.sdk/.metadata/*
+Zynq_bwt/bwt_test.sim/*
+Zynq_bwt/bwt_test.cache/*
+Zynq_bwt/bwt_test.runs/*
+*.log
+Zynq_bwt/vivado.jou

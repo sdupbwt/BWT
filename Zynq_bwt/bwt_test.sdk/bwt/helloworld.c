@@ -59,7 +59,7 @@
 #define BWT_BASE_ADDR XPAR_BWT_IP_0_S00_AXI_BASEADDR
 
 //Cordic processor registers' offset redefinition
-#define CONTROL_REG_OFFSET BWT_IP_S00_AXI_SLV_REG0_OFFSET 		//start
+#define CONTROL_REG_OFFSET BWT_IP_S00_AXI_SLV_REG0_OFFSET		//start
 #define INPUT_STRING_REG_OFFSET BWT_IP_S00_AXI_SLV_REG1_OFFSET	//input, uB -> fpga
 
 #define STATUS_REG_OFFSET BWT_IP_S00_AXI_SLV_REG2_OFFSET		//valid
@@ -117,11 +117,6 @@ int main(){
 
     BWT_IP_mWriteReg(BWT_BASE_ADDR, INPUT_STRING_REG_OFFSET, 0x4200);
 
-//    for (LoopCounter = 0; LoopCounter < 1000; LoopCounter++)
-//    	{
-//    	print("1");
-//    	}
-
     result[0] = (char8)((BWT_IP_mReadReg(BWT_BASE_ADDR, RESULT_REG_OFFSET))>>8);
     result[1] = 'F';
    	print(result);
@@ -129,20 +124,22 @@ int main(){
 
 
 	//Start bwt processor - pulse start bit in control register and send string to bwt
-    BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 1);
+    BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0);
 
 	for (LoopCounter = 0; LoopCounter < LENGTH_STR; LoopCounter++)
 	{
-		//ctrl_tgl = !ctrl_tgl;
 		BWT_IP_mWriteReg(BWT_BASE_ADDR, INPUT_STRING_REG_OFFSET, InputStr[LoopCounter]);
+		BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0x01);
+		BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0);
 		//BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, ctrl_tgl);
 		//XGpio_DiscreteWrite(&ledGpio, CHANNEL, led1);
 		/* Flip LEDs. */
 		//led1 = ~led1;
 	}
 
-	BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0);
+//	BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0);
 
+	print("InputStr: ");
 	print(InputStr);
 	print("\n\r");
 
@@ -157,10 +154,14 @@ int main(){
 	while(1){
 			if ((BWT_IP_mReadReg(BWT_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) != 0)
 			{
+				BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0x02);
 				FPGA_BWT_Str[LoopCounter] = BWT_IP_mReadReg(BWT_BASE_ADDR, RESULT_REG_OFFSET);
-				print("if 1");
+
+				BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0x00);
+
+				print(FPGA_BWT_Str);
 				print("\n\r");
-				if ((BWT_IP_mReadReg(BWT_BASE_ADDR, STATUS_REG_OFFSET) & 0x01) == 0)
+				if (LoopCounter >= LENGTH_STR )
 				{
 					print("if 2");
 					print("\n\r");

@@ -46,14 +46,14 @@ module bwt_top
     reg [7:0] output_string [STRING_LEN-1:0];
     reg valid_out_nxt;
     reg [7:0] output_string_char_nxt;
-    wire fifo_wr;
+    reg fifo_wr;
     
-    assign pull_string = full_fifo ? 1 : ((!empt_fifo) ? 1 : 0);
-    assign start_bwt = ctr == STRING_LEN-1;
-    assign put_string = done_bwt ? 1 : ((put_string && !full_fifo_out) ? 1 : 0);
-    assign input_string_char_b[0] = input_string_char;
-    assign rd_fifo = pull_string;
-    assign fifo_wr = start;
+//    assign pull_string = full_fifo ? 1 : ((!empt_fifo) ? 1 : 0);
+    assign start_bwt = (ctr == STRING_LEN-1);
+//    assign put_string = done_bwt ? 1 : ((put_string && !full_fifo_out) ? 1 : 0);
+//    assign input_string_char_b[0] = input_string_char;
+//    assign rd_fifo = pull_string;
+//    assign fifo_wr = start;
     
     always@(posedge clk) begin
         if(rst) begin
@@ -70,62 +70,60 @@ module bwt_top
             input_string <= input_string_nxt;
             valid_out <= valid_out_nxt;
             output_string_char <= output_string_char_nxt;
+            fifo_wr <= 0;
         end
     end
     
     always @* begin
         ctr_nxt = ctr;
         ctr_send_nxt = ctr_send;
-        output_string_char_nxt = output_string_char;
+//        output_string_char_nxt = output_string_char;
         valid_out_nxt = 0;
-        input_string_nxt = input_string;
+//        input_string_nxt = input_string;
         
-        if(pull_string) begin
-            input_string_nxt[ctr] = string_char[0];
-            ctr_nxt = ctr+1;
-        end
-        else if((done_bwt || valid_out != 0) && ctr_send < STRING_LEN) begin
+//        if(pull_string) begin
+//            input_string_nxt[ctr] = string_char[0];
+//            ctr_nxt = ctr+1;
+//        end
+        if((done_bwt || valid_out != 0) && ctr_send < STRING_LEN) begin
             valid_out_nxt = 1;
-            if(ctr_send == 0) begin
-                output_string_char_nxt = output_string[ctr_send];
-                ctr_send_nxt = ctr_send+1;
-            end
-            else if(send_data) begin
-                output_string_char_nxt = output_string[ctr_send];
-                ctr_send_nxt = ctr_send+1;
-            end 
-            else begin
-                ctr_send_nxt = ctr_send;
-                output_string_char_nxt = output_string_char;
-            end 
+//            if(ctr_send == 0) begin
+//                output_string_char_nxt = output_string[ctr_send];
+//                ctr_send_nxt = ctr_send+1;
+//            end
+//            else if(send_data) begin
+//                output_string_char_nxt = output_string[ctr_send];
+//                ctr_send_nxt = ctr_send+1;
+//            end 
+//            else begin
+//                ctr_send_nxt = ctr_send;
+//                output_string_char_nxt = output_string_char;
+//            end 
         end
     end
     
-//    always @(posedge start) begin
-//        fifo_wr <= 1;
-//    end
+    always @(posedge start) begin
+        input_string[ctr] <= input_string_char;
+        ctr_nxt <= ctr + 1;
+    end
     
-//    always @(negedge start) begin
-//        fifo_wr <= 1;
-//    end
-    
-//    always @(posedge clk) begin 
-//        if(fifo_wr)
-//            fifo_wr <= 0;
-//    end
+    always @(posedge send_data) begin
+        output_string_char <= output_string[ctr_send];
+        ctr_send_nxt <= ctr_send + 1;
+    end
     
    
-    fifo #(ELEMENT_LEN,5,1) fifo_input
-      (
-      .clk(clk),                               
-      .reset(rst),
-      .rd(rd_fifo),
-      .wr(fifo_wr),
-      .w_data(input_string_char_b),      
-      .empty(empt_fifo), 
-      .full(full_fifo),                                 
-      .r_data(string_char)
-      );
+//    fifo #(ELEMENT_LEN,5,1) fifo_input
+//      (
+//      .clk(clk),                               
+//      .reset(rst),
+//      .rd(rd_fifo),
+//      .wr(fifo_wr),
+//      .w_data(input_string_char_b),      
+//      .empty(empt_fifo), 
+//      .full(full_fifo),                                 
+//      .r_data(string_char)
+//      );
     
     MM_top #(STRING_LEN,4) build_sa
     (

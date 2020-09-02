@@ -372,8 +372,8 @@
 	      case ( axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
 	        2'h0   : reg_data_out <= slv_reg0;
 	        2'h1   : reg_data_out <= slv_reg1;
-	        2'h2   : reg_data_out <= slv_reg2;
-	        2'h3   : reg_data_out <= slv_reg3;
+//	        2'h2   : reg_data_out <= slv_reg2;
+//	        2'h3   : reg_data_out <= slv_reg3;
 	        default : reg_data_out <= 0;
 	      endcase
 	end
@@ -411,12 +411,12 @@
         end
         //Assign zeros to unused bits
         assign slv_wire2[31:1] = 31'b0;
-        assign slv_wire3[31:8] = 4'b0;
+        assign slv_wire3[31:8] = 24'b0;
         
         bwt_top bwt_top_inst( S_AXI_ACLK, //clock,
                                     ARESET, //reset,
-                                    (slv_reg_wren && axi_awaddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 2'h0), //start
-                                    (slv_reg_rden && axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] == 2'h3),
+                                    slv_reg0[0], //start
+                                    slv_reg0[1], //send_data
                                     slv_reg1[7:0], //input_string_char
                                     slv_wire3[7:0],//output_string_char
                                     slv_wire2[0] //valid_out,

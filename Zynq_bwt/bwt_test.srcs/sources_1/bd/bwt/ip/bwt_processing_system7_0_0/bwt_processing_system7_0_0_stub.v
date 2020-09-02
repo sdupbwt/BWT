@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Sep  1 19:33:15 2020
-// Host        : DESKTOP-O8F70A2 running 64-bit major release  (build 9200)
+// Date        : Wed Sep  2 00:23:46 2020
+// Host        : DESKTOP-64JSPKI running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/toshiba/Desktop/IV/sdup/bwt_test/bwt_test.srcs/sources_1/bd/bwt/ip/bwt_processing_system7_0_0/bwt_processing_system7_0_0_stub.v
+//               D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.srcs/sources_1/bd/bwt/ip/bwt_processing_system7_0_0/bwt_processing_system7_0_0_stub.v
 // Design      : bwt_processing_system7_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

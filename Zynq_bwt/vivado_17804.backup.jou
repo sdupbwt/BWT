@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Sep  1 23:10:46 2020
+# Process ID: 17804
+# Current directory: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10740 D:\MTM\semestr8\SDUP_BWT\BWT_2\BWT\Zynq_bwt\bwt_test.xpr
+# Log file: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/vivado.log
+# Journal file: D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.xpr
+update_compile_order -fileset sources_1
+update_ip_catalog -rebuild
+set_property  ip_repo_paths  {d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/projekt/BWT/BWT_TEST/ip D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip} [current_project]
+update_ip_catalog
+ipx::edit_ip_in_project -upgrade true -name bwt_ip_v1_0_project -directory D:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/Zynq_bwt/bwt_test.tmp/bwt_ip_v1_0_project d:/MTM/semestr8/SDUP_BWT/BWT_2/BWT/BWT_TEST/ip/bwt_ip_1.0/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 8 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete

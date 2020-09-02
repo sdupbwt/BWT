@@ -1,20 +1,20 @@
 -makelib xcelium_lib/xilinx_vip -sv \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_if.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_if.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib xcelium_lib/xpm \
-  "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/axi_infrastructure_v1_1_0 \
   "../../../../bwt_test.srcs/sources_1/bd/bwt/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
@@ -27,18 +27,18 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/bwt/ip/bwt_processing_system7_0_0/sim/bwt_processing_system7_0_0.v" \
-  "../../../bd/bwt/ipshared/3c1f/hdl/bwt_ip_v1_0_S00_AXI.v" \
+  "../../../bd/bwt/ipshared/1abd/hdl/bwt_ip_v1_0_S00_AXI.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/bwt/ipshared/3c1f/src/MM_top.sv" \
-  "../../../bd/bwt/ipshared/3c1f/src/bwt_top.sv" \
-  "../../../bd/bwt/ipshared/3c1f/src/fifo.sv" \
-  "../../../bd/bwt/ipshared/3c1f/src/merge_sort_top.sv" \
-  "../../../bd/bwt/ipshared/3c1f/src/sort2elem.sv" \
-  "../../../bd/bwt/ipshared/3c1f/src/sort_arrays.sv" \
+  "../../../bd/bwt/ipshared/1abd/src/MM_top.sv" \
+  "../../../bd/bwt/ipshared/1abd/src/bwt_top.sv" \
+  "../../../bd/bwt/ipshared/1abd/src/fifo.sv" \
+  "../../../bd/bwt/ipshared/1abd/src/merge_sort_top.sv" \
+  "../../../bd/bwt/ipshared/1abd/src/sort2elem.sv" \
+  "../../../bd/bwt/ipshared/1abd/src/sort_arrays.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/bwt/ipshared/3c1f/hdl/bwt_ip_v1_0.v" \
+  "../../../bd/bwt/ipshared/1abd/hdl/bwt_ip_v1_0.v" \
   "../../../bd/bwt/ip/bwt_bwt_ip_0_0/sim/bwt_bwt_ip_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_lite_ipif_v3_0_4 \

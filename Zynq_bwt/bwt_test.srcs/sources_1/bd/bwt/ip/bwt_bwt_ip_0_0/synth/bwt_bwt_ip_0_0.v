@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:bwt_ip:1.0
-// IP Revision: 9
+// IP Revision: 19
 
 (* X_CORE_INFO = "bwt_ip_v1_0,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "bwt_bwt_ip_0_0,bwt_ip_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "bwt_bwt_ip_0_0,bwt_ip_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=bwt_ip,x_ipVersion=1.0,x_ipCoreRevision=9,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
+(* CORE_GENERATION_INFO = "bwt_bwt_ip_0_0,bwt_ip_v1_0,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=bwt_ip,x_ipVersion=1.0,x_ipCoreRevision=19,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bwt_bwt_ip_0_0 (
   s00_axi_awaddr,
