@@ -27,13 +27,13 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/bwt_design/ip/bwt_design_processing_system7_0_0/sim/bwt_design_processing_system7_0_0.v" \
-  "../../../bd/bwt_design/ipshared/a64a/hdl/bwt_ip_v2_0_S00_AXI.v" \
+  "../../../bd/bwt_design/ipshared/3af4/hdl/bwt_ip_v2_0_S00_AXI.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "../../../bd/bwt_design/ipshared/a64a/src/bwt_top.sv" \
+  "../../../bd/bwt_design/ipshared/3af4/src/bwt_top.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/bwt_design/ipshared/a64a/hdl/bwt_ip_v2_0.v" \
+  "../../../bd/bwt_design/ipshared/3af4/hdl/bwt_ip_v2_0.v" \
   "../../../bd/bwt_design/ip/bwt_design_bwt_ip_0_0/sim/bwt_design_bwt_ip_0_0.v" \
 -endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \

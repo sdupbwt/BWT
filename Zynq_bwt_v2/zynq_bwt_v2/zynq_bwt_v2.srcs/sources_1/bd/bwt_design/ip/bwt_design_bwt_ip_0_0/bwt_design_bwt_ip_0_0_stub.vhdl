@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Thu Sep  3 22:10:12 2020
+-- Date        : Thu Sep  3 22:27:46 2020
 -- Host        : DESKTOP-O8F70A2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/toshiba/Desktop/IV/sdup/zynq_v2/zynq_bwt_v2/zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ip/bwt_design_bwt_ip_0_0/bwt_design_bwt_ip_0_0_stub.vhdl

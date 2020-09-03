@@ -81,6 +81,7 @@ int main(){
 	int status;
 	XGpio inputCharGpio, outputCharGpio, ledGpio;
 	u32 LoopCounter;
+	u32 InBWT;
 	u8 StrResult = 0;
 	u8 ctrl_tgl = 0;
 	char8 input_char;
@@ -127,11 +128,12 @@ int main(){
 
 	//Start bwt processor - pulse start bit in control register and send string to bwt
     BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0);
-
+    InBWT = (((u32)InputStr[0]) | (((u32)InputStr[1]) << 8) | (((u32)InputStr[2]) << 16) | (((u32)InputStr[3]) <<24));
     //Send data to data register of cordic processor
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG1_OFFSET, InputStr);
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG2_OFFSET, InputStr+4);
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG3_OFFSET, InputStr+8);
+
+    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG1_OFFSET, InBWT);
+    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG2_OFFSET, InputStr[4]);
+    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG3_OFFSET, InputStr[8]);
     	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG4_OFFSET, InputStr+12);
     	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG5_OFFSET, InputStr+16);
     	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG6_OFFSET, InputStr+20);
@@ -147,9 +149,10 @@ int main(){
     	while( (BWT_IP_mReadReg(BWT_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
     //Get results
 
-    	FPGA_BWT_Str[0] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET);
-    	FPGA_BWT_Str[4] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG11_OFFSET);
-    	FPGA_BWT_Str[8] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG12_OFFSET);
+    	FPGA_BWT_Str[0] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET)& ((u32)0x000000FF);
+    	FPGA_BWT_Str[1] = (BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET)& ((u32)0x0000FF00))>>8;
+    	FPGA_BWT_Str[2] = (BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET)& ((u32)0x00FF0000))>>16;
+    	FPGA_BWT_Str[3] = (BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET)& ((u32)0xFF000000))>>24;
     	FPGA_BWT_Str[12] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG13_OFFSET);
     	FPGA_BWT_Str[16] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG14_OFFSET);
     	FPGA_BWT_Str[20] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG15_OFFSET);
