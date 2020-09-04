@@ -29,7 +29,11 @@ module MM_top
     input wire [7:0] input_string [STRING_LEN-1:0],
     input wire start_sort,
     output reg [7:0] output_string [STRING_LEN-1:0],
-    output reg done
+    output reg done,
+    output wire [3:0] state_out,
+    output wire [4:0] phase_out,
+    output wire [7:0] max_bucket_out,
+    output reg [9:0] [7:0] check_state
     );
     
     localparam  IDLE = 4'h0,
@@ -66,6 +70,12 @@ module MM_top
     reg [7:0] output_string_nxt [STRING_LEN-1:0];
     reg done_nxt;
     
+    reg [9:0] [7:0] check_state_nxt;
+    
+    assign state_out = state;
+    assign phase_out = phase;
+    assign max_bucket_out = max_bucket;
+    
     always@(posedge clk) begin
         if(rst) begin
             state <= IDLE;
@@ -82,6 +92,7 @@ module MM_top
             sort_num <= 0;
             output_string <= '{STRING_LEN{8'h0}};
             done <= 0;
+            check_state <= {10{8'h0}};
         end
         else begin
             state <= state_nxt;
@@ -98,6 +109,7 @@ module MM_top
             sort_num <= sort_num_nxt;
             output_string <= output_string_nxt;
             done <= done_nxt;
+            check_state <= check_state_nxt;
         end
     end
     
@@ -111,14 +123,15 @@ module MM_top
             BUILD_BUCKETS: state_nxt    = (counter_b >= STRING_LEN) ? (max_bucket == STRING_LEN ? DONE : BUILD_KEYS) : BUILD_BUCKETS;
             BUILD_KEYS: state_nxt       = (counter_k >= STRING_LEN) ? INC_PHASE : BUILD_KEYS;
             INC_PHASE: state_nxt        = SORT_1_ST;
-            DONE:state_nxt              = IDLE;
+            DONE:state_nxt              = DONE;
             default: state_nxt          = IDLE;
         endcase
     end
     
-    always@(posedge clk) begin
+    always@* begin
         sort_start_nxt = 1'b0;
-//        phase_nxt = phase;
+        phase_nxt = phase;
+        check_state_nxt = check_state;
         case(state)
             IDLE: begin
                 phase_nxt = 0;
@@ -130,14 +143,18 @@ module MM_top
                 keys_data_nxt = '{STRING_LEN{'{3{8'h0}}}};
                 sort_num_nxt = 0;
                 done_nxt = 0;
+//                check_state_nxt = '{10{8'h0}};
+                check_state_nxt[8] = check_state[8] + 1;
             end
             SORT_1_ST: begin
                 sort_start_nxt = 1;
                 sort_num_nxt = 1'h0;
                 sort_data_in_nxt = keys_data;
+                check_state_nxt[0] = check_state[0] + 1;
             end
             SORT_1: begin
                 sort_start_nxt = 0;
+                check_state_nxt[1] = check_state[1] + 1;
             end
             SORT_2_ST: begin
                 sort_start_nxt = 1;
@@ -149,9 +166,11 @@ module MM_top
                         sort_data_in_nxt[char_ctr] = {char_ctr,input_string[char_ctr],8'h0}; 
                     end
                 end
+                check_state_nxt[2] = check_state[2] + 1;
             end
             SORT_2: begin
                 sort_start_nxt = 0;
+                check_state_nxt[3] = check_state[3] + 1;
             end
             BUILD_BUCKETS: begin
                 if(sort_data_out[counter_b][0] != sort_data_out[counter_b+1][0] ||
@@ -161,14 +180,16 @@ module MM_top
                 buckets_nxt[sort_data_out[counter_b][2]] = current_bucket;
                 counter_b_nxt = counter_b + 1;
                 max_bucket = current_bucket_nxt;
-                keys_data_nxt = '{STRING_LEN{'{3{8'h0}}}}; 
+                keys_data_nxt = '{STRING_LEN{'{3{8'h0}}}};
+                check_state_nxt[4] = check_state[4] + 1; 
             end 
             BUILD_KEYS: begin
                 if(counter_k+k < STRING_LEN)
                     keys_data_nxt[counter_k] = {counter_k,buckets[counter_k],buckets[counter_k+k]};
                 else
                     keys_data_nxt[counter_k] = '{counter_k,buckets[counter_k],{8{8'h0}}};
-                counter_k_nxt = counter_k + 1;                
+                counter_k_nxt = counter_k + 1;   
+                check_state_nxt[5] = check_state[5] + 1;             
             end
             INC_PHASE: begin
                 phase_nxt = phase + 1;
@@ -177,6 +198,7 @@ module MM_top
                 current_bucket_nxt = 8'h1;  
                 max_bucket = 0;                  
                 counter_b_nxt = 8'h0;   
+                check_state_nxt[6] = check_state[6] + 1;
             end
             DONE: begin
                 for(char_ctr = 0; char_ctr < STRING_LEN; char_ctr = char_ctr + 1) begin
@@ -187,6 +209,7 @@ module MM_top
                         output_string_nxt[char_ctr] = input_string[sort_data_out[char_ctr][2]-1];
                 end
                 done_nxt = 1;
+                check_state_nxt[7] = check_state[7] + 1;
             end
             default: begin
                 phase_nxt = 0;
@@ -198,6 +221,7 @@ module MM_top
                 keys_data_nxt = '{STRING_LEN{'{3{8'h0}}}};
                 sort_num_nxt = 0;
                 done_nxt = 0;
+                check_state_nxt[9] = check_state[9] + 1;
             end
         endcase
     end

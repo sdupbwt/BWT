@@ -44,11 +44,15 @@ module bwt_top
     reg [7:0]input_string [31:0];
     //reg [7:0] ctr, ctr_nxt, ctr_send, ctr_send_nxt;
     reg start_bwt;
-    wire done_bwt;
+    reg done_bwt;
     reg [7:0]output_string [31:0];
     reg valid_out_nxt;
     reg [2:0] state, state_nxt;
     reg [255:0] output_string_char_nxt;
+    reg [3:0] state_mm;
+    reg [4:0] phase_mm;
+    reg [7:0] max_bucket;
+    reg [9:0] [7:0] check_state ;
     //reg [7:0] test_string[STRING_LEN-1:0];
 //    assign done_bwt = 0;
     //assign start_bwt = (ctr == STRING_LEN-1) && (input_string[ctr] == 8'h24);
@@ -120,16 +124,18 @@ begin
                 state <= WRITE_DATA;
             end
             WRITE_DATA: begin
-                if(start_bwt == 1)begin
+//                if(start_bwt == 1)begin
                     state <= WRITE_DATA;
-                    output_string_char <= {>>{input_string}};
-                    valid_out <= 1;
+//                    output_string_char <= {>>{input_string}};
 //                    output_string_char <= {>>{output_string}};
-                end
-                else begin
-                    state <= WRITE_DATA;
-                    output_string_char <= 256'h64;
-                end
+                    output_string_char <= {{6'b000101},done_bwt,state_mm,phase_mm,check_state};
+                    valid_out <= 1; 
+                    start_bwt <= 0;
+//                end
+//                else begin
+//                    state <= WRITE_DATA;
+//                    output_string_char <= 256'h64;
+//                end
             end
             WAIT_TO_ZERO: begin
                 if(start == 0)
@@ -158,7 +164,11 @@ end
     .input_string(input_string),
     .start_sort(start_bwt),
     .output_string(output_string),
-    .done(done_bwt)
+    .done(done_bwt),
+    .state_out(state_mm),
+    .phase_out(phase_mm),
+    .max_bucket_out(max_bucket),
+    .check_state(check_state)
     );
    
 endmodule
