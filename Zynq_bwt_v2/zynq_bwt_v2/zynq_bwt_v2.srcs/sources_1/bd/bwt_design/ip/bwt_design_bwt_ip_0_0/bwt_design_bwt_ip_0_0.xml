@@ -581,11 +581,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 04 11:22:07 UTC 2020</spirit:value>
+            <spirit:value>Fri Sep 04 14:18:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7fa596c9</spirit:value>
+            <spirit:value>9:c8ddb683</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -596,7 +596,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7fa596c9</spirit:value>
+            <spirit:value>9:c8ddb683</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -612,11 +612,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 04 11:22:07 UTC 2020</spirit:value>
+            <spirit:value>Fri Sep 04 14:18:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7fa596c9</spirit:value>
+            <spirit:value>9:c8ddb683</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -632,11 +632,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 04 11:22:07 UTC 2020</spirit:value>
+            <spirit:value>Fri Sep 04 14:18:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:af3727ea</spirit:value>
+            <spirit:value>9:184f07a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -652,11 +652,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 04 11:22:07 UTC 2020</spirit:value>
+            <spirit:value>Fri Sep 04 14:18:49 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:af3727ea</spirit:value>
+            <spirit:value>9:184f07a0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -670,11 +670,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 04 11:23:02 UTC 2020</spirit:value>
+            <spirit:value>Fri Sep 04 14:20:04 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7fa596c9</spirit:value>
+            <spirit:value>9:c8ddb683</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1020,42 +1020,42 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/hdl/bwt_ip_v2_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/2d7e/hdl/bwt_ip_v2_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/MM_top.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/MM_top.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/bwt_top.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/bwt_top.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/fifo.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/fifo.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/merge_sort_top.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/merge_sort_top.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/sort2elem.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/sort2elem.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/sort_arrays.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/sort_arrays.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/hdl/bwt_ip_v2_0.v</spirit:name>
+        <spirit:name>../../ipshared/2d7e/hdl/bwt_ip_v2_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -1071,42 +1071,42 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/hdl/bwt_ip_v2_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/2d7e/hdl/bwt_ip_v2_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/MM_top.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/MM_top.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/bwt_top.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/bwt_top.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/fifo.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/fifo.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/merge_sort_top.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/merge_sort_top.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/sort2elem.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/sort2elem.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/src/sort_arrays.sv</spirit:name>
+        <spirit:name>../../ipshared/2d7e/src/sort_arrays.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0d6e/hdl/bwt_ip_v2_0.v</spirit:name>
+        <spirit:name>../../ipshared/2d7e/hdl/bwt_ip_v2_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -1216,7 +1216,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>bwt_ip_v2.0</xilinx:displayName>
-      <xilinx:coreRevision>21</xilinx:coreRevision>
+      <xilinx:coreRevision>31</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@44448c85_ARCHIVE_LOCATION">c:/Users/toshiba/Desktop/IV/sdup/zynq_v2/ip_repo/bwt_ip_2.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4560c5f7_ARCHIVE_LOCATION">c:/Users/toshiba/Desktop/IV/sdup/zynq_v2/ip_repo/bwt_ip_2.0</xilinx:tag>
@@ -1392,6 +1392,86 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3882a1a3_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1b90abb0_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1700af40_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11cfd30d_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5887192f_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31fdeabd_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48791843_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26b125f8_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3709889c_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6890cf3f_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20e8709_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56acfea_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f9902e_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13020ad5_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52d27882_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fab5a8c_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f424523_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30991a25_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2451880e_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19ada6c4_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@de8654c_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d75f5e4_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a914a8e_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62fd3f82_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a0aa239_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67562243_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ddf9e91_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@216501f8_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@312f3b26_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3412aa13_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e7dceae_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c72d2d3_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5acd0c08_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ce536ec_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30e30401_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@165d7136_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c7c2afb_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@344ac3bf_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@283f322c_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5228fa9e_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b530eae_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43b103b7_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20bcd34e_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62a4023d_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fcd1dbe_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a96135_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@572cd85f_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72193afa_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dd84f22_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c7bc38a_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6564dd72_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10ed9427_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c5f14db_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61a52325_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@332012c0_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5db538c9_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48b0dab0_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@433b48a8_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12233de6_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f47771_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ba765f4_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@178434f2_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c3d8e85_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cea3f8_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b38c9bf_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ccbf276_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ea300ce_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78d437af_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30d19875_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40c1a1f9_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25b1939e_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ecfa549_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cbdd9ab_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@285a83ce_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f326cf_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@129fd33e_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50a1a6b_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@227c0ccd_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b9f8232_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b7d63d2_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7805407a_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1efe439f_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@768da490_ARCHIVE_LOCATION">d:/MTM/semestr8/SDUP_BWT/BWT_3/BWT/Zynq_bwt_v2/bwt_ip_2.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -1426,7 +1506,7 @@
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="71f56bbe"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0afc7ea6"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1da301bb"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="e40987d2"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="a0a6f17f"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="de6329f2"/>

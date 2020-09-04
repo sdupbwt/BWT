@@ -27,18 +27,18 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/bwt_design/ip/bwt_design_processing_system7_0_0/sim/bwt_design_processing_system7_0_0.v" \
-  "../../../bd/bwt_design/ipshared/0d6e/hdl/bwt_ip_v2_0_S00_AXI.v" \
+  "../../../bd/bwt_design/ipshared/2d7e/hdl/bwt_ip_v2_0_S00_AXI.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/bwt_design/ipshared/0d6e/src/MM_top.sv" \
-  "../../../bd/bwt_design/ipshared/0d6e/src/bwt_top.sv" \
-  "../../../bd/bwt_design/ipshared/0d6e/src/fifo.sv" \
-  "../../../bd/bwt_design/ipshared/0d6e/src/merge_sort_top.sv" \
-  "../../../bd/bwt_design/ipshared/0d6e/src/sort2elem.sv" \
-  "../../../bd/bwt_design/ipshared/0d6e/src/sort_arrays.sv" \
+  "../../../bd/bwt_design/ipshared/2d7e/src/MM_top.sv" \
+  "../../../bd/bwt_design/ipshared/2d7e/src/bwt_top.sv" \
+  "../../../bd/bwt_design/ipshared/2d7e/src/fifo.sv" \
+  "../../../bd/bwt_design/ipshared/2d7e/src/merge_sort_top.sv" \
+  "../../../bd/bwt_design/ipshared/2d7e/src/sort2elem.sv" \
+  "../../../bd/bwt_design/ipshared/2d7e/src/sort_arrays.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/bwt_design/ipshared/0d6e/hdl/bwt_ip_v2_0.v" \
+  "../../../bd/bwt_design/ipshared/2d7e/hdl/bwt_ip_v2_0.v" \
   "../../../bd/bwt_design/ip/bwt_design_bwt_ip_0_0/sim/bwt_design_bwt_ip_0_0.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
