@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:bwt_ip:2.0
-// IP Revision: 9
+// IP Revision: 20
 
 `timescale 1ns/1ps
 

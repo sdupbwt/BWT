@@ -71,7 +71,7 @@
 #define STATUS_REG_READY_MASK (u32)(0x01)
 /***************************** Main function *********************************/
 
-char8 InputStr[LENGTH_STR] =      "abcdefghijklmnoprstuw1234567890$";
+char8 InputStr[LENGTH_STR] =      "Bananananananananananananananan$";
 char8 uB_BWT_Str[LENGTH_STR];// = "b$nnnnnnnnnnbbbbBaaaaaaaaaaaaaaa";
 char8 FPGA_BWT_Str[LENGTH_STR];
 char8 TEST_Str[LENGTH_STR];
@@ -81,7 +81,9 @@ int main(){
 	int status;
 	XGpio inputCharGpio, outputCharGpio, ledGpio;
 	u32 LoopCounter;
-	u32 InBWT[8],OutFPGA[8];
+//	u32 InBWT;
+	u32 InBWT[8];
+	u32 OutFPGA[8];
 	u8 StrResult = 0;
 	u8 ctrl_tgl = 0;
 	char8 input_char;
@@ -128,24 +130,27 @@ int main(){
 
 	//Start bwt processor - pulse start bit in control register and send string to bwt
     BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0);
+//    InBWT = (((u32)InputStr[0]) | (((u32)InputStr[1]) << 8) | (((u32)InputStr[2]) << 16) | (((u32)InputStr[3]) <<24));
+    //Send data to data register of cordic processor
     InBWT[0] = (((u32)InputStr[0]) | (((u32)InputStr[1]) << 8) | (((u32)InputStr[2]) << 16) | (((u32)InputStr[3]) <<24));
-	InBWT[1] = (((u32)InputStr[4]) | (((u32)InputStr[5]) < 8) | (((u32)InputStr[6]) << 16) | (((u32)InputStr[7]) <<24));
+	InBWT[1] = (((u32)InputStr[4]) | (((u32)InputStr[5]) << 8) | (((u32)InputStr[6]) << 16) | (((u32)InputStr[7]) <<24));
 	InBWT[2] = (((u32)InputStr[8]) | (((u32)InputStr[9]) << 8) | (((u32)InputStr[10]) << 16) | (((u32)InputStr[11]) <<24));
 	InBWT[3] = (((u32)InputStr[12]) | (((u32)InputStr[13]) << 8) | (((u32)InputStr[14]) << 16) | (((u32)InputStr[15]) <<24));
 	InBWT[4] = (((u32)InputStr[16]) | (((u32)InputStr[17]) << 8) | (((u32)InputStr[18]) << 16) | (((u32)InputStr[19]) <<24));
-	InBWT[5] = (((u32)InputStr[20]) | (((u32)InputStr[21]) < 8) | (((u32)InputStr[22]) << 16) | (((u32)InputStr[23]) <<24));
+	InBWT[5] = (((u32)InputStr[20]) | (((u32)InputStr[21]) << 8) | (((u32)InputStr[22]) << 16) | (((u32)InputStr[23]) <<24));
 	InBWT[6] = (((u32)InputStr[24]) | (((u32)InputStr[25]) << 8) | (((u32)InputStr[26]) << 16) | (((u32)InputStr[27]) <<24));
 	InBWT[7] = (((u32)InputStr[28]) | (((u32)InputStr[29]) << 8) | (((u32)InputStr[30]) << 16) | (((u32)InputStr[31]) <<24));
-    //Send data to data register of cordic processor
 
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG1_OFFSET, InBWT[0]);
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG2_OFFSET, InBWT[1]);
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG3_OFFSET, InBWT[2]);
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG4_OFFSET, InBWT[3]);
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG5_OFFSET, InBWT[4]);
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG6_OFFSET, InBWT[5]);
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG7_OFFSET, InBWT[6]);
-    	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG8_OFFSET, InBWT[7]);
+
+	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG1_OFFSET, InBWT[0]);
+	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG2_OFFSET, InBWT[1]);
+	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG3_OFFSET, InBWT[2]);
+	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG4_OFFSET, InBWT[3]);
+	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG5_OFFSET, InBWT[4]);
+	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG6_OFFSET, InBWT[5]);
+	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG7_OFFSET, InBWT[6]);
+	BWT_IP_mWriteReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG8_OFFSET, InBWT[7]);
+
     	print("InputStr: ");
     	print(InputStr);
     	print("\n\r");
@@ -154,58 +159,60 @@ int main(){
     	BWT_IP_mWriteReg(BWT_BASE_ADDR, CONTROL_REG_OFFSET, 0);
     //Wait for ready bit in status register
     	while( (BWT_IP_mReadReg(BWT_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+//        print("Press any key to start ");
+//        inbyte();
+//        print("\n\r");
     //Get results
-
-    	OutFPGA[0] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET)& ((u32)0x000000FF);
-    	OutFPGA[1] = (BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET)& ((u32)0x0000FF00))>>8;
-    	OutFPGA[2] = (BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET)& ((u32)0x00FF0000))>>16;
-    	OutFPGA[3] = (BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET)& ((u32)0xFF000000))>>24;
-    	OutFPGA[4] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG13_OFFSET);
-    	OutFPGA[5] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG14_OFFSET);
-    	OutFPGA[6] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG15_OFFSET);
-    	OutFPGA[7] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG16_OFFSET);
+    	OutFPGA[0] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG10_OFFSET);
+    	OutFPGA[1] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG11_OFFSET);
+    	OutFPGA[2] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG12_OFFSET);
+    	OutFPGA[3] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG13_OFFSET);
+    	OutFPGA[4] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG14_OFFSET);
+    	OutFPGA[5] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG15_OFFSET);
+    	OutFPGA[6] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG16_OFFSET);
+    	OutFPGA[7] = BWT_IP_mReadReg(BWT_BASE_ADDR, BWT_IP_S00_AXI_SLV_REG17_OFFSET);
 
 		//for(LoopCounter = 0; LoopCounter < ; LoopCounter++)
-		//{			
-			FPGA_BWT_Str[0] = (OutFPGA[0] & ((u32)0x000000FF);
+		//{
+			FPGA_BWT_Str[0] = (OutFPGA[0] & ((u32)0x000000FF));
 			FPGA_BWT_Str[1] = (OutFPGA[0] & ((u32)0x0000FF00)) >> 8;
 			FPGA_BWT_Str[2] = (OutFPGA[0] & ((u32)0x00FF0000)) >> 16;
 			FPGA_BWT_Str[3] = (OutFPGA[0] & ((u32)0xFF000000)) >> 24;
-		
-			FPGA_BWT_Str[4] = (OutFPGA[1] & ((u32)0x000000FF);
+
+			FPGA_BWT_Str[4] = (OutFPGA[1] & ((u32)0x000000FF));
 			FPGA_BWT_Str[5] = (OutFPGA[1] & ((u32)0x0000FF00)) >> 8;
 			FPGA_BWT_Str[6] = (OutFPGA[1] & ((u32)0x00FF0000)) >> 16;
 			FPGA_BWT_Str[7] = (OutFPGA[1] & ((u32)0xFF000000)) >> 24;
-			
-			FPGA_BWT_Str[8] = (OutFPGA[2] & ((u32)0x000000FF);
+
+			FPGA_BWT_Str[8] = (OutFPGA[2] & ((u32)0x000000FF));
 			FPGA_BWT_Str[9] = (OutFPGA[2] & ((u32)0x0000FF00)) >> 8;
 			FPGA_BWT_Str[10] = (OutFPGA[2] & ((u32)0x00FF0000)) >> 16;
 			FPGA_BWT_Str[11] = (OutFPGA[2] & ((u32)0xFF000000)) >> 24;
-			
-			FPGA_BWT_Str[12] = (OutFPGA[3] & ((u32)0x000000FF);
+
+			FPGA_BWT_Str[12] = (OutFPGA[3] & ((u32)0x000000FF));
 			FPGA_BWT_Str[13] = (OutFPGA[3] & ((u32)0x0000FF00)) >> 8;
 			FPGA_BWT_Str[14] = (OutFPGA[3] & ((u32)0x00FF0000)) >> 16;
 			FPGA_BWT_Str[15] = (OutFPGA[3] & ((u32)0xFF000000)) >> 24;
-			
-			FPGA_BWT_Str[16] = (OutFPGA[4] & ((u32)0x000000FF);
+
+			FPGA_BWT_Str[16] = (OutFPGA[4] & ((u32)0x000000FF));
 			FPGA_BWT_Str[17] = (OutFPGA[4] & ((u32)0x0000FF00)) >> 8;
 			FPGA_BWT_Str[18] = (OutFPGA[4] & ((u32)0x00FF0000)) >> 16;
 			FPGA_BWT_Str[19] = (OutFPGA[4] & ((u32)0xFF000000)) >> 24;
-		
-			FPGA_BWT_Str[20] = (OutFPGA[5] & ((u32)0x000000FF);
+
+			FPGA_BWT_Str[20] = (OutFPGA[5] & ((u32)0x000000FF));
 			FPGA_BWT_Str[21] = (OutFPGA[5] & ((u32)0x0000FF00)) >> 8;
 			FPGA_BWT_Str[22] = (OutFPGA[5] & ((u32)0x00FF0000)) >> 16;
 			FPGA_BWT_Str[23] = (OutFPGA[5] & ((u32)0xFF000000)) >> 24;
-			
-			FPGA_BWT_Str[24] = (OutFPGA[6] & ((u32)0x000000FF);
+
+			FPGA_BWT_Str[24] = (OutFPGA[6] & ((u32)0x000000FF));
 			FPGA_BWT_Str[25] = (OutFPGA[6] & ((u32)0x0000FF00)) >> 8;
 			FPGA_BWT_Str[26] = (OutFPGA[6] & ((u32)0x00FF0000)) >> 16;
 			FPGA_BWT_Str[27] = (OutFPGA[6] & ((u32)0xFF000000)) >> 24;
-			
-			FPGA_BWT_Str[28] = (OutFPGA[7] & ((u32)0x000000FF);
+
+			FPGA_BWT_Str[28] = (OutFPGA[7] & ((u32)0x000000FF));
 			FPGA_BWT_Str[29] = (OutFPGA[7] & ((u32)0x0000FF00)) >> 8;
 			FPGA_BWT_Str[30] = (OutFPGA[7] & ((u32)0x00FF0000)) >> 16;
-			FPGA_BWT_Str[31] = (OutFPGA[] & ((u32)0xFF000000)) >> 24;
+			FPGA_BWT_Str[31] = (OutFPGA[7] & ((u32)0xFF000000)) >> 24;
 		//}
 
     	print("FPGA BWT: ");

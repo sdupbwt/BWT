@@ -1,20 +1,20 @@
 -makelib ies_lib/xilinx_vip -sv \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_if.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/axi_vip_if.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib ies_lib/xpm \
-  "C:/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
+  "D:/Programy/Vivado2019_1/Vivado/2019.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies_lib/axi_infrastructure_v1_1_0 \
   "../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
@@ -27,13 +27,18 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/bwt_design/ip/bwt_design_processing_system7_0_0/sim/bwt_design_processing_system7_0_0.v" \
-  "../../../bd/bwt_design/ipshared/3af4/hdl/bwt_ip_v2_0_S00_AXI.v" \
+  "../../../bd/bwt_design/ipshared/221f/hdl/bwt_ip_v2_0_S00_AXI.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/bwt_design/ipshared/3af4/src/bwt_top.sv" \
+  "../../../bd/bwt_design/ipshared/221f/src/MM_top.sv" \
+  "../../../bd/bwt_design/ipshared/221f/src/bwt_top.sv" \
+  "../../../bd/bwt_design/ipshared/221f/src/fifo.sv" \
+  "../../../bd/bwt_design/ipshared/221f/src/merge_sort_top.sv" \
+  "../../../bd/bwt_design/ipshared/221f/src/sort2elem.sv" \
+  "../../../bd/bwt_design/ipshared/221f/src/sort_arrays.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/bwt_design/ipshared/3af4/hdl/bwt_ip_v2_0.v" \
+  "../../../bd/bwt_design/ipshared/221f/hdl/bwt_ip_v2_0.v" \
   "../../../bd/bwt_design/ip/bwt_design_bwt_ip_0_0/sim/bwt_design_bwt_ip_0_0.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \
