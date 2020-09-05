@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/ec67/hdl" --include "../../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/8c62/hdl" --include "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/include" \
+"bwt_top_tb_func_synth.v" \
+
+sv xil_defaultlib  --include "../../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/ec67/hdl" --include "../../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/8c62/hdl" --include "D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../../../../bwt_ip_2.0/src/MM_top.sv" \
+"../../../../../../bwt_ip_2.0/src/bwt_top.sv" \
+"../../../../../../bwt_ip_2.0/src/fifo.sv" \
+"../../../../../../bwt_ip_2.0/src/merge_sort_top.sv" \
+"../../../../../../bwt_ip_2.0/src/sort2elem.sv" \
+"../../../../../../bwt_ip_2.0/src/sort_arrays.sv" \
+"../../../../../zynq_bwt_v2.srcs/sim_1/new/bwt_top_tb.v" \
+
+# Do not sort compile order
+nosort
