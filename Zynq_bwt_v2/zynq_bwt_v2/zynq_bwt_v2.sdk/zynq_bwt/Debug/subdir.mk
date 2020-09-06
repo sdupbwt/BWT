@@ -5,18 +5,21 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../bwt.c \
-../helloworld.c \
-../platform.c 
+../main.c \
+../platform.c \
+../test.c 
 
 OBJS += \
 ./bwt.o \
-./helloworld.o \
-./platform.o 
+./main.o \
+./platform.o \
+./test.o 
 
 C_DEPS += \
 ./bwt.d \
-./helloworld.d \
-./platform.d 
+./main.d \
+./platform.d \
+./test.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

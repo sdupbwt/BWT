@@ -1,5 +1,4 @@
-helloworld.o helloworld.o: ../helloworld.c ../platform.h \
- ../platform_config.h \
+main.o main.o: ../main.c ../platform.h ../platform_config.h \
  ../../zynq_bwt_bsp/ps7_cortexa9_0/include/xil_printf.h \
  ../../zynq_bwt_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../zynq_bwt_bsp/ps7_cortexa9_0/include/xparameters.h \
