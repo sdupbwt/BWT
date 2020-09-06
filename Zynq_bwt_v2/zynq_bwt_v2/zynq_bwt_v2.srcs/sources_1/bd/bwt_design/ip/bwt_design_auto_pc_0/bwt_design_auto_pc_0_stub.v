@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Sep  3 20:19:38 2020
-// Host        : DESKTOP-O8F70A2 running 64-bit major release  (build 9200)
+// Date        : Sun Sep  6 14:30:59 2020
+// Host        : DESKTOP-64JSPKI running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top bwt_design_auto_pc_0 -prefix
 //               bwt_design_auto_pc_0_ bwt_design_auto_pc_0_stub.v
 // Design      : bwt_design_auto_pc_0

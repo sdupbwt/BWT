@@ -124,7 +124,7 @@ module MM_top
             BUILD_BUCKETS: state_nxt    = (counter_b >= STRING_LEN-1) ? (current_bucket >= STRING_LEN ? DONE : BUILD_KEYS) : BUILD_BUCKETS;
             BUILD_KEYS: state_nxt       = (counter_k >= STRING_LEN-1) ? INC_PHASE : BUILD_KEYS;
             INC_PHASE: state_nxt        = SORT_1_ST;
-            DONE:state_nxt              = DONE;
+            DONE:state_nxt              = IDLE;
             default: state_nxt          = IDLE;
         endcase
     end

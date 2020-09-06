@@ -53,6 +53,7 @@ module bwt_top
     reg [4:0] phase_mm;
     reg [7:0] max_bucket;
     reg [9:0] [7:0] check_state ;
+    reg done;
     //reg [7:0] test_string[STRING_LEN-1:0];
 //    assign done_bwt = 0;
     //assign start_bwt = (ctr == STRING_LEN-1) && (input_string[ctr] == 8'h24);
@@ -75,16 +76,13 @@ begin
                 start_bwt <= 0;
                 if(start)begin
                     state <= READ_DATA;
-                    output_string_char <= 256'h61;
                 end
                 else begin
                     state <= IDLE;
-                    output_string_char <= 256'h70;
                 end
                 output_string_char <= 256'h0;
             end
             READ_DATA: begin
-                output_string_char <= 256'h62;
                 input_string[0] <= input_string_char[7:0];
                 input_string[1] <= input_string_char[15:8];
                 input_string[2] <= input_string_char[23:16];
@@ -117,51 +115,18 @@ begin
                 input_string[29] <= input_string_char[239:232];
                 input_string[30] <= input_string_char[247:240];
                 input_string[31] <= input_string_char[255:248];
-////                    input_string[i] <= input_string_char[((i*8)+7)-:7];
-                
-//                input_string <= input_string_char;
                 valid_out <= 0;
                 start_bwt <= 1;
                 state <= WRITE_DATA;
             end
             WRITE_DATA: begin
-                if(done_bwt == 1)begin
+                if(done_bwt == 1) begin
                     state <= WRITE_DATA;
-                    //                    output_string_char[255:8] <= {>>{output_string}};
                     output_string_char <= {>>{output_string}};
-//                output_string_char[7:0]    <= output_string[0] ;
-//                output_string_char[15:8]   <= output_string[1] ;
-//                output_string_char[23:16]  <= output_string[2] ;
-//                output_string_char[31:24]  <= output_string[3] ;
-//                output_string_char[39:32]  <= output_string[4] ;
-//                output_string_char[47:40]  <= output_string[5] ;
-//                output_string_char[55:48]  <= output_string[6] ;
-//                output_string_char[63:56]  <= output_string[7] ;
-//                output_string_char[71:64]  <= output_string[8] ;
-//                output_string_char[79:72]  <= output_string[9] ;
-//                output_string_char[87:80]  <= output_string[10];
-//                output_string_char[95:88]  <= output_string[11];
-//                output_string_char[103:96] <= output_string[12];
-//                output_string_char[111:104]<= output_string[13];
-//                output_string_char[119:112]<= output_string[14];
-//                output_string_char[127:120]<= output_string[15];
-//                output_string_char[135:128]<= output_string[16];
-//                output_string_char[143:136]<= output_string[17];
-//                output_string_char[151:144]<= output_string[18];
-//                output_string_char[159:152]<= output_string[19];
-//                output_string_char[167:160]<= output_string[20];
-//                output_string_char[175:168]<= output_string[21];
-//                output_string_char[183:176]<= output_string[22];
-//                output_string_char[191:184]<= output_string[23];
-//                output_string_char[199:192]<= output_string[24];
-//                output_string_char[207:200]<= output_string[25];
-//                output_string_char[215:208]<= output_string[26];
-//                output_string_char[223:216]<= output_string[27];
-//                output_string_char[231:224]<= output_string[28];
-//                output_string_char[239:232]<= output_string[29];
-//                output_string_char[247:240]<= output_string[30];
-//                output_string_char[255:248]<= output_string[31];
                     valid_out <= 1;                         
+                end
+                else if(valid_out != 0 && output_string_char[255:148] == output_string[31] && output_string_char[7:0] == output_string[0]) begin
+                    state <= WAIT_TO_ZERO;
                 end
                 else begin
                     state <= WRITE_DATA;
@@ -175,11 +140,9 @@ begin
                 end
                 else 
                     state <= WAIT_TO_ZERO;
-//                output_string_char <= 256'h66666666666666666666666666666666666666666666666666;
             end
             default: begin
                 state <= IDLE;
-//                output_string_char <= 256'h72727272727272727272727272727272727272727272727272;
             end
             endcase
        
