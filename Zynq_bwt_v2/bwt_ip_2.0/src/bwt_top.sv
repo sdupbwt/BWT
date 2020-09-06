@@ -125,7 +125,7 @@ begin
                     output_string_char <= {>>{output_string}};
                     valid_out <= 1;                         
                 end
-                else if(valid_out != 0 && output_string_char[255:148] == output_string[31] && output_string_char[7:0] == output_string[0]) begin
+                else if(valid_out != 0 && output_string_char[255:248] == output_string[31] && output_string_char[7:0] == output_string[0]) begin
                     state <= WAIT_TO_ZERO;
                 end
                 else begin

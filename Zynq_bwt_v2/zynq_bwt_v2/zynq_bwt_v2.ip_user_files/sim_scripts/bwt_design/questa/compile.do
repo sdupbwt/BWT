@@ -66,18 +66,18 @@ vlog -work processing_system7_vip_v1_0_7 -64 -sv -L axi_vip_v1_1_5 -L processing
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/ec67/hdl" "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/8c62/hdl" "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ip/bwt_design_processing_system7_0_0" "+incdir+D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/include" \
 "../../../bd/bwt_design/ip/bwt_design_processing_system7_0_0/sim/bwt_design_processing_system7_0_0.v" \
-"../../../bd/bwt_design/ipshared/fd87/hdl/bwt_ip_v2_0_S00_AXI.v" \
+"../../../bd/bwt_design/ipshared/6bbb/hdl/bwt_ip_v2_0_S00_AXI.v" \
 
 vlog -work xil_defaultlib -64 -sv -L axi_vip_v1_1_5 -L processing_system7_vip_v1_0_7 -L xilinx_vip "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/ec67/hdl" "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/8c62/hdl" "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ip/bwt_design_processing_system7_0_0" "+incdir+D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/include" \
-"../../../bd/bwt_design/ipshared/fd87/src/MM_top.sv" \
-"../../../bd/bwt_design/ipshared/fd87/src/bwt_top.sv" \
-"../../../bd/bwt_design/ipshared/fd87/src/fifo.sv" \
-"../../../bd/bwt_design/ipshared/fd87/src/merge_sort_top.sv" \
-"../../../bd/bwt_design/ipshared/fd87/src/sort2elem.sv" \
-"../../../bd/bwt_design/ipshared/fd87/src/sort_arrays.sv" \
+"../../../bd/bwt_design/ipshared/6bbb/src/MM_top.sv" \
+"../../../bd/bwt_design/ipshared/6bbb/src/bwt_top.sv" \
+"../../../bd/bwt_design/ipshared/6bbb/src/fifo.sv" \
+"../../../bd/bwt_design/ipshared/6bbb/src/merge_sort_top.sv" \
+"../../../bd/bwt_design/ipshared/6bbb/src/sort2elem.sv" \
+"../../../bd/bwt_design/ipshared/6bbb/src/sort_arrays.sv" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/ec67/hdl" "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/8c62/hdl" "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ip/bwt_design_processing_system7_0_0" "+incdir+D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/include" \
-"../../../bd/bwt_design/ipshared/fd87/hdl/bwt_ip_v2_0.v" \
+"../../../bd/bwt_design/ipshared/6bbb/hdl/bwt_ip_v2_0.v" \
 "../../../bd/bwt_design/ip/bwt_design_bwt_ip_0_0/sim/bwt_design_bwt_ip_0_0.v" \
 
 vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/ec67/hdl" "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ipshared/8c62/hdl" "+incdir+../../../../zynq_bwt_v2.srcs/sources_1/bd/bwt_design/ip/bwt_design_processing_system7_0_0" "+incdir+D:/Programy/Vivado2019_1/Vivado/2019.1/data/xilinx_vip/include" \

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Sep  6 18:09:50 2020
+| Date             : Sun Sep  6 19:27:43 2020
 | Host             : DESKTOP-64JSPKI running 64-bit major release  (build 9200)
 | Command          : report_power -file bwt_design_wrapper_power_routed.rpt -pb bwt_design_wrapper_power_summary_routed.pb -rpx bwt_design_wrapper_power_routed.rpx
 | Design           : bwt_design_wrapper
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.021 |        3 |       --- |             --- |
-| Slice Logic              |     0.006 |    15342 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     6238 |     53200 |           11.73 |
+| Slice Logic              |     0.006 |    15300 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     6210 |     53200 |           11.67 |
 |   Register               |    <0.001 |     5364 |    106400 |            5.04 |
-|   CARRY4                 |    <0.001 |       61 |     13300 |            0.46 |
+|   CARRY4                 |    <0.001 |       52 |     13300 |            0.39 |
 |   F7/F8 Muxes            |    <0.001 |     1334 |     53200 |            2.51 |
 |   LUT as Distributed RAM |    <0.001 |      744 |     17400 |            4.28 |
 |   LUT as Shift Register  |    <0.001 |       62 |     17400 |            0.36 |
 |   Others                 |     0.000 |      379 |       --- |             --- |
-| Signals                  |     0.010 |     9200 |       --- |             --- |
+| Signals                  |     0.010 |     9192 |       --- |             --- |
 | I/O                      |     0.000 |        8 |       200 |            4.00 |
 | PS7                      |     1.529 |        1 |       --- |             --- |
 | Static Power             |     0.142 |          |           |                 |
