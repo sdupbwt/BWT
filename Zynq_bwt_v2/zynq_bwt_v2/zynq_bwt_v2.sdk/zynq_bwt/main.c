@@ -81,7 +81,8 @@ int main(){
     while(1)
     {
     	// Take input string from UART
-    	print("Write the input string and press \"enter\". String should have 31 characters.");
+    	print("n=\nWrite the input string and press \"enter\". String should have 31 characters.\n");
+    	printf("\nCharacters: ");
     	LoopCounter = 0;
 
     	while(1)
@@ -91,11 +92,11 @@ int main(){
     		{
     			if (LoopCounter < 31)
     			{
-    				print("Too less chars. String should have 31 characters. Try again from beginning.");
+    				print("\nToo less chars. String should have 31 characters. Try again from beginning.\n");
     				LoopCounter = 0;    			}
     			else if (LoopCounter > 31)
     			{
-    				print("Too many chars. String should have 31 characters. Try again from beginning.");
+    				print("\nToo many chars. String should have 31 characters. \n");
     				LoopCounter = 0;
     			}
     			else
@@ -107,6 +108,11 @@ int main(){
     		InputStr[LoopCounter] = InputChar;
     		print(InputStr);
     		LoopCounter++;
+    		if (31 == LoopCounter)
+    		{
+    			print("\nThere are 31 characters.\n");
+    			break;
+    		}
     	}
     	InputStr[LENGTH_STR] = '$';
 
