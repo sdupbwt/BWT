@@ -87,13 +87,12 @@ int main(){
     	while(1)
     	{
     		InputChar = inbyte();
-    		if ('\n' == InputChar)
+    		if ('\r' == InputChar)
     		{
     			if (LoopCounter < 31)
     			{
     				print("Too less chars. String should have 31 characters. Try again from beginning.");
-    				LoopCounter = 0;
-    			}
+    				LoopCounter = 0;    			}
     			else if (LoopCounter > 31)
     			{
     				print("Too many chars. String should have 31 characters. Try again from beginning.");
@@ -105,6 +104,8 @@ int main(){
     			}
     		}
     		InputStr[LoopCounter] = InputChar;
+    		print(InputStr);
+    		LoopCounter++;
     	}
     	InputStr[LENGTH_STR] = '$';
 
