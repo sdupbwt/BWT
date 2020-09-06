@@ -92,8 +92,7 @@ int main(){
     			if (LoopCounter < 31)
     			{
     				print("Too less chars. String should have 31 characters. Try again from beginning.");
-    				LoopCounter = 0;
-    			}
+    				LoopCounter = 0;    			}
     			else if (LoopCounter > 31)
     			{
     				print("Too many chars. String should have 31 characters. Try again from beginning.");
@@ -106,6 +105,8 @@ int main(){
     		}
     		LoopCounter++;
     		InputStr[LoopCounter] = InputChar;
+    		print(InputStr);
+    		LoopCounter++;
     	}
     	InputStr[LENGTH_STR] = '$';
 
