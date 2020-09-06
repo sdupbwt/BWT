@@ -87,7 +87,7 @@ int main(){
     	while(1)
     	{
     		InputChar = inbyte();
-    		if ('\n' == InputChar)
+    		if ('\r' == InputChar)
     		{
     			if (LoopCounter < 31)
     			{
@@ -104,6 +104,7 @@ int main(){
     				break;
     			}
     		}
+    		LoopCounter++;
     		InputStr[LoopCounter] = InputChar;
     	}
     	InputStr[LENGTH_STR] = '$';
