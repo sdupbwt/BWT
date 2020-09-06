@@ -1,9 +1,44 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Sep  6 19:17:12 2020" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Sep  6 22:18:09 2020" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="bwt_design" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="O" LEFT="7" NAME="leds_8bits_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_CAS_n"/>
@@ -77,41 +112,6 @@
     <PORT DIR="IO" LEFT="3" NAME="DDR_dqs_p" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_DQS">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DQS"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="7" NAME="leds_8bits_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -525,7 +525,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="58" FULLNAME="/bwt_ip_0" HWVERSION="2.0" INSTANCE="bwt_ip_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="bwt_ip" VLNV="xilinx.com:user:bwt_ip:2.0">
+    <MODULE COREREVISION="63" FULLNAME="/bwt_ip_0" HWVERSION="2.0" INSTANCE="bwt_ip_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="bwt_ip" VLNV="xilinx.com:user:bwt_ip:2.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>

@@ -63,7 +63,6 @@ int main(){
 	u32 OutFPGA[8];
 	u8 StrResult = 0;
 	char8 InputChar;
-	char8 result[2];
 
 	/* Initialize driver for LEDs */
 	status = XGpio_Initialize(&LedGpio, XPAR_AXI_GPIO_0_DEVICE_ID);
@@ -104,9 +103,8 @@ int main(){
     				break;
     			}
     		}
-    		LoopCounter++;
     		InputStr[LoopCounter] = InputChar;
-    		print(InputStr);
+//    		print(InputChar);
     		LoopCounter++;
     		if (31 == LoopCounter)
     		{
@@ -114,7 +112,7 @@ int main(){
     			break;
     		}
     	}
-    	InputStr[LENGTH_STR] = '$';
+    	InputStr[LENGTH_STR-1] = '$';
 
     	print("\n\r");
     	print("InputStr: ");
@@ -172,7 +170,10 @@ int main(){
 
     	XGpio_DiscreteWrite(&LedGpio, CHANNEL, 0x01);
 
+
     	BWT((u8 *)InputStr, (u8 *)ZYNQ_BWT_Str);
+
+    	ZYNQ_BWT_Str[LENGTH_STR] = '\0';
 
     	print("BWT:      ");
     	print(ZYNQ_BWT_Str);
@@ -185,6 +186,7 @@ int main(){
     		{
     			StrResult = 0;
     			XGpio_DiscreteWrite(&LedGpio, CHANNEL, 0xf0);
+    			break;
     		}
     		else
     			StrResult = 1;
@@ -192,12 +194,12 @@ int main(){
 
     	if (StrResult)
     	{
-    		print("\n\r********************\n**** BWT PASSED ****\n********************\n\r");
+    		print("\n\r********************\n\r**** BWT PASSED ****\n\r********************\n\r");
     		XGpio_DiscreteWrite(&LedGpio, CHANNEL, 0x55);
     	}
     	else
     	{
-    		print("\n\r********************\n**** BWT FAILED ****\n*********************\n\r");
+    		print("\n\r********************\n\r**** BWT FAILED ****\n\r*********************\n\r");
     		XGpio_DiscreteWrite(&LedGpio, CHANNEL, 0xFF);
     	}
     }

@@ -1,8 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../bd/mb_design/ip/mb_design_input_string_char_0/sim/mb_design_input_string_char_0.vhd" \
-"../../../bd/mb_design/ip/mb_design_output_string_char_0/sim/mb_design_output_string_char_0.vhd" \
-"../../../bd/mb_design/ip/mb_design_axi_gpio_0_0_1/sim/mb_design_axi_gpio_0_0.vhd" \
-"../../../bd/mb_design/ip/mb_design_axi_gpio_1_0/sim/mb_design_axi_gpio_1_0.vhd" \
-"../../../bd/mb_design/ip/mb_design_rst_ps7_0_100M_0/sim/mb_design_rst_ps7_0_100M_0.vhd" \
-
-nosort
