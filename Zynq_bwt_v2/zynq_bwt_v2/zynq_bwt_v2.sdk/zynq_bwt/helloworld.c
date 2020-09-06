@@ -328,7 +328,7 @@ int main(){
 	{
 
 		//XGpio_DiscreteWrite(&outputCharGpio, CHANNEL, 0xb);
-		XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0xaa);
+		XGpio_DiscreteWrite(&ledGpio, CHANNEL, 0xff);
 	}
 
     print("\n\r");

@@ -14,3 +14,17 @@ Zynq_bwt/bwt_test.cache/*
 Zynq_bwt/bwt_test.runs/*
 *.log
 Zynq_bwt/vivado.jou
+
+*/*.sdk/.metadata/*
+*/*.sim/*
+*/*.cache/*
+*/*.tmp/*
+*.log
+*.jou
+*.str
+
+Zynq_bwt_v2/zynq_bwt_v2/zynq_bwt_v2.sdk/.metadata/*
+Zynq_bwt_v2/zynq_bwt_v2/zynq_bwt_v2.sim/*
+Zynq_bwt_v2/zynq_bwt_v2/zynq_bwt_v2.cache/*
+Zynq_bwt_v2/zynq_bwt_v2/zynq_bwt_v2.tmp/*
+Zynq_bwt_v2/zynq_bwt_v2/zynq_bwt_v2.sdk/webtalk/*
